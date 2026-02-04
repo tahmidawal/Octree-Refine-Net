@@ -1,0 +1,4 @@
+Run directory: training_logs/20260204_183104
+Model parameters | Total: 15,137 | Trainable: 15,137
+Starting training...
+Epoch 0 | Loss: 0.814500

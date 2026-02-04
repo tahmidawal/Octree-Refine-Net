@@ -1,5 +1,3 @@
-training_logs/
-plots/
 __pycache__/
 *.pyc
 *.pyo
