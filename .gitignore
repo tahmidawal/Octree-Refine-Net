@@ -1,0 +1,8 @@
+training_logs/
+plots/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
