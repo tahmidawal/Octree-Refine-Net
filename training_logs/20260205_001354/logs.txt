@@ -1,0 +1,24 @@
+Run directory: training_logs/20260205_001354
+Model parameters | Total: 296,385 | Trainable: 296,321
+Device: cuda
+Starting training (Residual Learning)...
+Epoch 0 | Loss: 0.1969116
+Epoch 100 | Loss: 0.0002577
+Epoch 200 | Loss: 0.0001005
+Epoch 300 | Loss: 0.0000627
+Epoch 400 | Loss: 0.0000597
+Epoch 500 | Loss: 0.0000456
+Epoch 600 | Loss: 0.0000300
+Epoch 700 | Loss: 0.0000308
+Epoch 800 | Loss: 0.0000312
+Epoch 900 | Loss: 0.0000236
+Epoch 1000 | Loss: 0.0000230
+Best loss: 0.0000164
+Best model saved to: training_logs/20260205_001354/best_model.pt
+Loaded best model for evaluation.
+Loss curve saved to training_logs/20260205_001354/plots/loss_vs_epoch.png
+Example 0 | Neural MSE: 0.000613 | Bicubic MSE: 0.000609 | Improvement: -0.7%
+Example 1 | Neural MSE: 0.000542 | Bicubic MSE: 0.000583 | Improvement: +7.0%
+Example 2 | Neural MSE: 0.000074 | Bicubic MSE: 0.000315 | Improvement: +76.7%
+Example 3 | Neural MSE: 0.000076 | Bicubic MSE: 0.000398 | Improvement: +81.0%
+Finished evaluation.

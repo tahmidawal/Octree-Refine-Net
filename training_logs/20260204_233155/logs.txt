@@ -1,0 +1,19 @@
+Run directory: training_logs/20260204_233155
+Model parameters | Total: 15,137 | Trainable: 15,137
+Device: cuda
+Starting training...
+Epoch 0 | Loss: 0.329308
+Epoch 100 | Loss: 0.020496
+Epoch 200 | Loss: 0.004297
+Epoch 300 | Loss: 0.002030
+Epoch 400 | Loss: 0.002097
+Epoch 500 | Loss: 0.004807
+Best loss: 0.001146
+Best model saved to: training_logs/20260204_233155/best_model.pt
+Loaded best model for evaluation.
+Loss curve saved to training_logs/20260204_233155/plots/loss_vs_epoch.png
+Example 0 plot saved to training_logs/20260204_233155/plots/example_00_comparison.png | Neural MSE: 0.003865 | Bicubic MSE: 0.000804
+Example 1 plot saved to training_logs/20260204_233155/plots/example_01_comparison.png | Neural MSE: 0.001080 | Bicubic MSE: 0.000175
+Example 2 plot saved to training_logs/20260204_233155/plots/example_02_comparison.png | Neural MSE: 0.003410 | Bicubic MSE: 0.000821
+Example 3 plot saved to training_logs/20260204_233155/plots/example_03_comparison.png | Neural MSE: 0.002575 | Bicubic MSE: 0.000576
+Finished evaluation.

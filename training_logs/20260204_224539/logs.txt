@@ -1,0 +1,31 @@
+Run directory: training_logs/20260204_224539
+Model parameters | Total: 59,809 | Trainable: 59,809
+Device: cuda
+Starting training...
+Epoch 0 | Loss: 0.430595
+Epoch 100 | Loss: 0.028402
+Epoch 200 | Loss: 0.010589
+Epoch 300 | Loss: 0.010654
+Epoch 400 | Loss: 0.004170
+Epoch 500 | Loss: 0.003914
+Best loss: 0.002589
+Best model saved to: training_logs/20260204_224539/best_model.pt
+Loaded best model for evaluation.
+Loss curve saved to training_logs/20260204_224539/plots/loss_vs_epoch.png
+
+=== IN-TRAINING SAMPLE EVALUATION ===
+In-Training 0 plot saved to training_logs/20260204_224539/plots/train_00_comparison.png | Neural MSE: 0.021405 | Bicubic MSE: 0.000141
+In-Training 1 plot saved to training_logs/20260204_224539/plots/train_01_comparison.png | Neural MSE: 0.488037 | Bicubic MSE: 0.001044
+In-Training 2 plot saved to training_logs/20260204_224539/plots/train_02_comparison.png | Neural MSE: 0.008385 | Bicubic MSE: 0.000410
+In-Training 3 plot saved to training_logs/20260204_224539/plots/train_03_comparison.png | Neural MSE: 0.017069 | Bicubic MSE: 0.000154
+
+=== OUT-OF-TRAINING SAMPLE EVALUATION ===
+Out-of-Training 0 plot saved to training_logs/20260204_224539/plots/test_00_comparison.png | Neural MSE: 0.118008 | Bicubic MSE: 0.000778
+Out-of-Training 1 plot saved to training_logs/20260204_224539/plots/test_01_comparison.png | Neural MSE: 0.015830 | Bicubic MSE: 0.000270
+Out-of-Training 2 plot saved to training_logs/20260204_224539/plots/test_02_comparison.png | Neural MSE: 0.005816 | Bicubic MSE: 0.000423
+Out-of-Training 3 plot saved to training_logs/20260204_224539/plots/test_03_comparison.png | Neural MSE: 0.031840 | Bicubic MSE: 0.000771
+
+=== SUMMARY ===
+In-Training Avg MSE   | Neural: 0.133724 | Bicubic: 0.000437
+Out-of-Training Avg MSE | Neural: 0.042874 | Bicubic: 0.000560
+Finished evaluation.

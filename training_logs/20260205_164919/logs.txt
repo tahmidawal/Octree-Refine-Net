@@ -1,0 +1,27 @@
+Run directory: training_logs/20260205_164919
+Model parameters | Total: 130,497 | Trainable: 130,369
+Device: cuda
+Performing Sanity Check on Gather Layer...
+Sanity check saved to training_logs/20260205_164919/plots/sanity_check.png
+Quadtree structure saved to training_logs/20260205_164919/plots/quadtree_structure.png
+Training Sparse Quadtree Refiner...
+Epoch 0 | Loss: 0.7971802 | Neural: 0.797180 vs Bicubic: 0.496000 (+-60.7%)
+Epoch 100 | Loss: 0.2739758 | Neural: 0.273976 vs Bicubic: 0.522390 (+47.6%)
+Epoch 200 | Loss: 0.2705543 | Neural: 0.270554 vs Bicubic: 0.498196 (+45.7%)
+Epoch 300 | Loss: 0.2677079 | Neural: 0.267708 vs Bicubic: 0.483246 (+44.6%)
+Epoch 400 | Loss: 0.2724889 | Neural: 0.272489 vs Bicubic: 0.522106 (+47.8%)
+Epoch 500 | Loss: 0.2785514 | Neural: 0.278551 vs Bicubic: 0.477014 (+41.6%)
+Epoch 600 | Loss: 0.2685118 | Neural: 0.268512 vs Bicubic: 0.557642 (+51.8%)
+Epoch 700 | Loss: 0.2649325 | Neural: 0.264932 vs Bicubic: 0.511824 (+48.2%)
+Epoch 800 | Loss: 0.2644973 | Neural: 0.264497 vs Bicubic: 0.527151 (+49.8%)
+Epoch 900 | Loss: 0.2657676 | Neural: 0.265768 vs Bicubic: 0.500695 (+46.9%)
+Epoch 1000 | Loss: 0.2528889 | Neural: 0.252889 vs Bicubic: 0.522512 (+51.6%)
+Best loss: 0.2225671
+Best model saved to: training_logs/20260205_164919/best_model.pt
+Loss curve saved to training_logs/20260205_164919/plots/loss_vs_epoch.png
+Loaded best model for evaluation.
+Example 0 | Neural MSE: 0.248515 | Bicubic MSE: 0.572566 | Improvement: +56.6%
+Example 1 | Neural MSE: 0.378580 | Bicubic MSE: 1.017499 | Improvement: +62.8%
+Example 2 | Neural MSE: 0.327730 | Bicubic MSE: 0.411915 | Improvement: +20.4%
+Example 3 | Neural MSE: 0.266408 | Bicubic MSE: 0.525669 | Improvement: +49.3%
+Finished evaluation.
