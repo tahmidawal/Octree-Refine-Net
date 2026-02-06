@@ -1,0 +1,33 @@
+Device: cuda
+Config: Patch Size 50x50 (Output 200x200)
+Loss Weights: Global=1.0, Fine=10.0 (To ensure high accuracy)
+Epoch 0 | Weighted Loss: 7.30986 | Recon A: 0.372688 | Gen B: 0.345239
+Epoch 100 | Weighted Loss: 0.09235 | Recon A: 0.001889 | Gen B: 0.007288
+Epoch 200 | Weighted Loss: 0.08570 | Recon A: 0.001525 | Gen B: 0.006998
+Epoch 300 | Weighted Loss: 0.06159 | Recon A: 0.001875 | Gen B: 0.004242
+Epoch 400 | Weighted Loss: 0.03253 | Recon A: 0.000667 | Gen B: 0.002559
+Epoch 500 | Weighted Loss: 0.02494 | Recon A: 0.000947 | Gen B: 0.001531
+Epoch 600 | Weighted Loss: 0.02679 | Recon A: 0.001029 | Gen B: 0.001631
+Epoch 700 | Weighted Loss: 0.01993 | Recon A: 0.000788 | Gen B: 0.001122
+Epoch 800 | Weighted Loss: 0.02457 | Recon A: 0.000690 | Gen B: 0.001741
+Epoch 900 | Weighted Loss: 0.26614 | Recon A: 0.000420 | Gen B: 0.026173
+Epoch 1000 | Weighted Loss: 0.04775 | Recon A: 0.002459 | Gen B: 0.002305
+
+--- EVALUATION (50x50 Patch / 200x200 High Res) ---
+Sample 0:
+  Patch B (Neural) : 0.019751
+  Patch B (Bicubic): 0.008590
+  >>> Neural failed
+Sample 1:
+  Patch B (Neural) : 0.016629
+  Patch B (Bicubic): 0.005308
+  >>> Neural failed
+Sample 2:
+  Patch B (Neural) : 0.019443
+  Patch B (Bicubic): 0.010029
+  >>> Neural failed
+Sample 3:
+  Patch B (Neural) : 0.018588
+  Patch B (Bicubic): 0.009388
+  >>> Neural failed
+Saved plot to training_logs/20260206_022657_patch50/plots/result_50x50.png

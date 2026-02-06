@@ -58,13 +58,13 @@ class QuadTreeUNet(nn.Module):
         )
 
         # 2. Sparse Detail Encoder (Depth 10 Patch A -> Depth 8 Features)
-        # Compresses 40x40 high-res patch into 10x10 parent features
+        # Compresses 20x20 high-res patch into 5x5 parent features
         self.detail_enc = nn.Sequential(
             nn.Conv2d(1, 16, 3, padding=1),
             nn.GELU(),
-            nn.Conv2d(16, 32, 3, stride=2, padding=1), # 40 -> 20
+            nn.Conv2d(16, 32, 3, stride=2, padding=1), # 20 -> 10
             nn.GELU(),
-            nn.Conv2d(32, feat_dim, 3, stride=2, padding=1), # 20 -> 10 (Matches D8 resolution)
+            nn.Conv2d(32, feat_dim, 3, stride=2, padding=1), # 10 -> 5 (Matches D8 resolution)
             nn.BatchNorm2d(feat_dim), nn.GELU()
         )
 
@@ -85,12 +85,12 @@ class QuadTreeUNet(nn.Module):
             nn.Conv2d(feat_dim * 2, 128, 3, padding=1),
             nn.BatchNorm2d(128), nn.GELU(),
             
-            # Upsample 10 -> 20
+            # Upsample 5 -> 10
             nn.Upsample(scale_factor=2, mode='bilinear', align_corners=False),
             nn.Conv2d(128, 64, 3, padding=1),
             nn.BatchNorm2d(64), nn.GELU(),
             
-            # Upsample 20 -> 40
+            # Upsample 10 -> 20
             nn.Upsample(scale_factor=2, mode='bilinear', align_corners=False),
             nn.Conv2d(64, 32, 3, padding=1),
             nn.BatchNorm2d(32), nn.GELU(),
@@ -101,7 +101,7 @@ class QuadTreeUNet(nn.Module):
     def forward(self, coarse_grid, patch_A, loc_A, loc_B):
         """
         coarse_grid: [B, 1, 256, 256]
-        patch_A: [B, 1, 40, 40] (High Res Input)
+        patch_A: [B, 1, 20, 20] (High Res Input)
         loc_A: (row, col) tuple for Patch A
         loc_B: (row, col) tuple for Patch B
         """
@@ -110,14 +110,14 @@ class QuadTreeUNet(nn.Module):
 
         # 2. Encode Patch A Details (Depth 10 -> Depth 8)
         # This represents the "Information Injection" from child to parent
-        detail_feats_A = self.detail_enc(patch_A) # [B, 64, 10, 10]
+        detail_feats_A = self.detail_enc(patch_A) # [B, 64, 5, 5]
 
         # 3. Fusion (Simulating the Octree Merge)
         # We perform a residual fusion at Patch A's location in the global map
         # This makes the global map "aware" that A has high-res info available
         fused_feats = global_feats.clone()
         ra, ca = loc_A
-        fused_feats[:, :, ra:ra+10, ca:ca+10] = fused_feats[:, :, ra:ra+10, ca:ca+10] + detail_feats_A
+        fused_feats[:, :, ra:ra+5, ca:ca+5] = fused_feats[:, :, ra:ra+5, ca:ca+5] + detail_feats_A
 
         # 4. Task 1: Reconstruct Coarse Quadtree
         recon_coarse = self.global_recon(fused_feats)
@@ -127,15 +127,15 @@ class QuadTreeUNet(nn.Module):
         
         # Helper to run refiner on a specific patch location
         def run_refiner(row, col):
-            # Extract Halo Context (12x12) from FUSED map
+            # Extract Halo Context (7x7) from FUSED map
             pad = 1
-            r_start, r_end = max(0, row-pad), min(256, row+10+pad)
-            c_start, c_end = max(0, col-pad), min(256, col+10+pad)
+            r_start, r_end = max(0, row-pad), min(256, row+5+pad)
+            c_start, c_end = max(0, col-pad), min(256, col+5+pad)
             
             roi_feats = fused_feats[:, :, r_start:r_end, c_start:c_end]
             
             # Manual padding for edge cases
-            th, tw = 10 + 2*pad, 10 + 2*pad
+            th, tw = 5 + 2*pad, 5 + 2*pad
             if roi_feats.shape[2] != th or roi_feats.shape[3] != tw:
                 roi_feats = F.pad(roi_feats, (0, tw-roi_feats.shape[3], 0, th-roi_feats.shape[2]))
 
@@ -148,7 +148,7 @@ class QuadTreeUNet(nn.Module):
             pos = self.pos_enc(grid)
             combined = torch.cat([roi_feats, pos], dim=1)
             
-            # Generate High Res (48x48 -> Crop to 40x40)
+            # Generate High Res (28x28 -> Crop to 20x20)
             out = self.refiner(combined)
             out = out[:, :, 4:-4, 4:-4] 
             return out
@@ -164,7 +164,7 @@ class QuadTreeUNet(nn.Module):
 # ==========================================
 def generate_data(batch_size=8):
     grid_size = 256
-    patch_size = 10
+    patch_size = 5
     
     # Coarse coords
     x = torch.linspace(0, 1, grid_size)
@@ -192,7 +192,7 @@ def generate_data(batch_size=8):
         while True:
             rb = np.random.randint(patch_size, grid_size - patch_size)
             cb = np.random.randint(patch_size, grid_size - patch_size)
-            if abs(ra-rb) > 12 or abs(ca-cb) > 12: break
+            if abs(ra-rb) > 6 or abs(ca-cb) > 6: break
 
         # Generate High Res Ground Truths
         def get_hr_patch(r, c):
@@ -316,8 +316,8 @@ with torch.no_grad():
         
         # Bicubic Baseline for B (The "Void")
         r, c = loc_B
-        coarse_patch_B = coarse[i:i+1, :, r:r+10, c:c+10]
-        bicubic_B = F.interpolate(coarse_patch_B, size=(40,40), mode='bicubic', align_corners=False)
+        coarse_patch_B = coarse[i:i+1, :, r:r+5, c:c+5]
+        bicubic_B = F.interpolate(coarse_patch_B, size=(20,20), mode='bicubic', align_corners=False)
         
         mse_neural = F.mse_loss(out_B, target_B[i:i+1]).item()
         mse_bicubic = F.mse_loss(bicubic_B, target_B[i:i+1]).item()
@@ -345,8 +345,8 @@ with torch.no_grad():
         out_coarse, out_A, out_B = model(coarse[idx:idx+1], patch_A[idx:idx+1], loc_A, loc_B)
         
         # Bicubic baseline for this sample
-        coarse_patch_B = coarse[idx:idx+1, :, rb:rb+10, cb:cb+10]
-        bicubic_B = F.interpolate(coarse_patch_B, size=(40,40), mode='bicubic', align_corners=False)
+        coarse_patch_B = coarse[idx:idx+1, :, rb:rb+5, cb:cb+5]
+        bicubic_B = F.interpolate(coarse_patch_B, size=(20,20), mode='bicubic', align_corners=False)
         
         # The coarse grid IS the ground truth at depth 8
         gt_coarse = coarse[idx, 0].cpu().numpy()
@@ -383,21 +383,21 @@ with torch.no_grad():
         # Row 1: Coarse level comparison
         im0 = axes[0, 0].imshow(gt_coarse, cmap='twilight')
         axes[0, 0].set_title("Ground Truth (Coarse D8)")
-        axes[0, 0].add_patch(plt.Rectangle((ca, ra), 10, 10, color='lime', fill=False, lw=2, label='Patch A'))
-        axes[0, 0].add_patch(plt.Rectangle((cb, rb), 10, 10, color='red', fill=False, lw=2, label='Patch B'))
+        axes[0, 0].add_patch(plt.Rectangle((ca, ra), 5, 5, color='lime', fill=False, lw=2, label='Patch A'))
+        axes[0, 0].add_patch(plt.Rectangle((cb, rb), 5, 5, color='red', fill=False, lw=2, label='Patch B'))
         axes[0, 0].legend(loc='upper right')
         plt.colorbar(im0, ax=axes[0, 0])
         
         im1 = axes[0, 1].imshow(pred_coarse, cmap='twilight')
         axes[0, 1].set_title("Reconstructed Coarse")
-        axes[0, 1].add_patch(plt.Rectangle((ca, ra), 10, 10, color='lime', fill=False, lw=2))
-        axes[0, 1].add_patch(plt.Rectangle((cb, rb), 10, 10, color='red', fill=False, lw=2))
+        axes[0, 1].add_patch(plt.Rectangle((ca, ra), 5, 5, color='lime', fill=False, lw=2))
+        axes[0, 1].add_patch(plt.Rectangle((cb, rb), 5, 5, color='red', fill=False, lw=2))
         plt.colorbar(im1, ax=axes[0, 1])
         
         im2 = axes[0, 2].imshow(error_coarse, cmap='hot')
         axes[0, 2].set_title(f"Coarse Error (RelL2: {rel_l2_coarse:.6f})")
-        axes[0, 2].add_patch(plt.Rectangle((ca, ra), 10, 10, color='lime', fill=False, lw=2))
-        axes[0, 2].add_patch(plt.Rectangle((cb, rb), 10, 10, color='cyan', fill=False, lw=2))
+        axes[0, 2].add_patch(plt.Rectangle((ca, ra), 5, 5, color='lime', fill=False, lw=2))
+        axes[0, 2].add_patch(plt.Rectangle((cb, rb), 5, 5, color='cyan', fill=False, lw=2))
         plt.colorbar(im2, ax=axes[0, 2])
         
         # Row 2: High-res patch comparisons

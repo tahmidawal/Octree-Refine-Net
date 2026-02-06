@@ -1,0 +1,39 @@
+Run directory: training_logs/20260205_213317
+Model parameters | Total: 301,826 | Trainable: 301,762
+Device: cuda
+Task: Reconstruct Coarse + Autoencode Patch A + Generate Patch B
+Starting training...
+Epoch 0 | Total: 0.68900 | Coarse: 0.11408 | Recon A: 0.27584 | Gen B: 0.29908
+Epoch 100 | Total: 0.00699 | Coarse: 0.00052 | Recon A: 0.00307 | Gen B: 0.00340
+Epoch 200 | Total: 0.00269 | Coarse: 0.00029 | Recon A: 0.00113 | Gen B: 0.00127
+Epoch 300 | Total: 0.00193 | Coarse: 0.00018 | Recon A: 0.00076 | Gen B: 0.00099
+Epoch 400 | Total: 0.00135 | Coarse: 0.00016 | Recon A: 0.00047 | Gen B: 0.00072
+Epoch 500 | Total: 0.00114 | Coarse: 0.00012 | Recon A: 0.00044 | Gen B: 0.00058
+Epoch 600 | Total: 0.00101 | Coarse: 0.00010 | Recon A: 0.00038 | Gen B: 0.00052
+Epoch 700 | Total: 0.00070 | Coarse: 0.00008 | Recon A: 0.00030 | Gen B: 0.00031
+Epoch 800 | Total: 0.00078 | Coarse: 0.00012 | Recon A: 0.00035 | Gen B: 0.00031
+Epoch 900 | Total: 0.00066 | Coarse: 0.00006 | Recon A: 0.00032 | Gen B: 0.00028
+Epoch 1000 | Total: 0.00050 | Coarse: 0.00005 | Recon A: 0.00022 | Gen B: 0.00022
+Saved loss curve to training_logs/20260205_213317/plots/loss_curve.png
+
+--- FINAL EVALUATION (Comparison vs Bicubic) ---
+Sample 0:
+  Patch A (Recon) MSE: 0.000130
+  Patch B (Gen)   MSE: 0.000329 vs Bicubic: 0.007224
+  >>> Neural is 22.0x better than Bicubic
+Sample 1:
+  Patch A (Recon) MSE: 0.000347
+  Patch B (Gen)   MSE: 0.000236 vs Bicubic: 0.006161
+  >>> Neural is 26.1x better than Bicubic
+Sample 2:
+  Patch A (Recon) MSE: 0.000314
+  Patch B (Gen)   MSE: 0.000166 vs Bicubic: 0.003648
+  >>> Neural is 22.0x better than Bicubic
+Sample 3:
+  Patch A (Recon) MSE: 0.000224
+  Patch B (Gen)   MSE: 0.000371 vs Bicubic: 0.011067
+  >>> Neural is 29.9x better than Bicubic
+
+--- GENERATING FULL QUADTREE ERROR PLOT ---
+Saved full quadtree error plot to training_logs/20260205_213317/plots/full_quadtree_error.png
+Saved patch comparison to training_logs/20260205_213317/plots/patch_comparison.png

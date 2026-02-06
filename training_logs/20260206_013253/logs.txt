@@ -1,0 +1,66 @@
+Run directory: training_logs/20260206_013253
+Model parameters | Total: 301,826 | Trainable: 301,762
+Device: cuda
+Task: Reconstruct Coarse + Autoencode Patch A + Generate Patch B
+Starting training...
+Epoch 0 | Total: 0.59639 | Coarse: 0.13576 | Recon A: 0.23934 | Gen B: 0.22129
+Epoch 100 | Total: 0.00510 | Coarse: 0.00053 | Recon A: 0.00172 | Gen B: 0.00285
+Epoch 200 | Total: 0.00279 | Coarse: 0.00031 | Recon A: 0.00090 | Gen B: 0.00158
+Epoch 300 | Total: 0.00286 | Coarse: 0.00019 | Recon A: 0.00158 | Gen B: 0.00109
+Epoch 400 | Total: 0.00100 | Coarse: 0.00012 | Recon A: 0.00043 | Gen B: 0.00045
+Epoch 500 | Total: 0.00099 | Coarse: 0.00012 | Recon A: 0.00035 | Gen B: 0.00052
+Epoch 600 | Total: 0.00118 | Coarse: 0.00020 | Recon A: 0.00049 | Gen B: 0.00049
+Epoch 700 | Total: 0.00070 | Coarse: 0.00008 | Recon A: 0.00031 | Gen B: 0.00031
+Epoch 800 | Total: 0.00061 | Coarse: 0.00009 | Recon A: 0.00026 | Gen B: 0.00026
+Epoch 900 | Total: 0.00046 | Coarse: 0.00006 | Recon A: 0.00020 | Gen B: 0.00020
+Epoch 1000 | Total: 0.00132 | Coarse: 0.00020 | Recon A: 0.00061 | Gen B: 0.00052
+Saved loss curve to training_logs/20260206_013253/plots/loss_curve.png
+
+--- FINAL EVALUATION (Comparison vs Bicubic) ---
+Sample 0:
+  Patch A (Recon) MSE: 0.000274
+  Patch B (Gen)   MSE: 0.000601 vs Bicubic: 0.006045
+  >>> Neural is 10.1x better than Bicubic
+Sample 1:
+  Patch A (Recon) MSE: 0.000198
+  Patch B (Gen)   MSE: 0.000754 vs Bicubic: 0.006447
+  >>> Neural is 8.6x better than Bicubic
+Sample 2:
+  Patch A (Recon) MSE: 0.000193
+  Patch B (Gen)   MSE: 0.000633 vs Bicubic: 0.007986
+  >>> Neural is 12.6x better than Bicubic
+Sample 3:
+  Patch A (Recon) MSE: 0.000293
+  Patch B (Gen)   MSE: 0.000419 vs Bicubic: 0.005432
+  >>> Neural is 13.0x better than Bicubic
+
+================================================================================
+FAIR COMPARISON: PROJECTED ERROR TEST (All errors measured at Fine Scale 40x40)
+================================================================================
+Comparing against TRUE HIGH-RES GROUND TRUTH to verify refinement adds real accuracy
+--------------------------------------------------------------------------------
+Sample   Coarse->Fine MSE   Neural Fine MSE    Improvement    
+--------------------------------------------------------------------------------
+0        0.006043           0.000601           10.1           x
+1        0.006699           0.000754           8.9            x
+2        0.007957           0.000633           12.6           x
+3        0.004970           0.000419           11.9           x
+--------------------------------------------------------------------------------
+Interpretation:
+  - Coarse->Fine MSE: Error when using upsampled coarse reconstruction
+  - Neural Fine MSE:  Error of the neural refinement
+  - Improvement > 1:  Neural refinement adds REAL accuracy over coarse
+================================================================================
+Saved projected error test plots for 4 samples to training_logs/20260206_013253/plots/
+
+--- GENERATING FULL QUADTREE ERROR PLOTS ---
+
+--- RELATIVE L2 ERROR SUMMARY ---
+Sample   Coarse RelL2    Patch A RelL2   Patch B RelL2   Patch B Bicubic RelL2
+---------------------------------------------------------------------------
+0        0.040436        0.047183        0.066532        0.210981            
+1        0.042653        0.043019        0.073634        0.215349            
+2        0.044830        0.044939        0.072443        0.257394            
+3        0.045344        0.056223        0.058573        0.210906            
+---------------------------------------------------------------------------
+Saved full quadtree error plots for 4 samples to training_logs/20260206_013253/plots/

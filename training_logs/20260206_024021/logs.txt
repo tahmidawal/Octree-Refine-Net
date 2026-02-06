@@ -1,0 +1,47 @@
+Run directory: training_logs/20260206_024021
+Model parameters | Total: 301,826 | Trainable: 301,762
+Device: cuda
+Task: Reconstruct Coarse + Autoencode Patch A + Generate Patch B
+Starting training...
+Epoch 0 | Total: 0.93114 | Coarse: 0.14532 | Recon A: 0.33866 | Gen B: 0.44717
+Epoch 100 | Total: 0.01033 | Coarse: 0.00065 | Recon A: 0.00489 | Gen B: 0.00480
+Epoch 200 | Total: 0.00404 | Coarse: 0.00050 | Recon A: 0.00177 | Gen B: 0.00177
+Epoch 300 | Total: 0.00285 | Coarse: 0.00034 | Recon A: 0.00105 | Gen B: 0.00146
+Epoch 400 | Total: 0.00280 | Coarse: 0.00016 | Recon A: 0.00127 | Gen B: 0.00138
+Epoch 500 | Total: 0.00128 | Coarse: 0.00010 | Recon A: 0.00060 | Gen B: 0.00057
+Epoch 600 | Total: 0.00108 | Coarse: 0.00008 | Recon A: 0.00050 | Gen B: 0.00051
+Epoch 700 | Total: 0.00081 | Coarse: 0.00007 | Recon A: 0.00033 | Gen B: 0.00041
+Epoch 800 | Total: 0.00087 | Coarse: 0.00008 | Recon A: 0.00043 | Gen B: 0.00036
+Epoch 900 | Total: 0.00078 | Coarse: 0.00010 | Recon A: 0.00033 | Gen B: 0.00036
+Epoch 1000 | Total: 0.00054 | Coarse: 0.00006 | Recon A: 0.00024 | Gen B: 0.00025
+Saved loss curve to training_logs/20260206_024021/plots/loss_curve.png
+
+--- FINAL EVALUATION (Comparison vs Bicubic) ---
+Sample 0:
+  Patch A (Recon) MSE: 0.000283
+  Patch B (Gen)   MSE: 0.001076 vs Bicubic: 0.012973
+  >>> Neural is 12.1x better than Bicubic
+Sample 1:
+  Patch A (Recon) MSE: 0.000340
+  Patch B (Gen)   MSE: 0.000284 vs Bicubic: 0.005518
+  >>> Neural is 19.4x better than Bicubic
+Sample 2:
+  Patch A (Recon) MSE: 0.000413
+  Patch B (Gen)   MSE: 0.000203 vs Bicubic: 0.005198
+  >>> Neural is 25.6x better than Bicubic
+Sample 3:
+  Patch A (Recon) MSE: 0.000443
+  Patch B (Gen)   MSE: 0.000271 vs Bicubic: 0.005324
+  >>> Neural is 19.6x better than Bicubic
+
+--- GENERATING FULL QUADTREE ERROR PLOTS ---
+
+--- RELATIVE L2 ERROR SUMMARY ---
+Sample   Coarse RelL2    Patch A RelL2   Patch B RelL2   Patch B Bicubic RelL2
+---------------------------------------------------------------------------
+0        0.028936        0.069493        0.070971        0.246452            
+1        0.030741        0.051535        0.047994        0.211535            
+2        0.030493        0.058941        0.041350        0.209087            
+3        0.024602        0.063565        0.051710        0.228985            
+---------------------------------------------------------------------------
+Saved full quadtree error plots for 4 samples to training_logs/20260206_024021/plots/

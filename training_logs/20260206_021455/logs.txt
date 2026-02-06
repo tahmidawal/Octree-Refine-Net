@@ -1,0 +1,99 @@
+Run directory: training_logs/20260206_021455
+Model parameters | Total: 301,826 | Trainable: 301,762
+Device: cuda
+Task: Reconstruct Coarse + Autoencode Patch A + Generate Patch B
+Starting training...
+Epoch 0 | Total: 0.72017 | Coarse: 0.13759 | Recon A: 0.29024 | Gen B: 0.29234
+Epoch 100 | Total: 0.00460 | Coarse: 0.00064 | Recon A: 0.00184 | Gen B: 0.00212
+Epoch 200 | Total: 0.00265 | Coarse: 0.00034 | Recon A: 0.00113 | Gen B: 0.00118
+Epoch 300 | Total: 0.00258 | Coarse: 0.00027 | Recon A: 0.00128 | Gen B: 0.00103
+Epoch 400 | Total: 0.00151 | Coarse: 0.00032 | Recon A: 0.00047 | Gen B: 0.00071
+Epoch 500 | Total: 0.00124 | Coarse: 0.00012 | Recon A: 0.00068 | Gen B: 0.00044
+Epoch 600 | Total: 0.00068 | Coarse: 0.00008 | Recon A: 0.00027 | Gen B: 0.00033
+Epoch 700 | Total: 0.00066 | Coarse: 0.00006 | Recon A: 0.00029 | Gen B: 0.00031
+Epoch 800 | Total: 0.00069 | Coarse: 0.00009 | Recon A: 0.00025 | Gen B: 0.00035
+Epoch 900 | Total: 0.00098 | Coarse: 0.00005 | Recon A: 0.00025 | Gen B: 0.00069
+Epoch 1000 | Total: 0.00062 | Coarse: 0.00007 | Recon A: 0.00026 | Gen B: 0.00030
+Saved loss curve to training_logs/20260206_021455/plots/loss_curve.png
+
+--- FINAL EVALUATION (Comparison vs Bicubic) ---
+Sample 0:
+  Patch A (Recon) MSE: 0.000385
+  Patch B (Gen)   MSE: 0.000519 vs Bicubic: 0.010178
+  >>> Neural is 19.6x better than Bicubic
+Sample 1:
+  Patch A (Recon) MSE: 0.000368
+  Patch B (Gen)   MSE: 0.000852 vs Bicubic: 0.007570
+  >>> Neural is 8.9x better than Bicubic
+Sample 2:
+  Patch A (Recon) MSE: 0.000394
+  Patch B (Gen)   MSE: 0.000583 vs Bicubic: 0.007585
+  >>> Neural is 13.0x better than Bicubic
+Sample 3:
+  Patch A (Recon) MSE: 0.000375
+  Patch B (Gen)   MSE: 0.000554 vs Bicubic: 0.006503
+  >>> Neural is 11.7x better than Bicubic
+
+================================================================================
+FAIR COMPARISON: PROJECTED ERROR TEST (All errors measured at Fine Scale 40x40)
+================================================================================
+Comparing against TRUE HIGH-RES GROUND TRUTH to verify refinement adds real accuracy
+--------------------------------------------------------------------------------
+Sample   Coarse->Fine MSE   Neural Fine MSE    Improvement    
+--------------------------------------------------------------------------------
+0        0.010330           0.000519           19.9           x
+1        0.007748           0.000852           9.1            x
+2        0.007853           0.000583           13.5           x
+3        0.006572           0.000554           11.9           x
+--------------------------------------------------------------------------------
+Interpretation:
+  - Coarse->Fine MSE: Error when using upsampled coarse reconstruction
+  - Neural Fine MSE:  Error of the neural refinement
+  - Improvement > 1:  Neural refinement adds REAL accuracy over coarse
+================================================================================
+
+================================================================================
+REVERSE PROJECTION: Coarse Reconstruction vs Downsampled FULL 1024x1024 Fine GT
+================================================================================
+Generate TRUE 1024x1024 fine GT, downsample to 256x256, compare with coarse reconstruction
+--------------------------------------------------------------------------------
+Sample   Full Coarse MSE    Full Coarse RelL2   
+--------------------------------------------------------------------------------
+0        0.009451           0.292970            
+1        0.007776           0.262676            
+2        0.004236           0.189034            
+3        0.006252           0.233872            
+--------------------------------------------------------------------------------
+
+Patch-level comparison (Fine GT downsampled to coarse 10x10):
+Sample   Patch      Coarse Recon MSE   Coarse Recon RelL2  
+--------------------------------------------------------------------------------
+0        A          0.021954           0.418067            
+0        B          0.004333           0.298549            
+1        A          0.011824           0.325554            
+1        B          0.007846           0.275114            
+2        A          0.001250           0.100578            
+2        B          0.002506           0.216621            
+3        A          0.004544           0.265782            
+3        B          0.002595           0.234646            
+--------------------------------------------------------------------------------
+Interpretation:
+  - Full Coarse MSE: Error of 256x256 coarse reconstruction vs downsampled 1024x1024 fine GT
+  - Patch Coarse MSE: Error at specific patch locations
+  - This tests if coarse reconstruction matches what the TRUE fine signal looks like at coarse scale
+================================================================================
+
+--- GENERATING FAIR COMPARISON VISUALIZATION ---
+Saved fair comparison visualization to training_logs/20260206_021455/plots/fair_comparison_visualization.png
+
+--- GENERATING FULL QUADTREE ERROR PLOTS ---
+
+--- RELATIVE L2 ERROR SUMMARY ---
+Sample   Coarse RelL2    Patch A RelL2   Patch B RelL2   Patch B Bicubic RelL2
+---------------------------------------------------------------------------
+0        0.027424        0.048924        0.070717        0.313270            
+1        0.026416        0.043986        0.071494        0.213068            
+2        0.026197        0.061725        0.071554        0.258152            
+3        0.021008        0.055115        0.062649        0.214652            
+---------------------------------------------------------------------------
+Saved full quadtree error plots for 4 samples to training_logs/20260206_021455/plots/
