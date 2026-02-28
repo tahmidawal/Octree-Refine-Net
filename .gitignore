@@ -4,3 +4,8 @@ __pycache__/
 *.pyd
 .venv/
 venv/
+plots/
+*.pt
+*.png
+*.jpg
+*.jpeg

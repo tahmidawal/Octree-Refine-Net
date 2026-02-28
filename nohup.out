@@ -1,0 +1,1777 @@
+/home/tahmid/venv/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  warnings.warn(
+Running Operator Training on cuda
+Successfully loaded pre-trained Autoencoders.
+Step    0 | Total Loss: 0.41365 | Val: 0.24992 | Split: 0.32745
+Step   50 | Total Loss: 0.35813 | Val: 0.23868 | Split: 0.23889
+Step  100 | Total Loss: 0.37009 | Val: 0.24469 | Split: 0.25081
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 18293
+    -> Saved plots/operator_20260224_151532/comparison_step0100.png
+    -> New best checkpoint saved (loss: 0.370094)
+Step  150 | Total Loss: 0.35712 | Val: 0.26437 | Split: 0.18550
+Step  200 | Total Loss: 0.35969 | Val: 0.24044 | Split: 0.23849
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12181 | Generated u nodes: 12881
+    -> Saved plots/operator_20260224_151532/comparison_step0200.png
+    -> New best checkpoint saved (loss: 0.359686)
+Step  250 | Total Loss: 0.36168 | Val: 0.26706 | Split: 0.18925
+Step  300 | Total Loss: 0.31325 | Val: 0.23719 | Split: 0.15213
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 10365
+    -> Saved plots/operator_20260224_151532/comparison_step0300.png
+    -> New best checkpoint saved (loss: 0.313251)
+Step  350 | Total Loss: 0.27476 | Val: 0.24280 | Split: 0.06391
+Step  400 | Total Loss: 0.31806 | Val: 0.26320 | Split: 0.10973
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14805 | Generated u nodes: 16685
+    -> Saved plots/operator_20260224_151532/comparison_step0400.png
+Step  450 | Total Loss: 0.25207 | Val: 0.23491 | Split: 0.03431
+Step  500 | Total Loss: 0.26679 | Val: 0.24980 | Split: 0.03397
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14165 | Generated u nodes: 13841
+    -> Saved plots/operator_20260224_151532/comparison_step0500.png
+    -> New best checkpoint saved (loss: 0.266786)
+Step  550 | Total Loss: 0.25226 | Val: 0.24064 | Split: 0.02323
+Step  600 | Total Loss: 0.23177 | Val: 0.22012 | Split: 0.02331
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13685
+    -> Saved plots/operator_20260224_151532/comparison_step0600.png
+    -> New best checkpoint saved (loss: 0.231773)
+Step  650 | Total Loss: 0.22673 | Val: 0.21985 | Split: 0.01377
+Step  700 | Total Loss: 0.14075 | Val: 0.13746 | Split: 0.00659
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11625
+    -> Saved plots/operator_20260224_151532/comparison_step0700.png
+    -> New best checkpoint saved (loss: 0.140751)
+Step  750 | Total Loss: 0.30475 | Val: 0.26302 | Split: 0.08346
+Step  800 | Total Loss: 0.27308 | Val: 0.25410 | Split: 0.03797
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14805 | Generated u nodes: 15049
+    -> Saved plots/operator_20260224_151532/comparison_step0800.png
+Step  850 | Total Loss: 0.26824 | Val: 0.25887 | Split: 0.01873
+Step  900 | Total Loss: 0.23848 | Val: 0.22904 | Split: 0.01887
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13141 | Generated u nodes: 13333
+    -> Saved plots/operator_20260224_151532/comparison_step0900.png
+Step  950 | Total Loss: 0.09307 | Val: 0.09184 | Split: 0.00246
+Step 1000 | Total Loss: 0.23219 | Val: 0.22198 | Split: 0.02041
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12181 | Generated u nodes: 12277
+    -> Saved plots/operator_20260224_151532/comparison_step1000.png
+Step 1050 | Total Loss: 0.18929 | Val: 0.17582 | Split: 0.02693
+Step 1100 | Total Loss: 0.07464 | Val: 0.07313 | Split: 0.00302
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13665
+    -> Saved plots/operator_20260224_151532/comparison_step1100.png
+    -> New best checkpoint saved (loss: 0.074637)
+Step 1150 | Total Loss: 0.24825 | Val: 0.22389 | Split: 0.04872
+Step 1200 | Total Loss: 0.23501 | Val: 0.22872 | Split: 0.01257
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11733 | Generated u nodes: 11961
+    -> Saved plots/operator_20260224_151532/comparison_step1200.png
+Step 1250 | Total Loss: 0.20651 | Val: 0.20117 | Split: 0.01068
+Step 1300 | Total Loss: 0.06734 | Val: 0.06564 | Split: 0.00340
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12117 | Generated u nodes: 12117
+    -> Saved plots/operator_20260224_151532/comparison_step1300.png
+    -> New best checkpoint saved (loss: 0.067337)
+Step 1350 | Total Loss: 0.11519 | Val: 0.11196 | Split: 0.00648
+Step 1400 | Total Loss: 0.16142 | Val: 0.15417 | Split: 0.01450
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14805 | Generated u nodes: 15013
+    -> Saved plots/operator_20260224_151532/comparison_step1400.png
+Step 1450 | Total Loss: 0.08660 | Val: 0.08407 | Split: 0.00505
+Step 1500 | Total Loss: 0.05727 | Val: 0.05662 | Split: 0.00129
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step1500.png
+    -> New best checkpoint saved (loss: 0.057266)
+Step 1550 | Total Loss: 0.04427 | Val: 0.04340 | Split: 0.00174
+Step 1600 | Total Loss: 0.06232 | Val: 0.05302 | Split: 0.01860
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12181 | Generated u nodes: 12453
+    -> Saved plots/operator_20260224_151532/comparison_step1600.png
+Step 1650 | Total Loss: 0.10634 | Val: 0.10516 | Split: 0.00238
+Step 1700 | Total Loss: 0.06372 | Val: 0.06238 | Split: 0.00270
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13633
+    -> Saved plots/operator_20260224_151532/comparison_step1700.png
+Step 1750 | Total Loss: 0.07995 | Val: 0.07591 | Split: 0.00807
+Step 1800 | Total Loss: 0.04607 | Val: 0.02781 | Split: 0.03652
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 14037
+    -> Saved plots/operator_20260224_151532/comparison_step1800.png
+    -> New best checkpoint saved (loss: 0.046066)
+Step 1850 | Total Loss: 0.06008 | Val: 0.05640 | Split: 0.00737
+Step 1900 | Total Loss: 0.02859 | Val: 0.02521 | Split: 0.00676
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13705
+    -> Saved plots/operator_20260224_151532/comparison_step1900.png
+    -> New best checkpoint saved (loss: 0.028591)
+Step 1950 | Total Loss: 0.04016 | Val: 0.03779 | Split: 0.00473
+Step 2000 | Total Loss: 0.01165 | Val: 0.01157 | Split: 0.00016
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12117 | Generated u nodes: 12117
+    -> Saved plots/operator_20260224_151532/comparison_step2000.png
+    -> New best checkpoint saved (loss: 0.011653)
+Step 2050 | Total Loss: 0.01617 | Val: 0.01538 | Split: 0.00156
+Step 2100 | Total Loss: 0.01275 | Val: 0.01249 | Split: 0.00052
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11605
+    -> Saved plots/operator_20260224_151532/comparison_step2100.png
+Step 2150 | Total Loss: 0.01515 | Val: 0.01457 | Split: 0.00116
+Step 2200 | Total Loss: 0.00983 | Val: 0.00977 | Split: 0.00012
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step2200.png
+    -> New best checkpoint saved (loss: 0.009827)
+Step 2250 | Total Loss: 0.01050 | Val: 0.01028 | Split: 0.00044
+Step 2300 | Total Loss: 0.00674 | Val: 0.00638 | Split: 0.00071
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13649
+    -> Saved plots/operator_20260224_151532/comparison_step2300.png
+    -> New best checkpoint saved (loss: 0.006737)
+Step 2350 | Total Loss: 0.01234 | Val: 0.01223 | Split: 0.00021
+Step 2400 | Total Loss: 0.01571 | Val: 0.01489 | Split: 0.00164
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13141 | Generated u nodes: 13133
+    -> Saved plots/operator_20260224_151532/comparison_step2400.png
+Step 2450 | Total Loss: 0.01016 | Val: 0.01007 | Split: 0.00017
+Step 2500 | Total Loss: 0.01065 | Val: 0.00846 | Split: 0.00439
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step2500.png
+Step 2550 | Total Loss: 0.02342 | Val: 0.02222 | Split: 0.00240
+Step 2600 | Total Loss: 0.01711 | Val: 0.01677 | Split: 0.00067
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11605
+    -> Saved plots/operator_20260224_151532/comparison_step2600.png
+Step 2650 | Total Loss: 0.00607 | Val: 0.00600 | Split: 0.00015
+Step 2700 | Total Loss: 0.01484 | Val: 0.01452 | Split: 0.00065
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step2700.png
+Step 2750 | Total Loss: 0.00964 | Val: 0.00943 | Split: 0.00042
+Step 2800 | Total Loss: 0.00326 | Val: 0.00322 | Split: 0.00008
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13653
+    -> Saved plots/operator_20260224_151532/comparison_step2800.png
+    -> New best checkpoint saved (loss: 0.003259)
+Step 2850 | Total Loss: 0.00500 | Val: 0.00493 | Split: 0.00014
+Step 2900 | Total Loss: 0.00595 | Val: 0.00575 | Split: 0.00039
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14805 | Generated u nodes: 14805
+    -> Saved plots/operator_20260224_151532/comparison_step2900.png
+Step 2950 | Total Loss: 0.00264 | Val: 0.00260 | Split: 0.00007
+Step 3000 | Total Loss: 0.00309 | Val: 0.00308 | Split: 0.00002
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12117 | Generated u nodes: 12117
+    -> Saved plots/operator_20260224_151532/comparison_step3000.png
+    -> New best checkpoint saved (loss: 0.003090)
+Step 3050 | Total Loss: 0.00305 | Val: 0.00302 | Split: 0.00006
+Step 3100 | Total Loss: 0.00357 | Val: 0.00355 | Split: 0.00004
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11733 | Generated u nodes: 11733
+    -> Saved plots/operator_20260224_151532/comparison_step3100.png
+Step 3150 | Total Loss: 0.00236 | Val: 0.00235 | Split: 0.00001
+Step 3200 | Total Loss: 0.00320 | Val: 0.00313 | Split: 0.00014
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14165 | Generated u nodes: 14165
+    -> Saved plots/operator_20260224_151532/comparison_step3200.png
+Step 3250 | Total Loss: 0.00186 | Val: 0.00185 | Split: 0.00001
+Step 3300 | Total Loss: 0.00216 | Val: 0.00214 | Split: 0.00004
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step3300.png
+    -> New best checkpoint saved (loss: 0.002159)
+Step 3350 | Total Loss: 0.00300 | Val: 0.00295 | Split: 0.00009
+Step 3400 | Total Loss: 0.00233 | Val: 0.00231 | Split: 0.00002
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13141 | Generated u nodes: 13141
+    -> Saved plots/operator_20260224_151532/comparison_step3400.png
+Step 3450 | Total Loss: 0.00207 | Val: 0.00206 | Split: 0.00001
+Step 3500 | Total Loss: 0.00220 | Val: 0.00218 | Split: 0.00003
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11349 | Generated u nodes: 11349
+    -> Saved plots/operator_20260224_151532/comparison_step3500.png
+Step 3550 | Total Loss: 0.00194 | Val: 0.00194 | Split: 0.00001
+Step 3600 | Total Loss: 0.00226 | Val: 0.00225 | Split: 0.00002
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13141 | Generated u nodes: 13141
+    -> Saved plots/operator_20260224_151532/comparison_step3600.png
+Step 3650 | Total Loss: 0.00393 | Val: 0.00387 | Split: 0.00012
+Step 3700 | Total Loss: 0.00367 | Val: 0.00362 | Split: 0.00011
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 14805 | Generated u nodes: 14805
+    -> Saved plots/operator_20260224_151532/comparison_step3700.png
+Step 3750 | Total Loss: 0.00262 | Val: 0.00257 | Split: 0.00009
+Step 3800 | Total Loss: 0.00144 | Val: 0.00142 | Split: 0.00005
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13653
+    -> Saved plots/operator_20260224_151532/comparison_step3800.png
+    -> New best checkpoint saved (loss: 0.001440)
+Step 3850 | Total Loss: 0.00171 | Val: 0.00170 | Split: 0.00001
+Step 3900 | Total Loss: 0.00130 | Val: 0.00128 | Split: 0.00005
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13653
+    -> Saved plots/operator_20260224_151532/comparison_step3900.png
+    -> New best checkpoint saved (loss: 0.001303)
+Step 3950 | Total Loss: 0.00115 | Val: 0.00115 | Split: 0.00001
+Step 4000 | Total Loss: 0.00146 | Val: 0.00144 | Split: 0.00004
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13653
+    -> Saved plots/operator_20260224_151532/comparison_step4000.png
+Step 4050 | Total Loss: 0.00133 | Val: 0.00133 | Split: 0.00001
+Step 4100 | Total Loss: 0.00133 | Val: 0.00132 | Split: 0.00001
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13653
+    -> Saved plots/operator_20260224_151532/comparison_step4100.png
+Step 4150 | Total Loss: 0.00268 | Val: 0.00264 | Split: 0.00009
+Step 4200 | Total Loss: 0.01278 | Val: 0.00925 | Split: 0.00706
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12117 | Generated u nodes: 12009
+    -> Saved plots/operator_20260224_151532/comparison_step4200.png
+Step 4250 | Total Loss: 0.07033 | Val: 0.06592 | Split: 0.00883
+Step 4300 | Total Loss: 0.02952 | Val: 0.02642 | Split: 0.00620
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 12117 | Generated u nodes: 12109
+    -> Saved plots/operator_20260224_151532/comparison_step4300.png
+Step 4350 | Total Loss: 0.02089 | Val: 0.02009 | Split: 0.00159
+Step 4400 | Total Loss: 0.01247 | Val: 0.01086 | Split: 0.00320
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11573
+    -> Saved plots/operator_20260224_151532/comparison_step4400.png
+Step 4450 | Total Loss: 0.00956 | Val: 0.00735 | Split: 0.00443
+Step 4500 | Total Loss: 0.00697 | Val: 0.00662 | Split: 0.00071
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 13653 | Generated u nodes: 13653
+    -> Saved plots/operator_20260224_151532/comparison_step4500.png
+Step 4550 | Total Loss: 0.00298 | Val: 0.00287 | Split: 0.00023
+Step 4600 | Total Loss: 0.00283 | Val: 0.00282 | Split: 0.00003
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11605
+    -> Saved plots/operator_20260224_151532/comparison_step4600.png
+Step 4650 | Total Loss: 0.00479 | Val: 0.00457 | Split: 0.00044
+Step 4700 | Total Loss: 0.00176 | Val: 0.00174 | Split: 0.00005
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step4700.png
+Step 4750 | Total Loss: 0.00214 | Val: 0.00211 | Split: 0.00005
+Step 4800 | Total Loss: 0.00174 | Val: 0.00173 | Split: 0.00003
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11605 | Generated u nodes: 11605
+    -> Saved plots/operator_20260224_151532/comparison_step4800.png
+Step 4850 | Total Loss: 0.00191 | Val: 0.00190 | Split: 0.00003
+Step 4900 | Total Loss: 0.00166 | Val: 0.00164 | Split: 0.00004
+ => Running Autoregressive Mesh Generation Eval...
+    GT u nodes: 11477 | Generated u nodes: 11477
+    -> Saved plots/operator_20260224_151532/comparison_step4900.png
+Step 4950 | Total Loss: 0.00236 | Val: 0.00235 | Split: 0.00003
+
+Training complete. Final checkpoint saved to plots/operator_20260224_151532/final_operator.pt
+/home/tahmid/venv/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  warnings.warn(
+Running on cuda
+Saving plots to: plots/20260226_175504
+Training Denoising AE across random trees for 3000 steps...
+  - Random K1,K2 in [1,5] each step
+  - Noise std: 0.05
+  - GRADIENT-BASED splitting
+  - Split loss: ENABLED (weight=0.5)
+  - Decoder starts from learned root token; uses ONLY stored embeddings + topology
+Step 0: val=0.255458 split=0.731059 total=0.621087  k1=5 k2=4 leaves=10432  best=0.621087@0  patience=0/150
+  -> Saved plots/20260226_175504/samples_step0000.png (1 samples)
+  -> Saved plots/20260226_175504/loss_curve_step0000.png
+Step 1: val=0.234734 split=0.677761 total=0.573714  k1=1 k2=4 leaves=9088  best=0.573714@1  patience=0/150
+Step 2: val=0.229721 split=0.611044 total=0.535342  k1=5 k2=3 leaves=9136  best=0.535342@2  patience=0/150
+Step 3: val=0.184267 split=0.525496 total=0.447114  k1=3 k2=3 leaves=11104  best=0.447114@3  patience=0/150
+Step 4: val=0.124803 split=0.424247 total=0.337026  k1=4 k2=5 leaves=10432  best=0.337026@4  patience=0/150
+Step 5: val=0.094652 split=0.321431 total=0.255466  k1=5 k2=5 leaves=11104  best=0.255466@5  patience=0/150
+Step 6: val=0.424606 split=0.244320 total=0.546865  k1=2 k2=1 leaves=8608  best=0.255466@5  patience=1/150
+Step 7: val=0.141481 split=0.195842 total=0.239500  k1=3 k2=2 leaves=9856  best=0.239500@7  patience=0/150
+Step 8: val=0.189074 split=0.163831 total=0.271088  k1=1 k2=1 leaves=11104  best=0.239500@7  patience=1/150
+Step 9: val=0.149174 split=0.149065 total=0.223804  k1=1 k2=2 leaves=8608  best=0.223804@9  patience=0/150
+Step 10: val=0.147845 split=0.135143 total=0.215514  k1=2 k2=5 leaves=8512  best=0.215514@10  patience=0/150
+Step 11: val=0.130771 split=0.125049 total=0.193394  k1=3 k2=1 leaves=8704  best=0.193394@11  patience=0/150
+Step 12: val=0.129775 split=0.117334 total=0.188540  k1=4 k2=1 leaves=9088  best=0.188540@12  patience=0/150
+Step 13: val=0.173953 split=0.111889 total=0.229994  k1=5 k2=5 leaves=11104  best=0.188540@12  patience=1/150
+Step 14: val=0.126291 split=0.108695 total=0.180736  k1=2 k2=1 leaves=8608  best=0.180736@14  patience=0/150
+Step 15: val=0.138820 split=0.108091 total=0.192962  k1=5 k2=2 leaves=8512  best=0.180736@14  patience=1/150
+Step 16: val=0.135628 split=0.102888 total=0.187169  k1=2 k2=2 leaves=10624  best=0.180736@14  patience=2/150
+Step 17: val=0.143500 split=0.102940 total=0.195067  k1=5 k2=4 leaves=10432  best=0.180736@14  patience=3/150
+Step 18: val=0.104175 split=0.101654 total=0.155098  k1=3 k2=2 leaves=9856  best=0.155098@18  patience=0/150
+Step 19: val=0.080563 split=0.099252 total=0.130286  k1=1 k2=4 leaves=9088  best=0.130286@19  patience=0/150
+Step 20: val=0.078980 split=0.101775 total=0.129963  k1=5 k2=2 leaves=8512  best=0.129963@20  patience=0/150
+Step 21: val=0.063611 split=0.097836 total=0.112625  k1=4 k2=1 leaves=9088  best=0.112625@21  patience=0/150
+Step 22: val=0.074605 split=0.097287 total=0.123344  k1=3 k2=3 leaves=11104  best=0.112625@21  patience=1/150
+Step 23: val=0.064549 split=0.098839 total=0.114064  k1=5 k2=1 leaves=8800  best=0.112625@21  patience=2/150
+Step 24: val=0.059442 split=0.099280 total=0.109177  k1=5 k2=5 leaves=11104  best=0.109177@24  patience=0/150
+Step 25: val=0.050481 split=0.099412 total=0.100282  k1=5 k2=5 leaves=11104  best=0.100282@25  patience=0/150
+Step 26: val=0.043146 split=0.099787 total=0.093135  k1=5 k2=4 leaves=10432  best=0.093135@26  patience=0/150
+Step 27: val=0.037541 split=0.100589 total=0.087930  k1=3 k2=4 leaves=10240  best=0.087930@27  patience=0/150
+Step 28: val=0.055761 split=0.098364 total=0.105037  k1=5 k2=1 leaves=8800  best=0.087930@27  patience=1/150
+Step 29: val=0.023642 split=0.092394 total=0.069933  k1=1 k2=1 leaves=11104  best=0.069933@29  patience=0/150
+Step 30: val=0.028610 split=0.100095 total=0.078752  k1=5 k2=3 leaves=9136  best=0.069933@29  patience=1/150
+Step 31: val=0.030818 split=0.099559 total=0.080692  k1=3 k2=5 leaves=9136  best=0.069933@29  patience=2/150
+Step 32: val=0.025298 split=0.095519 total=0.073151  k1=2 k2=3 leaves=9856  best=0.069933@29  patience=3/150
+Step 33: val=0.029185 split=0.095857 total=0.077207  k1=4 k2=2 leaves=8704  best=0.069933@29  patience=4/150
+Step 34: val=0.015188 split=0.094317 total=0.062440  k1=2 k2=1 leaves=8608  best=0.062440@34  patience=0/150
+Step 35: val=0.020717 split=0.094152 total=0.067886  k1=2 k2=3 leaves=9856  best=0.062440@34  patience=1/150
+Step 36: val=0.016950 split=0.093725 total=0.063906  k1=2 k2=3 leaves=9856  best=0.062440@34  patience=2/150
+Step 37: val=0.013287 split=0.091164 total=0.058962  k1=3 k2=1 leaves=8704  best=0.058962@37  patience=0/150
+Step 38: val=0.011920 split=0.091333 total=0.057678  k1=4 k2=1 leaves=9088  best=0.057678@38  patience=0/150
+Step 39: val=0.036580 split=0.095433 total=0.084389  k1=5 k2=5 leaves=11104  best=0.057678@38  patience=1/150
+Step 40: val=0.033934 split=0.084471 total=0.076262  k1=2 k2=1 leaves=8608  best=0.057678@38  patience=2/150
+Step 41: val=0.024740 split=0.084321 total=0.066992  k1=1 k2=3 leaves=8704  best=0.057678@38  patience=3/150
+Step 42: val=0.014936 split=0.093348 total=0.061702  k1=3 k2=3 leaves=11104  best=0.057678@38  patience=4/150
+Step 43: val=0.024300 split=0.092760 total=0.070772  k1=4 k2=4 leaves=10240  best=0.057678@38  patience=5/150
+Step 44: val=0.011983 split=0.090419 total=0.057284  k1=2 k2=3 leaves=9856  best=0.057284@44  patience=0/150
+Step 45: val=0.007072 split=0.089362 total=0.051844  k1=2 k2=2 leaves=10624  best=0.051844@45  patience=0/150
+Step 46: val=0.010619 split=0.091306 total=0.056363  k1=4 k2=3 leaves=10240  best=0.051844@45  patience=1/150
+Step 47: val=0.016061 split=0.086295 total=0.059299  k1=1 k2=5 leaves=8800  best=0.051844@45  patience=2/150
+Step 48: val=0.004787 split=0.089897 total=0.049826  k1=4 k2=3 leaves=10240  best=0.049826@48  patience=0/150
+Step 49: val=0.017497 split=0.078885 total=0.057030  k1=3 k2=1 leaves=8704  best=0.049826@48  patience=1/150
+Step 50: val=0.008397 split=0.092340 total=0.054657  k1=4 k2=5 leaves=10432  best=0.049826@48  patience=2/150
+Step 51: val=0.010613 split=0.085610 total=0.053508  k1=2 k2=4 leaves=8704  best=0.049826@48  patience=3/150
+Step 52: val=0.006312 split=0.085414 total=0.049109  k1=2 k2=5 leaves=8512  best=0.049109@52  patience=0/150
+Step 53: val=0.008880 split=0.076224 total=0.047082  k1=1 k2=5 leaves=8800  best=0.047082@53  patience=0/150
+Step 54: val=0.020075 split=0.087317 total=0.063823  k1=5 k2=5 leaves=11104  best=0.047082@53  patience=1/150
+Step 55: val=0.005977 split=0.065556 total=0.038844  k1=1 k2=3 leaves=8704  best=0.038844@55  patience=0/150
+Step 56: val=0.006284 split=0.075038 total=0.043892  k1=2 k2=3 leaves=9856  best=0.038844@55  patience=1/150
+Step 57: val=0.003713 split=0.077758 total=0.042681  k1=3 k2=3 leaves=11104  best=0.038844@55  patience=2/150
+Step 58: val=0.006742 split=0.082576 total=0.048118  k1=4 k2=5 leaves=10432  best=0.038844@55  patience=3/150
+Step 59: val=0.006813 split=0.053362 total=0.033583  k1=1 k2=2 leaves=8608  best=0.033583@59  patience=0/150
+Step 60: val=0.005598 split=0.055265 total=0.033319  k1=1 k2=5 leaves=8800  best=0.033319@60  patience=0/150
+Step 61: val=0.004050 split=0.055138 total=0.031707  k1=3 k2=2 leaves=9856  best=0.031707@61  patience=0/150
+Step 62: val=0.004112 split=0.050514 total=0.029457  k1=2 k2=4 leaves=8704  best=0.029457@62  patience=0/150
+Step 63: val=0.002921 split=0.048568 total=0.027293  k1=3 k2=2 leaves=9856  best=0.027293@63  patience=0/150
+Step 64: val=0.003281 split=0.036800 total=0.021769  k1=3 k2=1 leaves=8704  best=0.021769@64  patience=0/150
+Step 65: val=0.004181 split=0.040644 total=0.024591  k1=5 k2=1 leaves=8800  best=0.021769@64  patience=1/150
+Step 66: val=0.011460 split=0.078607 total=0.050851  k1=5 k2=5 leaves=11104  best=0.021769@64  patience=2/150
+Step 67: val=0.003162 split=0.045461 total=0.025979  k1=4 k2=3 leaves=10240  best=0.021769@64  patience=3/150
+Step 68: val=0.006492 split=0.049934 total=0.031546  k1=3 k2=2 leaves=9856  best=0.021769@64  patience=4/150
+Step 69: val=0.003554 split=0.037078 total=0.022180  k1=1 k2=5 leaves=8800  best=0.021769@64  patience=5/150
+Step 70: val=0.003004 split=0.059373 total=0.032777  k1=4 k2=5 leaves=10432  best=0.021769@64  patience=6/150
+Step 71: val=0.003404 split=0.031609 total=0.019295  k1=4 k2=4 leaves=10240  best=0.019295@71  patience=0/150
+Step 72: val=0.003286 split=0.013919 total=0.010332  k1=4 k2=1 leaves=9088  best=0.010332@72  patience=0/150
+Step 73: val=0.007219 split=0.138648 total=0.076630  k1=5 k2=5 leaves=11104  best=0.010332@72  patience=1/150
+Step 74: val=0.003610 split=0.046620 total=0.027005  k1=5 k2=4 leaves=10432  best=0.010332@72  patience=2/150
+Step 75: val=0.004274 split=0.018741 total=0.013730  k1=4 k2=1 leaves=9088  best=0.010332@72  patience=3/150
+Step 76: val=0.004101 split=0.036335 total=0.022354  k1=1 k2=4 leaves=9088  best=0.010332@72  patience=4/150
+Step 77: val=0.005421 split=0.086705 total=0.048859  k1=5 k2=3 leaves=9136  best=0.010332@72  patience=5/150
+Step 78: val=0.004134 split=0.071066 total=0.039752  k1=3 k2=4 leaves=10240  best=0.010332@72  patience=6/150
+Step 79: val=0.006397 split=0.033762 total=0.023363  k1=2 k2=4 leaves=8704  best=0.010332@72  patience=7/150
+Step 80: val=0.010524 split=0.017554 total=0.019386  k1=3 k2=4 leaves=10240  best=0.010332@72  patience=8/150
+Step 81: val=0.005083 split=0.005656 total=0.007996  k1=2 k2=1 leaves=8608  best=0.007996@81  patience=0/150
+Step 82: val=0.004027 split=0.063586 total=0.035904  k1=5 k2=4 leaves=10432  best=0.007996@81  patience=1/150
+Step 83: val=0.007151 split=0.020152 total=0.017311  k1=2 k2=2 leaves=10624  best=0.007996@81  patience=2/150
+Step 84: val=0.009150 split=0.026052 total=0.022260  k1=5 k2=3 leaves=9136  best=0.007996@81  patience=3/150
+Step 85: val=0.010794 split=0.021323 total=0.021539  k1=3 k2=4 leaves=10240  best=0.007996@81  patience=4/150
+Step 86: val=0.004695 split=0.011714 total=0.010636  k1=2 k2=4 leaves=8704  best=0.007996@81  patience=5/150
+Step 87: val=0.003649 split=0.012346 total=0.009906  k1=2 k2=3 leaves=9856  best=0.007996@81  patience=6/150
+Step 88: val=0.002967 split=0.028265 total=0.017183  k1=3 k2=5 leaves=9136  best=0.007996@81  patience=7/150
+Step 89: val=0.003061 split=0.022184 total=0.014236  k1=5 k2=4 leaves=10432  best=0.007996@81  patience=8/150
+Step 90: val=0.007950 split=0.005998 total=0.011032  k1=4 k2=1 leaves=9088  best=0.007996@81  patience=9/150
+Step 91: val=0.004624 split=0.018037 total=0.013725  k1=5 k2=4 leaves=10432  best=0.007996@81  patience=10/150
+Step 92: val=0.005362 split=0.003467 total=0.007178  k1=1 k2=2 leaves=8608  best=0.007178@92  patience=0/150
+Step 93: val=0.003061 split=0.010465 total=0.008377  k1=4 k2=2 leaves=8704  best=0.007178@92  patience=1/150
+Step 94: val=0.003086 split=0.012087 total=0.009211  k1=3 k2=3 leaves=11104  best=0.007178@92  patience=2/150
+Step 95: val=0.003369 split=0.006072 total=0.006487  k1=3 k2=1 leaves=8704  best=0.006487@95  patience=0/150
+Step 96: val=0.005487 split=0.010531 total=0.010834  k1=3 k2=3 leaves=11104  best=0.006487@95  patience=1/150
+Step 97: val=0.006801 split=0.015226 total=0.014496  k1=4 k2=5 leaves=10432  best=0.006487@95  patience=2/150
+Step 98: val=0.002653 split=0.011069 total=0.008269  k1=4 k2=4 leaves=10240  best=0.006487@95  patience=3/150
+Step 99: val=0.002122 split=0.008665 total=0.006536  k1=4 k2=4 leaves=10240  best=0.006487@95  patience=4/150
+Step 100: val=0.005503 split=0.009276 total=0.010223  k1=2 k2=4 leaves=8704  best=0.006487@95  patience=5/150
+  -> Saved plots/20260226_175504/samples_step0100.png (2 samples)
+  -> Saved plots/20260226_175504/loss_curve_step0100.png
+Step 101: val=0.003392 split=0.005579 total=0.006263  k1=2 k2=5 leaves=8512  best=0.006263@101  patience=0/150
+Step 102: val=0.004171 split=0.004217 total=0.006361  k1=4 k2=2 leaves=8704  best=0.006263@101  patience=1/150
+Step 103: val=0.002442 split=0.020575 total=0.012810  k1=3 k2=5 leaves=9136  best=0.006263@101  patience=2/150
+Step 104: val=0.001871 split=0.006525 total=0.005214  k1=4 k2=2 leaves=8704  best=0.005214@104  patience=0/150
+Step 105: val=0.004401 split=0.057680 total=0.033321  k1=4 k2=5 leaves=10432  best=0.005214@104  patience=1/150
+Step 106: val=0.006126 split=0.059082 total=0.035747  k1=5 k2=5 leaves=11104  best=0.005214@104  patience=2/150
+Step 107: val=0.006574 split=0.005172 total=0.009240  k1=4 k2=3 leaves=10240  best=0.005214@104  patience=3/150
+Step 108: val=0.004478 split=0.036783 total=0.022949  k1=5 k2=4 leaves=10432  best=0.005214@104  patience=4/150
+Step 109: val=0.005305 split=0.028081 total=0.019426  k1=4 k2=2 leaves=8704  best=0.005214@104  patience=5/150
+Step 110: val=0.004607 split=0.030219 total=0.019796  k1=2 k2=3 leaves=9856  best=0.005214@104  patience=6/150
+Step 111: val=0.003936 split=0.019713 total=0.013872  k1=4 k2=2 leaves=8704  best=0.005214@104  patience=7/150
+Step 112: val=0.006419 split=0.006242 total=0.009619  k1=3 k2=4 leaves=10240  best=0.005214@104  patience=8/150
+Step 113: val=0.004546 split=0.002438 total=0.005844  k1=4 k2=1 leaves=9088  best=0.005214@104  patience=9/150
+Step 114: val=0.005614 split=0.028848 total=0.020117  k1=5 k2=5 leaves=11104  best=0.005214@104  patience=10/150
+Step 115: val=0.003595 split=0.004186 total=0.005767  k1=4 k2=3 leaves=10240  best=0.005214@104  patience=11/150
+Step 116: val=0.004161 split=0.002008 total=0.005243  k1=1 k2=4 leaves=9088  best=0.005214@104  patience=12/150
+Step 117: val=0.005287 split=0.019646 total=0.015188  k1=3 k2=5 leaves=9136  best=0.005214@104  patience=13/150
+Step 118: val=0.004106 split=0.001977 total=0.005173  k1=3 k2=1 leaves=8704  best=0.005173@118  patience=0/150
+Step 119: val=0.004533 split=0.007480 total=0.008351  k1=2 k2=2 leaves=10624  best=0.005173@118  patience=1/150
+Step 120: val=0.001910 split=0.002248 total=0.003112  k1=2 k2=5 leaves=8512  best=0.003112@120  patience=0/150
+Step 121: val=0.001845 split=0.003760 total=0.003803  k1=2 k2=4 leaves=8704  best=0.003112@120  patience=1/150
+Step 122: val=0.002216 split=0.010342 total=0.007465  k1=4 k2=4 leaves=10240  best=0.003112@120  patience=2/150
+Step 123: val=0.002228 split=0.002010 total=0.003310  k1=2 k2=5 leaves=8512  best=0.003112@120  patience=3/150
+Step 124: val=0.002254 split=0.001969 total=0.003316  k1=2 k2=5 leaves=8512  best=0.003112@120  patience=4/150
+Step 125: val=0.003336 split=0.001863 total=0.004345  k1=3 k2=1 leaves=8704  best=0.003112@120  patience=5/150
+Step 126: val=0.001728 split=0.006346 total=0.004978  k1=3 k2=3 leaves=11104  best=0.003112@120  patience=6/150
+Step 127: val=0.003006 split=0.001775 total=0.003970  k1=4 k2=1 leaves=9088  best=0.003112@120  patience=7/150
+Step 128: val=0.002356 split=0.004331 total=0.004599  k1=2 k2=3 leaves=9856  best=0.003112@120  patience=8/150
+Step 129: val=0.003242 split=0.003223 total=0.004930  k1=2 k2=5 leaves=8512  best=0.003112@120  patience=9/150
+Step 130: val=0.002755 split=0.003301 total=0.004482  k1=2 k2=4 leaves=8704  best=0.003112@120  patience=10/150
+Step 131: val=0.002510 split=0.002939 total=0.004056  k1=4 k2=3 leaves=10240  best=0.003112@120  patience=11/150
+Step 132: val=0.001960 split=0.000760 total=0.002416  k1=2 k2=1 leaves=8608  best=0.002416@132  patience=0/150
+Step 133: val=0.002523 split=0.002395 total=0.003796  k1=3 k2=1 leaves=8704  best=0.002416@132  patience=1/150
+Step 134: val=0.002741 split=0.003813 total=0.004723  k1=4 k2=5 leaves=10432  best=0.002416@132  patience=2/150
+Step 135: val=0.003252 split=0.002990 total=0.004823  k1=2 k2=3 leaves=9856  best=0.002416@132  patience=3/150
+Step 136: val=0.001857 split=0.001947 total=0.002905  k1=4 k2=3 leaves=10240  best=0.002416@132  patience=4/150
+Step 137: val=0.001976 split=0.001606 total=0.002854  k1=4 k2=2 leaves=8704  best=0.002416@132  patience=5/150
+Step 138: val=0.001733 split=0.001763 total=0.002689  k1=1 k2=3 leaves=8704  best=0.002416@132  patience=6/150
+Step 139: val=0.002804 split=0.001059 total=0.003408  k1=2 k2=5 leaves=8512  best=0.002416@132  patience=7/150
+Step 140: val=0.002941 split=0.002956 total=0.004493  k1=5 k2=4 leaves=10432  best=0.002416@132  patience=8/150
+Step 141: val=0.002489 split=0.000761 total=0.002944  k1=1 k2=4 leaves=9088  best=0.002416@132  patience=9/150
+Step 142: val=0.002095 split=0.001279 total=0.002809  k1=2 k2=2 leaves=10624  best=0.002416@132  patience=10/150
+Step 143: val=0.002214 split=0.000932 total=0.002754  k1=2 k2=3 leaves=9856  best=0.002416@132  patience=11/150
+Step 144: val=0.001633 split=0.000875 total=0.002145  k1=2 k2=4 leaves=8704  best=0.002145@144  patience=0/150
+Step 145: val=0.001899 split=0.012345 total=0.008145  k1=3 k2=5 leaves=9136  best=0.002145@144  patience=1/150
+Step 146: val=0.003107 split=0.019959 total=0.013160  k1=5 k2=5 leaves=11104  best=0.002145@144  patience=2/150
+Step 147: val=0.001547 split=0.001329 total=0.002285  k1=4 k2=4 leaves=10240  best=0.002145@144  patience=3/150
+Step 148: val=0.001612 split=0.012653 total=0.008012  k1=3 k2=5 leaves=9136  best=0.002145@144  patience=4/150
+Step 149: val=0.002842 split=0.000905 total=0.003367  k1=3 k2=4 leaves=10240  best=0.002145@144  patience=5/150
+Step 150: val=0.001738 split=0.000568 total=0.002095  k1=4 k2=1 leaves=9088  best=0.002095@150  patience=0/150
+Step 151: val=0.001193 split=0.012399 total=0.007466  k1=3 k2=5 leaves=9136  best=0.002095@150  patience=1/150
+Step 152: val=0.002595 split=0.000643 total=0.002989  k1=2 k2=2 leaves=10624  best=0.002095@150  patience=2/150
+Step 153: val=0.002043 split=0.000804 total=0.002518  k1=1 k2=1 leaves=11104  best=0.002095@150  patience=3/150
+Step 154: val=0.001478 split=0.000967 total=0.002034  k1=1 k2=3 leaves=8704  best=0.002034@154  patience=0/150
+Step 155: val=0.001530 split=0.000289 total=0.001746  k1=2 k2=1 leaves=8608  best=0.001746@155  patience=0/150
+Step 156: val=0.004475 split=0.009446 total=0.009270  k1=5 k2=5 leaves=11104  best=0.001746@155  patience=1/150
+Step 157: val=0.001585 split=0.000548 total=0.001931  k1=5 k2=2 leaves=8512  best=0.001746@155  patience=2/150
+Step 158: val=0.002568 split=0.000283 total=0.002781  k1=1 k2=2 leaves=8608  best=0.001746@155  patience=3/150
+Step 159: val=0.004121 split=0.000491 total=0.004438  k1=1 k2=1 leaves=11104  best=0.001746@155  patience=4/150
+Step 160: val=0.001899 split=0.000458 total=0.002200  k1=2 k2=2 leaves=10624  best=0.001746@155  patience=5/150
+Step 161: val=0.002559 split=0.012907 total=0.009084  k1=5 k2=3 leaves=9136  best=0.001746@155  patience=6/150
+Step 162: val=0.001612 split=0.000643 total=0.002005  k1=4 k2=1 leaves=9088  best=0.001746@155  patience=7/150
+Step 163: val=0.001272 split=0.000315 total=0.001500  k1=1 k2=2 leaves=8608  best=0.001500@163  patience=0/150
+Step 164: val=0.001414 split=0.000450 total=0.001710  k1=2 k2=2 leaves=10624  best=0.001500@163  patience=1/150
+Step 165: val=0.001670 split=0.000943 total=0.002212  k1=3 k2=2 leaves=9856  best=0.001500@163  patience=2/150
+Step 166: val=0.000956 split=0.001125 total=0.001589  k1=3 k2=1 leaves=8704  best=0.001500@163  patience=3/150
+Step 167: val=0.002326 split=0.001257 total=0.003025  k1=4 k2=5 leaves=10432  best=0.001500@163  patience=4/150
+Step 168: val=0.001503 split=0.000740 total=0.001943  k1=4 k2=3 leaves=10240  best=0.001500@163  patience=5/150
+Step 169: val=0.001519 split=0.000813 total=0.001996  k1=3 k2=1 leaves=8704  best=0.001500@163  patience=6/150
+Step 170: val=0.001078 split=0.000520 total=0.001408  k1=4 k2=2 leaves=8704  best=0.001408@170  patience=0/150
+Step 171: val=0.001278 split=0.001248 total=0.001972  k1=5 k2=1 leaves=8800  best=0.001408@170  patience=1/150
+Step 172: val=0.001122 split=0.000477 total=0.001430  k1=1 k2=4 leaves=9088  best=0.001408@170  patience=2/150
+Step 173: val=0.001212 split=0.000511 total=0.001537  k1=2 k2=2 leaves=10624  best=0.001408@170  patience=3/150
+Step 174: val=0.000852 split=0.000429 total=0.001136  k1=4 k2=1 leaves=9088  best=0.001136@174  patience=0/150
+Step 175: val=0.003641 split=0.006865 total=0.007142  k1=5 k2=5 leaves=11104  best=0.001136@174  patience=1/150
+Step 176: val=0.001545 split=0.001125 total=0.002177  k1=3 k2=3 leaves=11104  best=0.001136@174  patience=2/150
+Step 177: val=0.001358 split=0.000607 total=0.001730  k1=4 k2=4 leaves=10240  best=0.001136@174  patience=3/150
+Step 178: val=0.001437 split=0.000242 total=0.001627  k1=1 k2=2 leaves=8608  best=0.001136@174  patience=4/150
+Step 179: val=0.001982 split=0.000551 total=0.002326  k1=3 k2=2 leaves=9856  best=0.001136@174  patience=5/150
+Step 180: val=0.001532 split=0.000457 total=0.001829  k1=2 k2=3 leaves=9856  best=0.001136@174  patience=6/150
+Step 181: val=0.001747 split=0.001526 total=0.002578  k1=5 k2=1 leaves=8800  best=0.001136@174  patience=7/150
+Step 182: val=0.001400 split=0.000715 total=0.001826  k1=1 k2=3 leaves=8704  best=0.001136@174  patience=8/150
+Step 183: val=0.001289 split=0.000600 total=0.001657  k1=3 k2=2 leaves=9856  best=0.001136@174  patience=9/150
+Step 184: val=0.001637 split=0.000498 total=0.001954  k1=4 k2=3 leaves=10240  best=0.001136@174  patience=10/150
+Step 185: val=0.001154 split=0.000554 total=0.001499  k1=2 k2=4 leaves=8704  best=0.001136@174  patience=11/150
+Step 186: val=0.001178 split=0.000311 total=0.001402  k1=1 k2=4 leaves=9088  best=0.001136@174  patience=12/150
+Step 187: val=0.000985 split=0.000272 total=0.001188  k1=5 k2=2 leaves=8512  best=0.001136@174  patience=13/150
+Step 188: val=0.002231 split=0.000391 total=0.002494  k1=3 k2=2 leaves=9856  best=0.001136@174  patience=14/150
+Step 189: val=0.001021 split=0.000788 total=0.001483  k1=5 k2=1 leaves=8800  best=0.001136@174  patience=15/150
+Step 190: val=0.002638 split=0.000542 total=0.002976  k1=5 k2=4 leaves=10432  best=0.001136@174  patience=16/150
+Step 191: val=0.001055 split=0.000308 total=0.001276  k1=2 k2=4 leaves=8704  best=0.001136@174  patience=17/150
+Step 192: val=0.000953 split=0.000286 total=0.001162  k1=3 k2=2 leaves=9856  best=0.001136@174  patience=18/150
+Step 193: val=0.001297 split=0.000194 total=0.001460  k1=2 k2=2 leaves=10624  best=0.001136@174  patience=19/150
+Step 194: val=0.000800 split=0.000264 total=0.000998  k1=1 k2=3 leaves=8704  best=0.000998@194  patience=0/150
+Step 195: val=0.002231 split=0.004281 total=0.004438  k1=5 k2=3 leaves=9136  best=0.000998@194  patience=1/150
+Step 196: val=0.001615 split=0.003553 total=0.003458  k1=5 k2=3 leaves=9136  best=0.000998@194  patience=2/150
+Step 197: val=0.001680 split=0.000233 total=0.001863  k1=1 k2=3 leaves=8704  best=0.000998@194  patience=3/150
+Step 198: val=0.001159 split=0.000246 total=0.001347  k1=4 k2=2 leaves=8704  best=0.000998@194  patience=4/150
+Step 199: val=0.001877 split=0.000375 total=0.002130  k1=4 k2=3 leaves=10240  best=0.000998@194  patience=5/150
+Step 200: val=0.001656 split=0.001122 total=0.002282  k1=3 k2=5 leaves=9136  best=0.000998@194  patience=6/150
+  -> Saved plots/20260226_175504/samples_step0200.png (3 samples)
+  -> Saved plots/20260226_175504/loss_curve_step0200.png
+Step 201: val=0.001915 split=0.001078 total=0.002519  k1=3 k2=3 leaves=11104  best=0.000998@194  patience=7/150
+Step 202: val=0.002132 split=0.000891 total=0.002642  k1=5 k2=4 leaves=10432  best=0.000998@194  patience=8/150
+Step 203: val=0.001408 split=0.000221 total=0.001583  k1=2 k2=5 leaves=8512  best=0.000998@194  patience=9/150
+Step 204: val=0.001673 split=0.000359 total=0.001917  k1=3 k2=1 leaves=8704  best=0.000998@194  patience=10/150
+Step 205: val=0.001631 split=0.000222 total=0.001807  k1=2 k2=3 leaves=9856  best=0.000998@194  patience=11/150
+Step 206: val=0.001470 split=0.000342 total=0.001706  k1=4 k2=2 leaves=8704  best=0.000998@194  patience=12/150
+Step 207: val=0.001401 split=0.001173 total=0.002052  k1=1 k2=1 leaves=11104  best=0.000998@194  patience=13/150
+Step 208: val=0.001687 split=0.000907 total=0.002205  k1=1 k2=1 leaves=11104  best=0.000998@194  patience=14/150
+Step 209: val=0.002784 split=0.000283 total=0.002990  k1=4 k2=3 leaves=10240  best=0.000998@194  patience=15/150
+Step 210: val=0.001143 split=0.000151 total=0.001282  k1=1 k2=2 leaves=8608  best=0.000998@194  patience=16/150
+Step 211: val=0.001146 split=0.000179 total=0.001299  k1=4 k2=2 leaves=8704  best=0.000998@194  patience=17/150
+Step 212: val=0.001289 split=0.000196 total=0.001450  k1=3 k2=4 leaves=10240  best=0.000998@194  patience=18/150
+Step 213: val=0.001538 split=0.001115 total=0.002158  k1=5 k2=3 leaves=9136  best=0.000998@194  patience=19/150
+Step 214: val=0.001313 split=0.000349 total=0.001550  k1=4 k2=5 leaves=10432  best=0.000998@194  patience=20/150
+Step 215: val=0.002310 split=0.000209 total=0.002478  k1=5 k2=1 leaves=8800  best=0.000998@194  patience=21/150
+Step 216: val=0.002545 split=0.000187 total=0.002702  k1=1 k2=3 leaves=8704  best=0.000998@194  patience=22/150
+Step 217: val=0.001195 split=0.000116 total=0.001316  k1=1 k2=2 leaves=8608  best=0.000998@194  patience=23/150
+Step 218: val=0.001288 split=0.000185 total=0.001443  k1=3 k2=1 leaves=8704  best=0.000998@194  patience=24/150
+Step 219: val=0.004768 split=0.000147 total=0.004904  k1=5 k2=2 leaves=8512  best=0.000998@194  patience=25/150
+Step 220: val=0.002467 split=0.000154 total=0.002607  k1=2 k2=3 leaves=9856  best=0.000998@194  patience=26/150
+Step 221: val=0.003061 split=0.000242 total=0.003245  k1=5 k2=4 leaves=10432  best=0.000998@194  patience=27/150
+Step 222: val=0.001100 split=0.000145 total=0.001234  k1=2 k2=5 leaves=8512  best=0.000998@194  patience=28/150
+Step 223: val=0.002935 split=0.000176 total=0.003085  k1=4 k2=4 leaves=10240  best=0.000998@194  patience=29/150
+Step 224: val=0.003282 split=0.000141 total=0.003414  k1=5 k2=2 leaves=8512  best=0.000998@194  patience=30/150
+Step 225: val=0.003848 split=0.000155 total=0.003988  k1=4 k2=3 leaves=10240  best=0.000998@194  patience=31/150
+Step 226: val=0.001055 split=0.000191 total=0.001212  k1=1 k2=4 leaves=9088  best=0.000998@194  patience=32/150
+Step 227: val=0.002147 split=0.000220 total=0.002319  k1=5 k2=1 leaves=8800  best=0.000998@194  patience=33/150
+Step 228: val=0.002720 split=0.000161 total=0.002862  k1=3 k2=2 leaves=9856  best=0.000998@194  patience=34/150
+Step 229: val=0.006647 split=0.000245 total=0.006831  k1=5 k2=4 leaves=10432  best=0.000998@194  patience=35/150
+Step 230: val=0.001101 split=0.000122 total=0.001223  k1=2 k2=1 leaves=8608  best=0.000998@194  patience=36/150
+Step 231: val=0.002136 split=0.000263 total=0.002329  k1=4 k2=5 leaves=10432  best=0.000998@194  patience=37/150
+Step 232: val=0.003606 split=0.000147 total=0.003740  k1=2 k2=3 leaves=9856  best=0.000998@194  patience=38/150
+Step 233: val=0.002800 split=0.000201 total=0.002962  k1=1 k2=4 leaves=9088  best=0.000998@194  patience=39/150
+Step 234: val=0.001337 split=0.000967 total=0.001881  k1=5 k2=3 leaves=9136  best=0.000998@194  patience=40/150
+Step 235: val=0.001060 split=0.000170 total=0.001205  k1=2 k2=4 leaves=8704  best=0.000998@194  patience=41/150
+Step 236: val=0.001089 split=0.000171 total=0.001235  k1=4 k2=1 leaves=9088  best=0.000998@194  patience=42/150
+Step 237: val=0.002271 split=0.000143 total=0.002403  k1=3 k2=4 leaves=10240  best=0.000998@194  patience=43/150
+Step 238: val=0.002045 split=0.000115 total=0.002162  k1=2 k2=2 leaves=10624  best=0.000998@194  patience=44/150
+Step 239: val=0.001697 split=0.000251 total=0.001882  k1=3 k2=3 leaves=11104  best=0.000998@194  patience=45/150
+Step 240: val=0.001083 split=0.000178 total=0.001232  k1=1 k2=3 leaves=8704  best=0.000998@194  patience=46/150
+Step 241: val=0.000914 split=0.000171 total=0.001059  k1=4 k2=1 leaves=9088  best=0.000998@194  patience=47/150
+Step 242: val=0.000886 split=0.000137 total=0.001014  k1=4 k2=2 leaves=8704  best=0.000998@194  patience=48/150
+Step 243: val=0.001081 split=0.000753 total=0.001517  k1=5 k2=3 leaves=9136  best=0.000998@194  patience=49/150
+Step 244: val=0.001178 split=0.000707 total=0.001590  k1=5 k2=3 leaves=9136  best=0.000998@194  patience=50/150
+Step 245: val=0.002368 split=0.000099 total=0.002477  k1=2 k2=1 leaves=8608  best=0.000998@194  patience=51/150
+Step 246: val=0.002817 split=0.004109 total=0.004930  k1=5 k2=5 leaves=11104  best=0.000998@194  patience=52/150
+Step 247: val=0.001406 split=0.000124 total=0.001527  k1=2 k2=5 leaves=8512  best=0.000998@194  patience=53/150
+Step 248: val=0.001325 split=0.000195 total=0.001481  k1=5 k2=4 leaves=10432  best=0.000998@194  patience=54/150
+Step 249: val=0.001699 split=0.000095 total=0.001805  k1=1 k2=2 leaves=8608  best=0.000998@194  patience=55/150
+Step 250: val=0.001370 split=0.000177 total=0.001517  k1=3 k2=1 leaves=8704  best=0.000998@194  patience=56/150
+Step 251: val=0.000696 split=0.000091 total=0.000800  k1=1 k2=2 leaves=8608  best=0.000800@251  patience=0/150
+Step 252: val=0.001315 split=0.000127 total=0.001437  k1=2 k2=3 leaves=9856  best=0.000800@251  patience=1/150
+Step 253: val=0.001962 split=0.000149 total=0.002094  k1=1 k2=4 leaves=9088  best=0.000800@251  patience=2/150
+Step 254: val=0.002019 split=0.000250 total=0.002202  k1=1 k2=5 leaves=8800  best=0.000800@251  patience=3/150
+Step 255: val=0.001490 split=0.000138 total=0.001617  k1=3 k2=4 leaves=10240  best=0.000800@251  patience=4/150
+Step 256: val=0.001185 split=0.000129 total=0.001307  k1=2 k2=5 leaves=8512  best=0.000800@251  patience=5/150
+Step 257: val=0.002460 split=0.000080 total=0.002558  k1=1 k2=2 leaves=8608  best=0.000800@251  patience=6/150
+Step 258: val=0.003027 split=0.000079 total=0.003124  k1=2 k2=2 leaves=10624  best=0.000800@251  patience=7/150
+Step 259: val=0.001181 split=0.000159 total=0.001317  k1=3 k2=2 leaves=9856  best=0.000800@251  patience=8/150
+Step 260: val=0.001578 split=0.000061 total=0.001666  k1=1 k2=1 leaves=11104  best=0.000800@251  patience=9/150
+Step 261: val=0.002342 split=0.000061 total=0.002430  k1=1 k2=1 leaves=11104  best=0.000800@251  patience=10/150
+Step 262: val=0.002982 split=0.000257 total=0.003167  k1=4 k2=2 leaves=8704  best=0.000800@251  patience=11/150
+Step 263: val=0.003537 split=0.000312 total=0.003749  k1=4 k2=5 leaves=10432  best=0.000800@251  patience=12/150
+Step 264: val=0.001511 split=0.000256 total=0.001695  k1=2 k2=4 leaves=8704  best=0.000800@251  patience=13/150
+Step 265: val=0.001937 split=0.001369 total=0.002678  k1=3 k2=5 leaves=9136  best=0.000800@251  patience=14/150
+Step 266: val=0.003152 split=0.000094 total=0.003255  k1=5 k2=2 leaves=8512  best=0.000800@251  patience=15/150
+Step 267: val=0.001464 split=0.000204 total=0.001622  k1=5 k2=4 leaves=10432  best=0.000800@251  patience=16/150
+Step 268: val=0.003425 split=0.000109 total=0.003536  k1=3 k2=2 leaves=9856  best=0.000800@251  patience=17/150
+Step 269: val=0.001889 split=0.000092 total=0.001990  k1=5 k2=2 leaves=8512  best=0.000800@251  patience=18/150
+Step 270: val=0.000916 split=0.000053 total=0.000999  k1=1 k2=1 leaves=11104  best=0.000800@251  patience=19/150
+Step 271: val=0.007241 split=0.000795 total=0.007695  k1=5 k2=3 leaves=9136  best=0.000800@251  patience=20/150
+Step 272: val=0.003578 split=0.000102 total=0.003684  k1=3 k2=4 leaves=10240  best=0.000800@251  patience=21/150
+Step 273: val=0.000580 split=0.000080 total=0.000675  k1=1 k2=2 leaves=8608  best=0.000675@273  patience=0/150
+Step 274: val=0.001423 split=0.000432 total=0.001694  k1=5 k2=3 leaves=9136  best=0.000675@273  patience=1/150
+Step 275: val=0.001973 split=0.000316 total=0.002186  k1=3 k2=5 leaves=9136  best=0.000675@273  patience=2/150
+Step 276: val=0.001923 split=0.000177 total=0.002067  k1=4 k2=5 leaves=10432  best=0.000675@273  patience=3/150
+Step 277: val=0.005085 split=0.000104 total=0.005191  k1=4 k2=3 leaves=10240  best=0.000675@273  patience=4/150
+Step 278: val=0.002159 split=0.002525 total=0.003477  k1=5 k2=5 leaves=11104  best=0.000675@273  patience=5/150
+Step 279: val=0.001268 split=0.000102 total=0.001374  k1=1 k2=2 leaves=8608  best=0.000675@273  patience=6/150
+Step 280: val=0.001002 split=0.000127 total=0.001120  k1=3 k2=1 leaves=8704  best=0.000675@273  patience=7/150
+Step 281: val=0.002420 split=0.000150 total=0.002549  k1=1 k2=4 leaves=9088  best=0.000675@273  patience=8/150
+Step 282: val=0.002694 split=0.000089 total=0.002793  k1=2 k2=2 leaves=10624  best=0.000675@273  patience=9/150
+Step 283: val=0.003291 split=0.000121 total=0.003406  k1=4 k2=4 leaves=10240  best=0.000675@273  patience=10/150
+Step 284: val=0.001287 split=0.000100 total=0.001391  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=11/150
+Step 285: val=0.001095 split=0.000152 total=0.001224  k1=5 k2=4 leaves=10432  best=0.000675@273  patience=12/150
+Step 286: val=0.003734 split=0.000127 total=0.003851  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=13/150
+Step 287: val=0.003055 split=0.000137 total=0.003177  k1=1 k2=5 leaves=8800  best=0.000675@273  patience=14/150
+Step 288: val=0.001730 split=0.000096 total=0.001831  k1=5 k2=2 leaves=8512  best=0.000675@273  patience=15/150
+Step 289: val=0.001043 split=0.000113 total=0.001152  k1=4 k2=4 leaves=10240  best=0.000675@273  patience=16/150
+Step 290: val=0.001276 split=0.000101 total=0.001379  k1=2 k2=3 leaves=9856  best=0.000675@273  patience=17/150
+Step 291: val=0.001412 split=0.000137 total=0.001533  k1=1 k2=4 leaves=9088  best=0.000675@273  patience=18/150
+Step 292: val=0.001765 split=0.000105 total=0.001871  k1=2 k2=3 leaves=9856  best=0.000675@273  patience=19/150
+Step 293: val=0.004410 split=0.000328 total=0.004627  k1=3 k2=5 leaves=9136  best=0.000675@273  patience=20/150
+Step 294: val=0.001817 split=0.000064 total=0.001901  k1=1 k2=1 leaves=11104  best=0.000675@273  patience=21/150
+Step 295: val=0.001049 split=0.000126 total=0.001164  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=22/150
+Step 296: val=0.002057 split=0.000098 total=0.002159  k1=3 k2=2 leaves=9856  best=0.000675@273  patience=23/150
+Step 297: val=0.001631 split=0.000093 total=0.001730  k1=1 k2=2 leaves=8608  best=0.000675@273  patience=24/150
+Step 298: val=0.001462 split=0.000119 total=0.001573  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=25/150
+Step 299: val=0.001407 split=0.000119 total=0.001519  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=26/150
+Step 300: val=0.002214 split=0.000261 total=0.002396  k1=3 k2=5 leaves=9136  best=0.000675@273  patience=27/150
+  -> Saved plots/20260226_175504/samples_step0300.png (3 samples)
+  -> Saved plots/20260226_175504/loss_curve_step0300.png
+Step 301: val=0.001227 split=0.000094 total=0.001326  k1=2 k2=3 leaves=9856  best=0.000675@273  patience=28/150
+Step 302: val=0.001533 split=0.000088 total=0.001629  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=29/150
+Step 303: val=0.001467 split=0.000090 total=0.001563  k1=4 k2=3 leaves=10240  best=0.000675@273  patience=30/150
+Step 304: val=0.001764 split=0.000090 total=0.001861  k1=3 k2=2 leaves=9856  best=0.000675@273  patience=31/150
+Step 305: val=0.001133 split=0.000066 total=0.001217  k1=2 k2=2 leaves=10624  best=0.000675@273  patience=32/150
+Step 306: val=0.001811 split=0.000113 total=0.001919  k1=5 k2=1 leaves=8800  best=0.000675@273  patience=33/150
+Step 307: val=0.001991 split=0.000091 total=0.002088  k1=4 k2=2 leaves=8704  best=0.000675@273  patience=34/150
+Step 308: val=0.000866 split=0.000097 total=0.000965  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=35/150
+Step 309: val=0.001036 split=0.000107 total=0.001140  k1=4 k2=1 leaves=9088  best=0.000675@273  patience=36/150
+Step 310: val=0.001349 split=0.000126 total=0.001463  k1=1 k2=4 leaves=9088  best=0.000675@273  patience=37/150
+Step 311: val=0.001773 split=0.000067 total=0.001857  k1=2 k2=1 leaves=8608  best=0.000675@273  patience=38/150
+Step 312: val=0.001169 split=0.000084 total=0.001262  k1=4 k2=4 leaves=10240  best=0.000675@273  patience=39/150
+Step 313: val=0.001122 split=0.000081 total=0.001213  k1=4 k2=2 leaves=8704  best=0.000675@273  patience=40/150
+Step 314: val=0.001726 split=0.000240 total=0.001896  k1=5 k2=3 leaves=9136  best=0.000675@273  patience=41/150
+Step 315: val=0.001101 split=0.000064 total=0.001183  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=42/150
+Step 316: val=0.001120 split=0.000093 total=0.001216  k1=1 k2=5 leaves=8800  best=0.000675@273  patience=43/150
+Step 317: val=0.000756 split=0.000070 total=0.000841  k1=4 k2=4 leaves=10240  best=0.000675@273  patience=44/150
+Step 318: val=0.001406 split=0.000073 total=0.001492  k1=4 k2=2 leaves=8704  best=0.000675@273  patience=45/150
+Step 319: val=0.001566 split=0.000062 total=0.001647  k1=2 k2=3 leaves=9856  best=0.000675@273  patience=46/150
+Step 320: val=0.000810 split=0.000072 total=0.000896  k1=4 k2=1 leaves=9088  best=0.000675@273  patience=47/150
+Step 321: val=0.000825 split=0.000087 total=0.000918  k1=3 k2=1 leaves=8704  best=0.000675@273  patience=48/150
+Step 322: val=0.001930 split=0.000067 total=0.002012  k1=4 k2=2 leaves=8704  best=0.000675@273  patience=49/150
+Step 323: val=0.003564 split=0.000179 total=0.003702  k1=3 k2=5 leaves=9136  best=0.000675@273  patience=50/150
+Step 324: val=0.000843 split=0.000054 total=0.000920  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=51/150
+Step 325: val=0.001390 split=0.000081 total=0.001479  k1=1 k2=4 leaves=9088  best=0.000675@273  patience=52/150
+Step 326: val=0.001391 split=0.000059 total=0.001469  k1=4 k2=4 leaves=10240  best=0.000675@273  patience=53/150
+Step 327: val=0.002617 split=0.000065 total=0.002698  k1=4 k2=1 leaves=9088  best=0.000675@273  patience=54/150
+Step 328: val=0.001270 split=0.000083 total=0.001360  k1=5 k2=4 leaves=10432  best=0.000675@273  patience=55/150
+Step 329: val=0.001709 split=0.000036 total=0.001775  k1=1 k2=1 leaves=11104  best=0.000675@273  patience=56/150
+Step 330: val=0.002474 split=0.000057 total=0.002551  k1=2 k2=5 leaves=8512  best=0.000675@273  patience=57/150
+Step 331: val=0.001089 split=0.000081 total=0.001177  k1=1 k2=3 leaves=8704  best=0.000675@273  patience=58/150
+Step 332: val=0.001630 split=0.000067 total=0.001711  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=59/150
+Step 333: val=0.000749 split=0.000054 total=0.000824  k1=1 k2=2 leaves=8608  best=0.000675@273  patience=60/150
+Step 334: val=0.001019 split=0.000056 total=0.001095  k1=2 k2=5 leaves=8512  best=0.000675@273  patience=61/150
+Step 335: val=0.001024 split=0.000048 total=0.001096  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=62/150
+Step 336: val=0.001596 split=0.000080 total=0.001684  k1=1 k2=4 leaves=9088  best=0.000675@273  patience=63/150
+Step 337: val=0.001260 split=0.000079 total=0.001347  k1=1 k2=4 leaves=9088  best=0.000675@273  patience=64/150
+Step 338: val=0.001080 split=0.000132 total=0.001193  k1=3 k2=5 leaves=9136  best=0.000675@273  patience=65/150
+Step 339: val=0.000929 split=0.000048 total=0.001001  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=66/150
+Step 340: val=0.002159 split=0.000077 total=0.002245  k1=5 k2=4 leaves=10432  best=0.000675@273  patience=67/150
+Step 341: val=0.001342 split=0.000079 total=0.001429  k1=4 k2=5 leaves=10432  best=0.000675@273  patience=68/150
+Step 342: val=0.001171 split=0.000061 total=0.001248  k1=4 k2=1 leaves=9088  best=0.000675@273  patience=69/150
+Step 343: val=0.002453 split=0.000066 total=0.002532  k1=1 k2=3 leaves=8704  best=0.000675@273  patience=70/150
+Step 344: val=0.001325 split=0.000468 total=0.001606  k1=5 k2=5 leaves=11104  best=0.000675@273  patience=71/150
+Step 345: val=0.000888 split=0.000041 total=0.000955  k1=2 k2=1 leaves=8608  best=0.000675@273  patience=72/150
+Step 346: val=0.001213 split=0.000064 total=0.001292  k1=5 k2=1 leaves=8800  best=0.000675@273  patience=73/150
+Step 347: val=0.001231 split=0.000048 total=0.001301  k1=4 k2=2 leaves=8704  best=0.000675@273  patience=74/150
+Step 348: val=0.000959 split=0.000043 total=0.001027  k1=3 k2=2 leaves=9856  best=0.000675@273  patience=75/150
+Step 349: val=0.001550 split=0.000038 total=0.001615  k1=3 k2=4 leaves=10240  best=0.000675@273  patience=76/150
+Step 350: val=0.000873 split=0.000059 total=0.000948  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=77/150
+Step 351: val=0.000787 split=0.000048 total=0.000857  k1=4 k2=1 leaves=9088  best=0.000675@273  patience=78/150
+Step 352: val=0.001054 split=0.000063 total=0.001131  k1=1 k2=3 leaves=8704  best=0.000675@273  patience=79/150
+Step 353: val=0.000914 split=0.000034 total=0.000977  k1=2 k2=1 leaves=8608  best=0.000675@273  patience=80/150
+Step 354: val=0.000623 split=0.000055 total=0.000696  k1=2 k2=4 leaves=8704  best=0.000675@273  patience=81/150
+Step 355: val=0.001341 split=0.000037 total=0.001405  k1=5 k2=2 leaves=8512  best=0.000675@273  patience=82/150
+Step 356: val=0.001144 split=0.000028 total=0.001203  k1=2 k2=2 leaves=10624  best=0.000675@273  patience=83/150
+Step 357: val=0.000722 split=0.000052 total=0.000793  k1=3 k2=1 leaves=8704  best=0.000675@273  patience=84/150
+Step 358: val=0.000491 split=0.000057 total=0.000565  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=0/150
+Step 359: val=0.001474 split=0.000035 total=0.001537  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=1/150
+Step 360: val=0.000563 split=0.000055 total=0.000635  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=2/150
+Step 361: val=0.001079 split=0.000036 total=0.001142  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=3/150
+Step 362: val=0.001131 split=0.000258 total=0.001305  k1=5 k2=3 leaves=9136  best=0.000565@358  patience=4/150
+Step 363: val=0.001794 split=0.000312 total=0.001994  k1=5 k2=5 leaves=11104  best=0.000565@358  patience=5/150
+Step 364: val=0.004586 split=0.000025 total=0.004643  k1=2 k2=2 leaves=10624  best=0.000565@358  patience=6/150
+Step 365: val=0.001124 split=0.000051 total=0.001193  k1=1 k2=5 leaves=8800  best=0.000565@358  patience=7/150
+Step 366: val=0.001551 split=0.000035 total=0.001613  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=8/150
+Step 367: val=0.000947 split=0.000045 total=0.001014  k1=1 k2=4 leaves=9088  best=0.000565@358  patience=9/150
+Step 368: val=0.004239 split=0.000147 total=0.004357  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=10/150
+Step 369: val=0.001443 split=0.000050 total=0.001512  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=11/150
+Step 370: val=0.001135 split=0.000036 total=0.001197  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=12/150
+Step 371: val=0.000986 split=0.000125 total=0.001093  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=13/150
+Step 372: val=0.002266 split=0.000048 total=0.002334  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=14/150
+Step 373: val=0.001041 split=0.000034 total=0.001101  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=15/150
+Step 374: val=0.000989 split=0.000052 total=0.001059  k1=5 k2=4 leaves=10432  best=0.000565@358  patience=16/150
+Step 375: val=0.001912 split=0.000034 total=0.001973  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=17/150
+Step 376: val=0.001421 split=0.000052 total=0.001490  k1=5 k2=4 leaves=10432  best=0.000565@358  patience=18/150
+Step 377: val=0.000844 split=0.000042 total=0.000908  k1=4 k2=1 leaves=9088  best=0.000565@358  patience=19/150
+Step 378: val=0.001690 split=0.000035 total=0.001751  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=20/150
+Step 379: val=0.000925 split=0.000051 total=0.000994  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=21/150
+Step 380: val=0.001175 split=0.000047 total=0.001241  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=22/150
+Step 381: val=0.000828 split=0.000034 total=0.000887  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=23/150
+Step 382: val=0.000757 split=0.000043 total=0.000821  k1=4 k2=1 leaves=9088  best=0.000565@358  patience=24/150
+Step 383: val=0.000787 split=0.000043 total=0.000851  k1=4 k2=1 leaves=9088  best=0.000565@358  patience=25/150
+Step 384: val=0.000862 split=0.000035 total=0.000922  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=26/150
+Step 385: val=0.000709 split=0.000034 total=0.000768  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=27/150
+Step 386: val=0.000798 split=0.000035 total=0.000858  k1=4 k2=4 leaves=10240  best=0.000565@358  patience=28/150
+Step 387: val=0.000744 split=0.000034 total=0.000803  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=29/150
+Step 388: val=0.001156 split=0.000031 total=0.001213  k1=4 k2=3 leaves=10240  best=0.000565@358  patience=30/150
+Step 389: val=0.000825 split=0.000043 total=0.000889  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=31/150
+Step 390: val=0.000512 split=0.000041 total=0.000574  k1=4 k2=1 leaves=9088  best=0.000565@358  patience=32/150
+Step 391: val=0.001187 split=0.000031 total=0.001244  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=33/150
+Step 392: val=0.000655 split=0.000028 total=0.000711  k1=2 k2=1 leaves=8608  best=0.000565@358  patience=34/150
+Step 393: val=0.000777 split=0.000035 total=0.000836  k1=4 k2=4 leaves=10240  best=0.000565@358  patience=35/150
+Step 394: val=0.000939 split=0.000027 total=0.000994  k1=2 k2=1 leaves=8608  best=0.000565@358  patience=36/150
+Step 395: val=0.000663 split=0.000034 total=0.000721  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=37/150
+Step 396: val=0.000854 split=0.000029 total=0.000910  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=38/150
+Step 397: val=0.000854 split=0.000024 total=0.000907  k1=2 k2=2 leaves=10624  best=0.000565@358  patience=39/150
+Step 398: val=0.002173 split=0.000093 total=0.002261  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=40/150
+Step 399: val=0.001334 split=0.000088 total=0.001418  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=41/150
+Step 400: val=0.001663 split=0.000027 total=0.001717  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=42/150
+  -> Saved plots/20260226_175504/samples_step0400.png (3 samples)
+  -> Saved plots/20260226_175504/loss_curve_step0400.png
+Step 401: val=0.001023 split=0.000031 total=0.001079  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=43/150
+Step 402: val=0.000850 split=0.000117 total=0.000949  k1=5 k2=3 leaves=9136  best=0.000565@358  patience=44/150
+Step 403: val=0.000916 split=0.000024 total=0.000968  k1=2 k2=1 leaves=8608  best=0.000565@358  patience=45/150
+Step 404: val=0.000628 split=0.000030 total=0.000684  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=46/150
+Step 405: val=0.000696 split=0.000036 total=0.000755  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=47/150
+Step 406: val=0.002122 split=0.000047 total=0.002186  k1=4 k2=5 leaves=10432  best=0.000565@358  patience=48/150
+Step 407: val=0.000831 split=0.000026 total=0.000884  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=49/150
+Step 408: val=0.000844 split=0.000025 total=0.000896  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=50/150
+Step 409: val=0.001153 split=0.000024 total=0.001204  k1=2 k2=1 leaves=8608  best=0.000565@358  patience=51/150
+Step 410: val=0.001140 split=0.000034 total=0.001196  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=52/150
+Step 411: val=0.001033 split=0.000025 total=0.001085  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=53/150
+Step 412: val=0.000853 split=0.000034 total=0.000909  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=54/150
+Step 413: val=0.000885 split=0.000029 total=0.000939  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=55/150
+Step 414: val=0.000771 split=0.000030 total=0.000825  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=56/150
+Step 415: val=0.000902 split=0.000041 total=0.000962  k1=1 k2=5 leaves=8800  best=0.000565@358  patience=57/150
+Step 416: val=0.001648 split=0.000030 total=0.001702  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=58/150
+Step 417: val=0.001349 split=0.000028 total=0.001402  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=59/150
+Step 418: val=0.001405 split=0.000025 total=0.001456  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=60/150
+Step 419: val=0.000864 split=0.000025 total=0.000915  k1=4 k2=2 leaves=8704  best=0.000565@358  patience=61/150
+Step 420: val=0.000737 split=0.000030 total=0.000791  k1=4 k2=4 leaves=10240  best=0.000565@358  patience=62/150
+Step 421: val=0.000757 split=0.000035 total=0.000813  k1=5 k2=1 leaves=8800  best=0.000565@358  patience=63/150
+Step 422: val=0.001013 split=0.000038 total=0.001070  k1=1 k2=5 leaves=8800  best=0.000565@358  patience=64/150
+Step 423: val=0.001788 split=0.000022 total=0.001837  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=65/150
+Step 424: val=0.000813 split=0.000024 total=0.000863  k1=4 k2=2 leaves=8704  best=0.000565@358  patience=66/150
+Step 425: val=0.001199 split=0.000033 total=0.001253  k1=5 k2=1 leaves=8800  best=0.000565@358  patience=67/150
+Step 426: val=0.003650 split=0.000487 total=0.003932  k1=5 k2=5 leaves=11104  best=0.000565@358  patience=68/150
+Step 427: val=0.000685 split=0.000031 total=0.000738  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=69/150
+Step 428: val=0.000773 split=0.000023 total=0.000823  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=70/150
+Step 429: val=0.001084 split=0.000111 total=0.001177  k1=5 k2=3 leaves=9136  best=0.000565@358  patience=71/150
+Step 430: val=0.001827 split=0.000025 total=0.001877  k1=4 k2=2 leaves=8704  best=0.000565@358  patience=72/150
+Step 431: val=0.001278 split=0.000031 total=0.001331  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=73/150
+Step 432: val=0.001644 split=0.000024 total=0.001694  k1=4 k2=4 leaves=10240  best=0.000565@358  patience=74/150
+Step 433: val=0.001695 split=0.000023 total=0.001743  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=75/150
+Step 434: val=0.002228 split=0.000035 total=0.002283  k1=5 k2=4 leaves=10432  best=0.000565@358  patience=76/150
+Step 435: val=0.001963 split=0.000021 total=0.002010  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=77/150
+Step 436: val=0.001120 split=0.000032 total=0.001173  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=78/150
+Step 437: val=0.001357 split=0.000031 total=0.001410  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=79/150
+Step 438: val=0.001963 split=0.000021 total=0.002011  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=80/150
+Step 439: val=0.001104 split=0.000025 total=0.001153  k1=4 k2=4 leaves=10240  best=0.000565@358  patience=81/150
+Step 440: val=0.001422 split=0.000016 total=0.001467  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=82/150
+Step 441: val=0.002956 split=0.000125 total=0.003056  k1=5 k2=3 leaves=9136  best=0.000565@358  patience=83/150
+Step 442: val=0.001166 split=0.000017 total=0.001211  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=84/150
+Step 443: val=0.001976 split=0.000023 total=0.002024  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=85/150
+Step 444: val=0.000963 split=0.000035 total=0.001017  k1=1 k2=4 leaves=9088  best=0.000565@358  patience=86/150
+Step 445: val=0.001356 split=0.000070 total=0.001428  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=87/150
+Step 446: val=0.005948 split=0.000025 total=0.005996  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=88/150
+Step 447: val=0.000861 split=0.000040 total=0.000917  k1=1 k2=4 leaves=9088  best=0.000565@358  patience=89/150
+Step 448: val=0.002086 split=0.000030 total=0.002137  k1=4 k2=4 leaves=10240  best=0.000565@358  patience=90/150
+Step 449: val=0.001467 split=0.000025 total=0.001516  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=91/150
+Step 450: val=0.002520 split=0.000029 total=0.002571  k1=4 k2=3 leaves=10240  best=0.000565@358  patience=92/150
+Step 451: val=0.001744 split=0.000040 total=0.001800  k1=1 k2=5 leaves=8800  best=0.000565@358  patience=93/150
+Step 452: val=0.001047 split=0.000027 total=0.001096  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=94/150
+Step 453: val=0.003193 split=0.000038 total=0.003248  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=95/150
+Step 454: val=0.002119 split=0.000031 total=0.002170  k1=4 k2=3 leaves=10240  best=0.000565@358  patience=96/150
+Step 455: val=0.001362 split=0.000038 total=0.001416  k1=3 k2=1 leaves=8704  best=0.000565@358  patience=97/150
+Step 456: val=0.001410 split=0.000049 total=0.001470  k1=1 k2=4 leaves=9088  best=0.000565@358  patience=98/150
+Step 457: val=0.002634 split=0.000032 total=0.002686  k1=4 k2=2 leaves=8704  best=0.000565@358  patience=99/150
+Step 458: val=0.001575 split=0.000028 total=0.001624  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=100/150
+Step 459: val=0.001665 split=0.000033 total=0.001717  k1=4 k2=3 leaves=10240  best=0.000565@358  patience=101/150
+Step 460: val=0.001437 split=0.000043 total=0.001493  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=102/150
+Step 461: val=0.002560 split=0.000034 total=0.002611  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=103/150
+Step 462: val=0.001595 split=0.000036 total=0.001647  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=104/150
+Step 463: val=0.001385 split=0.000032 total=0.001436  k1=3 k2=4 leaves=10240  best=0.000565@358  patience=105/150
+Step 464: val=0.001146 split=0.000032 total=0.001197  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=106/150
+Step 465: val=0.001916 split=0.000035 total=0.001968  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=107/150
+Step 466: val=0.001129 split=0.000034 total=0.001181  k1=2 k2=1 leaves=8608  best=0.000565@358  patience=108/150
+Step 467: val=0.002649 split=0.000066 total=0.002716  k1=4 k2=5 leaves=10432  best=0.000565@358  patience=109/150
+Step 468: val=0.001093 split=0.000032 total=0.001143  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=110/150
+Step 469: val=0.002238 split=0.000041 total=0.002293  k1=4 k2=1 leaves=9088  best=0.000565@358  patience=111/150
+Step 470: val=0.001526 split=0.000047 total=0.001584  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=112/150
+Step 471: val=0.001692 split=0.000037 total=0.001744  k1=4 k2=2 leaves=8704  best=0.000565@358  patience=113/150
+Step 472: val=0.001633 split=0.000035 total=0.001685  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=114/150
+Step 473: val=0.001464 split=0.000024 total=0.001510  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=115/150
+Step 474: val=0.001675 split=0.000057 total=0.001737  k1=4 k2=5 leaves=10432  best=0.000565@358  patience=116/150
+Step 475: val=0.001898 split=0.000110 total=0.001986  k1=5 k2=3 leaves=9136  best=0.000565@358  patience=117/150
+Step 476: val=0.001467 split=0.000033 total=0.001517  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=118/150
+Step 477: val=0.002335 split=0.000401 total=0.002569  k1=5 k2=5 leaves=11104  best=0.000565@358  patience=119/150
+Step 478: val=0.003301 split=0.000032 total=0.003350  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=120/150
+Step 479: val=0.002136 split=0.000053 total=0.002196  k1=4 k2=5 leaves=10432  best=0.000565@358  patience=121/150
+Step 480: val=0.001566 split=0.000113 total=0.001656  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=122/150
+Step 481: val=0.001723 split=0.000030 total=0.001771  k1=3 k2=4 leaves=10240  best=0.000565@358  patience=123/150
+Step 482: val=0.001473 split=0.000032 total=0.001522  k1=4 k2=3 leaves=10240  best=0.000565@358  patience=124/150
+Step 483: val=0.001175 split=0.000034 total=0.001225  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=125/150
+Step 484: val=0.001306 split=0.000034 total=0.001356  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=126/150
+Step 485: val=0.000855 split=0.000046 total=0.000911  k1=1 k2=3 leaves=8704  best=0.000565@358  patience=127/150
+Step 486: val=0.001064 split=0.000033 total=0.001113  k1=3 k2=2 leaves=9856  best=0.000565@358  patience=128/150
+Step 487: val=0.000873 split=0.000031 total=0.000921  k1=4 k2=3 leaves=10240  best=0.000565@358  patience=129/150
+Step 488: val=0.002005 split=0.000054 total=0.002064  k1=4 k2=5 leaves=10432  best=0.000565@358  patience=130/150
+Step 489: val=0.001023 split=0.000029 total=0.001070  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=131/150
+Step 490: val=0.000863 split=0.000042 total=0.000916  k1=2 k2=4 leaves=8704  best=0.000565@358  patience=132/150
+Step 491: val=0.001040 split=0.000041 total=0.001093  k1=5 k2=1 leaves=8800  best=0.000565@358  patience=133/150
+Step 492: val=0.001714 split=0.000029 total=0.001760  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=134/150
+Step 493: val=0.001791 split=0.000022 total=0.001835  k1=1 k2=1 leaves=11104  best=0.000565@358  patience=135/150
+Step 494: val=0.001279 split=0.000136 total=0.001379  k1=3 k2=3 leaves=11104  best=0.000565@358  patience=136/150
+Step 495: val=0.002080 split=0.000036 total=0.002130  k1=4 k2=1 leaves=9088  best=0.000565@358  patience=137/150
+Step 496: val=0.003038 split=0.000029 total=0.003085  k1=3 k2=4 leaves=10240  best=0.000565@358  patience=138/150
+Step 497: val=0.001112 split=0.000027 total=0.001157  k1=3 k2=4 leaves=10240  best=0.000565@358  patience=139/150
+Step 498: val=0.001519 split=0.000027 total=0.001564  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=140/150
+Step 499: val=0.001747 split=0.000031 total=0.001794  k1=4 k2=2 leaves=8704  best=0.000565@358  patience=141/150
+Step 500: val=0.001000 split=0.000026 total=0.001045  k1=5 k2=2 leaves=8512  best=0.000565@358  patience=142/150
+  -> Saved plots/20260226_175504/samples_step0500.png (3 samples)
+  -> Saved plots/20260226_175504/loss_curve_step0500.png
+Step 501: val=0.000765 split=0.000101 total=0.000847  k1=5 k2=3 leaves=9136  best=0.000565@358  patience=143/150
+Step 502: val=0.001135 split=0.000021 total=0.001177  k1=2 k2=2 leaves=10624  best=0.000565@358  patience=144/150
+Step 503: val=0.001419 split=0.000032 total=0.001467  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=145/150
+Step 504: val=0.001539 split=0.000032 total=0.001586  k1=2 k2=5 leaves=8512  best=0.000565@358  patience=146/150
+Step 505: val=0.000736 split=0.000029 total=0.000781  k1=2 k2=3 leaves=9856  best=0.000565@358  patience=147/150
+Step 506: val=0.000856 split=0.000024 total=0.000899  k1=2 k2=1 leaves=8608  best=0.000565@358  patience=148/150
+Step 507: val=0.000836 split=0.000077 total=0.000905  k1=3 k2=5 leaves=9136  best=0.000565@358  patience=149/150
+Step 508: val=0.001009 split=0.000029 total=0.001055  k1=1 k2=2 leaves=8608  best=0.000565@358  patience=150/150
+
+Early stopping triggered at step 508 (no improvement for 150 steps)
+Training complete. Best model saved at step 358 with total_loss=0.000565
+Best model path: plots/20260226_175504/best_model.pt
+
+Loading best model for final evaluation + embedding-only decode demo...
+Embedding-only decode demo ran successfully.
+/home/tahmid/venv/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  warnings.warn(
+Running on cuda
+Saving plots to: plots/20260226_190141
+Training Denoising AE across random trees for 3000 steps...
+  - Random K1,K2 in [1,5] each step
+  - Noise std: 0.05
+  - GRADIENT-BASED splitting
+  - Split loss: ENABLED (weight=0.5)
+  - Decoder starts from learned root token; uses ONLY stored embeddings + topology
+Step 0: val=0.246446 split=0.639810 total=0.566351  k1=2 k2=3 leaves=9856  best=0.566351@0  patience=0/150
+  -> Saved plots/20260226_190141/samples_step0000.png (1 samples)
+  -> Saved plots/20260226_190141/loss_curve_step0000.png
+Step 1: val=0.239205 split=0.615933 total=0.547172  k1=2 k2=1 leaves=8608  best=0.547172@1  patience=0/150
+Step 2: val=0.234966 split=0.578423 total=0.524178  k1=2 k2=5 leaves=8512  best=0.524178@2  patience=0/150
+Step 3: val=0.232246 split=0.496030 total=0.480261  k1=2 k2=3 leaves=9856  best=0.480261@3  patience=0/150
+Step 4: val=0.215002 split=0.335538 total=0.382771  k1=2 k2=4 leaves=8704  best=0.382771@4  patience=0/150
+Step 5: val=0.190055 split=0.157983 total=0.269046  k1=2 k2=4 leaves=8704  best=0.269046@5  patience=0/150
+Step 6: val=0.175836 split=0.105199 total=0.228436  k1=2 k2=5 leaves=8512  best=0.228436@6  patience=0/150
+Step 7: val=0.193759 split=0.109043 total=0.248280  k1=2 k2=1 leaves=8608  best=0.228436@6  patience=1/150
+Step 8: val=0.116179 split=0.097785 total=0.165072  k1=3 k2=3 leaves=11104  best=0.165072@8  patience=0/150
+Step 9: val=0.112851 split=0.102803 total=0.164252  k1=4 k2=1 leaves=9088  best=0.164252@9  patience=0/150
+Step 10: val=0.066962 split=0.098576 total=0.116250  k1=5 k2=5 leaves=11104  best=0.116250@10  patience=0/150
+Step 11: val=0.041979 split=0.102614 total=0.093286  k1=3 k2=2 leaves=9856  best=0.093286@11  patience=0/150
+Step 12: val=0.033735 split=0.105112 total=0.086291  k1=1 k2=4 leaves=9088  best=0.086291@12  patience=0/150
+Step 13: val=0.027113 split=0.099599 total=0.076912  k1=3 k2=3 leaves=11104  best=0.076912@13  patience=0/150
+Step 14: val=0.054745 split=0.101249 total=0.105370  k1=2 k2=2 leaves=10624  best=0.076912@13  patience=1/150
+Step 15: val=0.053329 split=0.105627 total=0.106142  k1=3 k2=1 leaves=8704  best=0.076912@13  patience=2/150
+Step 16: val=0.019493 split=0.103328 total=0.071157  k1=4 k2=3 leaves=10240  best=0.071157@16  patience=0/150
+Step 17: val=0.018999 split=0.105150 total=0.071574  k1=4 k2=1 leaves=9088  best=0.071157@16  patience=1/150
+Step 18: val=0.021764 split=0.100989 total=0.072258  k1=2 k2=2 leaves=10624  best=0.071157@16  patience=2/150
+Step 19: val=0.023904 split=0.104363 total=0.076085  k1=2 k2=5 leaves=8512  best=0.071157@16  patience=3/150
+Step 20: val=0.023740 split=0.102135 total=0.074808  k1=2 k2=5 leaves=8512  best=0.071157@16  patience=4/150
+Step 21: val=0.019841 split=0.100019 total=0.069851  k1=3 k2=1 leaves=8704  best=0.069851@21  patience=0/150
+Step 22: val=0.031637 split=0.099504 total=0.081389  k1=5 k2=5 leaves=11104  best=0.069851@21  patience=1/150
+Step 23: val=0.017671 split=0.097376 total=0.066358  k1=2 k2=3 leaves=9856  best=0.066358@23  patience=0/150
+Step 24: val=0.019031 split=0.096469 total=0.067266  k1=4 k2=2 leaves=8704  best=0.066358@23  patience=1/150
+Step 25: val=0.014479 split=0.096945 total=0.062951  k1=1 k2=4 leaves=9088  best=0.062951@25  patience=0/150
+Step 26: val=0.018255 split=0.096560 total=0.066534  k1=3 k2=2 leaves=9856  best=0.062951@25  patience=1/150
+Step 27: val=0.018734 split=0.096943 total=0.067206  k1=2 k2=2 leaves=10624  best=0.062951@25  patience=2/150
+Step 28: val=0.011728 split=0.096361 total=0.059908  k1=4 k2=3 leaves=10240  best=0.059908@28  patience=0/150
+Step 29: val=0.012344 split=0.094384 total=0.059536  k1=3 k2=1 leaves=8704  best=0.059536@29  patience=0/150
+Step 30: val=0.011020 split=0.098361 total=0.060200  k1=2 k2=2 leaves=10624  best=0.059536@29  patience=1/150
+Step 31: val=0.015839 split=0.095051 total=0.063365  k1=1 k2=5 leaves=8800  best=0.059536@29  patience=2/150
+Step 32: val=0.015845 split=0.093979 total=0.062834  k1=5 k2=2 leaves=8512  best=0.059536@29  patience=3/150
+Step 33: val=0.007942 split=0.096381 total=0.056133  k1=2 k2=3 leaves=9856  best=0.056133@33  patience=0/150
+Step 34: val=0.010089 split=0.096154 total=0.058166  k1=3 k2=2 leaves=9856  best=0.056133@33  patience=1/150
+Step 35: val=0.013934 split=0.095584 total=0.061726  k1=4 k2=3 leaves=10240  best=0.056133@33  patience=2/150
+Step 36: val=0.013597 split=0.098717 total=0.062956  k1=4 k2=5 leaves=10432  best=0.056133@33  patience=3/150
+Step 37: val=0.009533 split=0.094766 total=0.056916  k1=3 k2=1 leaves=8704  best=0.056133@33  patience=4/150
+Step 38: val=0.012052 split=0.098971 total=0.061538  k1=3 k2=2 leaves=9856  best=0.056133@33  patience=5/150
+Step 39: val=0.007363 split=0.103451 total=0.059088  k1=3 k2=3 leaves=11104  best=0.056133@33  patience=6/150
+Step 40: val=0.004272 split=0.096694 total=0.052619  k1=3 k2=4 leaves=10240  best=0.052619@40  patience=0/150
+Step 41: val=0.006105 split=0.094944 total=0.053577  k1=1 k2=5 leaves=8800  best=0.052619@40  patience=1/150
+Step 42: val=0.011322 split=0.098388 total=0.060516  k1=5 k2=4 leaves=10432  best=0.052619@40  patience=2/150
+Step 43: val=0.004236 split=0.096312 total=0.052392  k1=3 k2=2 leaves=9856  best=0.052392@43  patience=0/150
+Step 44: val=0.005933 split=0.096824 total=0.054345  k1=4 k2=4 leaves=10240  best=0.052392@43  patience=1/150
+Step 45: val=0.006543 split=0.093633 total=0.053360  k1=2 k2=5 leaves=8512  best=0.052392@43  patience=2/150
+Step 46: val=0.006842 split=0.098644 total=0.056163  k1=5 k2=4 leaves=10432  best=0.052392@43  patience=3/150
+Step 47: val=0.009885 split=0.093121 total=0.056445  k1=1 k2=2 leaves=8608  best=0.052392@43  patience=4/150
+Step 48: val=0.004850 split=0.094335 total=0.052018  k1=1 k2=5 leaves=8800  best=0.052018@48  patience=0/150
+Step 49: val=0.005916 split=0.093389 total=0.052610  k1=1 k2=3 leaves=8704  best=0.052018@48  patience=1/150
+Step 50: val=0.005128 split=0.095109 total=0.052682  k1=2 k2=3 leaves=9856  best=0.052018@48  patience=2/150
+Step 51: val=0.002846 split=0.092722 total=0.049207  k1=2 k2=1 leaves=8608  best=0.049207@51  patience=0/150
+Step 52: val=0.009532 split=0.093308 total=0.056186  k1=5 k2=2 leaves=8512  best=0.049207@51  patience=1/150
+Step 53: val=0.005992 split=0.093686 total=0.052835  k1=2 k2=4 leaves=8704  best=0.049207@51  patience=2/150
+Step 54: val=0.004427 split=0.094665 total=0.051760  k1=3 k2=2 leaves=9856  best=0.049207@51  patience=3/150
+Step 55: val=0.005114 split=0.093900 total=0.052064  k1=4 k2=3 leaves=10240  best=0.049207@51  patience=4/150
+Step 56: val=0.003480 split=0.091997 total=0.049478  k1=5 k2=2 leaves=8512  best=0.049207@51  patience=5/150
+Step 57: val=0.004111 split=0.092681 total=0.050451  k1=5 k2=1 leaves=8800  best=0.049207@51  patience=6/150
+Step 58: val=0.009707 split=0.094147 total=0.056780  k1=1 k2=4 leaves=9088  best=0.049207@51  patience=7/150
+Step 59: val=0.003559 split=0.097373 total=0.052245  k1=4 k2=5 leaves=10432  best=0.049207@51  patience=8/150
+Step 60: val=0.006193 split=0.091307 total=0.051847  k1=2 k2=4 leaves=8704  best=0.049207@51  patience=9/150
+Step 61: val=0.005653 split=0.095369 total=0.053338  k1=2 k2=2 leaves=10624  best=0.049207@51  patience=10/150
+Step 62: val=0.004824 split=0.089404 total=0.049526  k1=2 k2=5 leaves=8512  best=0.049207@51  patience=11/150
+Step 63: val=0.003641 split=0.088475 total=0.047878  k1=1 k2=3 leaves=8704  best=0.047878@63  patience=0/150
+Step 64: val=0.008166 split=0.088386 total=0.052358  k1=2 k2=5 leaves=8512  best=0.047878@63  patience=1/150
+Step 65: val=0.004820 split=0.087796 total=0.048718  k1=2 k2=4 leaves=8704  best=0.047878@63  patience=2/150
+Step 66: val=0.005497 split=0.089731 total=0.050362  k1=4 k2=3 leaves=10240  best=0.047878@63  patience=3/150
+Step 67: val=0.003967 split=0.086042 total=0.046988  k1=5 k2=2 leaves=8512  best=0.046988@67  patience=0/150
+Step 68: val=0.006542 split=0.086075 total=0.049579  k1=4 k2=1 leaves=9088  best=0.046988@67  patience=1/150
+Step 69: val=0.005571 split=0.083735 total=0.047438  k1=4 k2=2 leaves=8704  best=0.046988@67  patience=2/150
+Step 70: val=0.001400 split=0.088662 total=0.045731  k1=4 k2=4 leaves=10240  best=0.045731@70  patience=0/150
+Step 71: val=0.002479 split=0.083834 total=0.044396  k1=3 k2=4 leaves=10240  best=0.044396@71  patience=0/150
+Step 72: val=0.002568 split=0.081283 total=0.043209  k1=3 k2=4 leaves=10240  best=0.043209@72  patience=0/150
+Step 73: val=0.003432 split=0.074221 total=0.040543  k1=3 k2=2 leaves=9856  best=0.040543@73  patience=0/150
+Step 74: val=0.005746 split=0.076976 total=0.044234  k1=5 k2=3 leaves=9136  best=0.040543@73  patience=1/150
+Step 75: val=0.012678 split=0.081982 total=0.053669  k1=5 k2=5 leaves=11104  best=0.040543@73  patience=2/150
+Step 76: val=0.001572 split=0.070627 total=0.036886  k1=4 k2=4 leaves=10240  best=0.036886@76  patience=0/150
+Step 77: val=0.004888 split=0.063220 total=0.036498  k1=3 k2=4 leaves=10240  best=0.036498@77  patience=0/150
+Step 78: val=0.010193 split=0.039821 total=0.030103  k1=3 k2=1 leaves=8704  best=0.030103@78  patience=0/150
+Step 79: val=0.002116 split=0.049471 total=0.026851  k1=4 k2=3 leaves=10240  best=0.026851@79  patience=0/150
+Step 80: val=0.001810 split=0.034337 total=0.018978  k1=2 k2=3 leaves=9856  best=0.018978@80  patience=0/150
+Step 81: val=0.003511 split=0.026569 total=0.016795  k1=2 k2=4 leaves=8704  best=0.016795@81  patience=0/150
+Step 82: val=0.004068 split=0.023015 total=0.015575  k1=2 k2=3 leaves=9856  best=0.015575@82  patience=0/150
+Step 83: val=0.006069 split=0.026285 total=0.019212  k1=3 k2=4 leaves=10240  best=0.015575@82  patience=1/150
+Step 84: val=0.004302 split=0.011607 total=0.010106  k1=2 k2=1 leaves=8608  best=0.010106@84  patience=0/150
+Step 85: val=0.003903 split=0.030906 total=0.019356  k1=2 k2=5 leaves=8512  best=0.010106@84  patience=1/150
+Step 86: val=0.006076 split=0.021085 total=0.016618  k1=5 k2=1 leaves=8800  best=0.010106@84  patience=2/150
+Step 87: val=0.005117 split=0.028336 total=0.019285  k1=1 k2=5 leaves=8800  best=0.010106@84  patience=3/150
+Step 88: val=0.002264 split=0.029691 total=0.017110  k1=3 k2=5 leaves=9136  best=0.010106@84  patience=4/150
+Step 89: val=0.002176 split=0.012172 total=0.008262  k1=2 k2=3 leaves=9856  best=0.008262@89  patience=0/150
+Step 90: val=0.003174 split=0.010959 total=0.008654  k1=2 k2=2 leaves=10624  best=0.008262@89  patience=1/150
+Step 91: val=0.008548 split=0.022015 total=0.019556  k1=5 k2=4 leaves=10432  best=0.008262@89  patience=2/150
+Step 92: val=0.004732 split=0.009867 total=0.009666  k1=3 k2=2 leaves=9856  best=0.008262@89  patience=3/150
+Step 93: val=0.002188 split=0.003888 total=0.004132  k1=2 k2=5 leaves=8512  best=0.004132@93  patience=0/150
+Step 94: val=0.006092 split=0.016497 total=0.014341  k1=5 k2=1 leaves=8800  best=0.004132@93  patience=1/150
+Step 95: val=0.004136 split=0.070127 total=0.039199  k1=4 k2=5 leaves=10432  best=0.004132@93  patience=2/150
+Step 96: val=0.018650 split=0.011346 total=0.024323  k1=2 k2=1 leaves=8608  best=0.004132@93  patience=3/150
+Step 97: val=0.006324 split=0.122876 total=0.067762  k1=4 k2=2 leaves=8704  best=0.004132@93  patience=4/150
+Step 98: val=0.002206 split=0.055664 total=0.030038  k1=2 k2=1 leaves=8608  best=0.004132@93  patience=5/150
+Step 99: val=0.008151 split=0.095078 total=0.055691  k1=2 k2=5 leaves=8512  best=0.004132@93  patience=6/150
+Step 100: val=0.009225 split=0.043555 total=0.031003  k1=3 k2=2 leaves=9856  best=0.004132@93  patience=7/150
+  -> Saved plots/20260226_190141/samples_step0100.png (2 samples)
+  -> Saved plots/20260226_190141/loss_curve_step0100.png
+Step 101: val=0.006109 split=0.011728 total=0.011973  k1=2 k2=3 leaves=9856  best=0.004132@93  patience=8/150
+Step 102: val=0.004894 split=0.010774 total=0.010280  k1=2 k2=4 leaves=8704  best=0.004132@93  patience=9/150
+Step 103: val=0.011489 split=0.057957 total=0.040468  k1=2 k2=2 leaves=10624  best=0.004132@93  patience=10/150
+Step 104: val=0.005764 split=0.085096 total=0.048312  k1=3 k2=4 leaves=10240  best=0.004132@93  patience=11/150
+Step 105: val=0.015963 split=0.023466 total=0.027696  k1=3 k2=2 leaves=9856  best=0.004132@93  patience=12/150
+Step 106: val=0.012814 split=0.020707 total=0.023167  k1=2 k2=3 leaves=9856  best=0.004132@93  patience=13/150
+Step 107: val=0.003581 split=0.017564 total=0.012362  k1=3 k2=2 leaves=9856  best=0.004132@93  patience=14/150
+Step 108: val=0.015914 split=0.015128 total=0.023478  k1=5 k2=2 leaves=8512  best=0.004132@93  patience=15/150
+Step 109: val=0.014135 split=0.015338 total=0.021804  k1=2 k2=5 leaves=8512  best=0.004132@93  patience=16/150
+Step 110: val=0.004587 split=0.017928 total=0.013551  k1=2 k2=4 leaves=8704  best=0.004132@93  patience=17/150
+Step 111: val=0.004376 split=0.012099 total=0.010426  k1=3 k2=1 leaves=8704  best=0.004132@93  patience=18/150
+Step 112: val=0.013901 split=0.015815 total=0.021809  k1=2 k2=5 leaves=8512  best=0.004132@93  patience=19/150
+Step 113: val=0.010874 split=0.017123 total=0.019436  k1=3 k2=2 leaves=9856  best=0.004132@93  patience=20/150
+Step 114: val=0.004307 split=0.013909 total=0.011261  k1=4 k2=2 leaves=8704  best=0.004132@93  patience=21/150
+Step 115: val=0.005331 split=0.013056 total=0.011860  k1=2 k2=4 leaves=8704  best=0.004132@93  patience=22/150
+Step 116: val=0.007843 split=0.020961 total=0.018323  k1=3 k2=4 leaves=10240  best=0.004132@93  patience=23/150
+Step 117: val=0.004826 split=0.026758 total=0.018205  k1=3 k2=3 leaves=11104  best=0.004132@93  patience=24/150
+Step 118: val=0.002433 split=0.011200 total=0.008033  k1=4 k2=2 leaves=8704  best=0.004132@93  patience=25/150
+Step 119: val=0.008705 split=0.005949 total=0.011679  k1=1 k2=3 leaves=8704  best=0.004132@93  patience=26/150
+Step 120: val=0.012295 split=0.020228 total=0.022409  k1=4 k2=5 leaves=10432  best=0.004132@93  patience=27/150
+Step 121: val=0.005716 split=0.019104 total=0.015268  k1=4 k2=5 leaves=10432  best=0.004132@93  patience=28/150
+Step 122: val=0.008594 split=0.002910 total=0.010049  k1=2 k2=1 leaves=8608  best=0.004132@93  patience=29/150
+Step 123: val=0.005394 split=0.010555 total=0.010672  k1=3 k2=2 leaves=9856  best=0.004132@93  patience=30/150
+Step 124: val=0.004501 split=0.014991 total=0.011997  k1=3 k2=3 leaves=11104  best=0.004132@93  patience=31/150
+Step 125: val=0.003278 split=0.004163 total=0.005360  k1=4 k2=1 leaves=9088  best=0.004132@93  patience=32/150
+Step 126: val=0.005518 split=0.007994 total=0.009515  k1=2 k2=4 leaves=8704  best=0.004132@93  patience=33/150
+Step 127: val=0.003403 split=0.003116 total=0.004961  k1=4 k2=1 leaves=9088  best=0.004132@93  patience=34/150
+Step 128: val=0.003289 split=0.013123 total=0.009850  k1=5 k2=4 leaves=10432  best=0.004132@93  patience=35/150
+Step 129: val=0.005251 split=0.001275 total=0.005889  k1=2 k2=1 leaves=8608  best=0.004132@93  patience=36/150
+Step 130: val=0.003051 split=0.006261 total=0.006182  k1=4 k2=4 leaves=10240  best=0.004132@93  patience=37/150
+Step 131: val=0.001891 split=0.009419 total=0.006601  k1=4 k2=5 leaves=10432  best=0.004132@93  patience=38/150
+Step 132: val=0.001932 split=0.005384 total=0.004624  k1=4 k2=4 leaves=10240  best=0.004132@93  patience=39/150
+Step 133: val=0.004369 split=0.005112 total=0.006925  k1=2 k2=2 leaves=10624  best=0.004132@93  patience=40/150
+Step 134: val=0.002500 split=0.004022 total=0.004511  k1=2 k2=5 leaves=8512  best=0.004132@93  patience=41/150
+Step 135: val=0.001844 split=0.001800 total=0.002744  k1=1 k2=4 leaves=9088  best=0.002744@135  patience=0/150
+Step 136: val=0.002498 split=0.000676 total=0.002836  k1=1 k2=2 leaves=8608  best=0.002744@135  patience=1/150
+Step 137: val=0.001738 split=0.006626 total=0.005051  k1=2 k2=3 leaves=9856  best=0.002744@135  patience=2/150
+Step 138: val=0.003452 split=0.003396 total=0.005150  k1=4 k2=4 leaves=10240  best=0.002744@135  patience=3/150
+Step 139: val=0.001460 split=0.003004 total=0.002962  k1=2 k2=4 leaves=8704  best=0.002744@135  patience=4/150
+Step 140: val=0.002300 split=0.006240 total=0.005420  k1=2 k2=2 leaves=10624  best=0.002744@135  patience=5/150
+Step 141: val=0.001500 split=0.000746 total=0.001873  k1=1 k2=4 leaves=9088  best=0.001873@141  patience=0/150
+Step 142: val=0.002441 split=0.003878 total=0.004380  k1=1 k2=1 leaves=11104  best=0.001873@141  patience=1/150
+Step 143: val=0.001965 split=0.001251 total=0.002591  k1=2 k2=5 leaves=8512  best=0.001873@141  patience=2/150
+Step 144: val=0.001234 split=0.000816 total=0.001641  k1=4 k2=1 leaves=9088  best=0.001641@144  patience=0/150
+Step 145: val=0.001407 split=0.000635 total=0.001725  k1=1 k2=4 leaves=9088  best=0.001641@144  patience=1/150
+Step 146: val=0.001128 split=0.001266 total=0.001761  k1=1 k2=3 leaves=8704  best=0.001641@144  patience=2/150
+Step 147: val=0.001613 split=0.003498 total=0.003362  k1=3 k2=2 leaves=9856  best=0.001641@144  patience=3/150
+Step 148: val=0.001313 split=0.001250 total=0.001938  k1=2 k2=4 leaves=8704  best=0.001641@144  patience=4/150
+Step 149: val=0.001201 split=0.000204 total=0.001303  k1=2 k2=1 leaves=8608  best=0.001303@149  patience=0/150
+Step 150: val=0.000964 split=0.004944 total=0.003436  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=1/150
+Step 151: val=0.002264 split=0.028667 total=0.016597  k1=5 k2=3 leaves=9136  best=0.001303@149  patience=2/150
+Step 152: val=0.001243 split=0.003616 total=0.003051  k1=5 k2=1 leaves=8800  best=0.001303@149  patience=3/150
+Step 153: val=0.001504 split=0.021683 total=0.012345  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=4/150
+Step 154: val=0.002247 split=0.000509 total=0.002501  k1=4 k2=1 leaves=9088  best=0.001303@149  patience=5/150
+Step 155: val=0.001261 split=0.001183 total=0.001852  k1=4 k2=3 leaves=10240  best=0.001303@149  patience=6/150
+Step 156: val=0.001557 split=0.034836 total=0.018975  k1=3 k2=5 leaves=9136  best=0.001303@149  patience=7/150
+Step 157: val=0.001345 split=0.005921 total=0.004306  k1=3 k2=2 leaves=9856  best=0.001303@149  patience=8/150
+Step 158: val=0.003811 split=0.005803 total=0.006712  k1=4 k2=5 leaves=10432  best=0.001303@149  patience=9/150
+Step 159: val=0.001746 split=0.000938 total=0.002215  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=10/150
+Step 160: val=0.001518 split=0.001623 total=0.002329  k1=4 k2=4 leaves=10240  best=0.001303@149  patience=11/150
+Step 161: val=0.001163 split=0.002978 total=0.002652  k1=5 k2=1 leaves=8800  best=0.001303@149  patience=12/150
+Step 162: val=0.001056 split=0.001604 total=0.001858  k1=4 k2=4 leaves=10240  best=0.001303@149  patience=13/150
+Step 163: val=0.002991 split=0.000256 total=0.003119  k1=2 k2=1 leaves=8608  best=0.001303@149  patience=14/150
+Step 164: val=0.001737 split=0.001606 total=0.002540  k1=2 k2=4 leaves=8704  best=0.001303@149  patience=15/150
+Step 165: val=0.001712 split=0.003056 total=0.003240  k1=4 k2=5 leaves=10432  best=0.001303@149  patience=16/150
+Step 166: val=0.001156 split=0.000801 total=0.001557  k1=1 k2=3 leaves=8704  best=0.001303@149  patience=17/150
+Step 167: val=0.002125 split=0.001049 total=0.002649  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=18/150
+Step 168: val=0.003183 split=0.020367 total=0.013366  k1=5 k2=3 leaves=9136  best=0.001303@149  patience=19/150
+Step 169: val=0.001183 split=0.000248 total=0.001307  k1=1 k2=2 leaves=8608  best=0.001303@149  patience=20/150
+Step 170: val=0.001204 split=0.002081 total=0.002244  k1=4 k2=4 leaves=10240  best=0.001303@149  patience=21/150
+Step 171: val=0.001994 split=0.012711 total=0.008349  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=22/150
+Step 172: val=0.001053 split=0.001724 total=0.001915  k1=4 k2=4 leaves=10240  best=0.001303@149  patience=23/150
+Step 173: val=0.001463 split=0.018543 total=0.010735  k1=5 k2=3 leaves=9136  best=0.001303@149  patience=24/150
+Step 174: val=0.003692 split=0.002227 total=0.004805  k1=1 k2=1 leaves=11104  best=0.001303@149  patience=25/150
+Step 175: val=0.001486 split=0.001898 total=0.002435  k1=1 k2=1 leaves=11104  best=0.001303@149  patience=26/150
+Step 176: val=0.001784 split=0.000700 total=0.002134  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=27/150
+Step 177: val=0.002263 split=0.001268 total=0.002897  k1=1 k2=1 leaves=11104  best=0.001303@149  patience=28/150
+Step 178: val=0.002421 split=0.000628 total=0.002735  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=29/150
+Step 179: val=0.003738 split=0.020220 total=0.013848  k1=5 k2=3 leaves=9136  best=0.001303@149  patience=30/150
+Step 180: val=0.001185 split=0.002750 total=0.002560  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=31/150
+Step 181: val=0.000936 split=0.001504 total=0.001688  k1=4 k2=4 leaves=10240  best=0.001303@149  patience=32/150
+Step 182: val=0.005954 split=0.001083 total=0.006496  k1=3 k2=1 leaves=8704  best=0.001303@149  patience=33/150
+Step 183: val=0.001538 split=0.002546 total=0.002811  k1=4 k2=5 leaves=10432  best=0.001303@149  patience=34/150
+Step 184: val=0.002536 split=0.001569 total=0.003320  k1=4 k2=2 leaves=8704  best=0.001303@149  patience=35/150
+Step 185: val=0.002186 split=0.000780 total=0.002576  k1=3 k2=1 leaves=8704  best=0.001303@149  patience=36/150
+Step 186: val=0.002335 split=0.012283 total=0.008476  k1=5 k2=3 leaves=9136  best=0.001303@149  patience=37/150
+Step 187: val=0.002070 split=0.006059 total=0.005100  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=38/150
+Step 188: val=0.002393 split=0.000667 total=0.002726  k1=2 k2=5 leaves=8512  best=0.001303@149  patience=39/150
+Step 189: val=0.001856 split=0.001518 total=0.002615  k1=3 k2=4 leaves=10240  best=0.001303@149  patience=40/150
+Step 190: val=0.001457 split=0.000372 total=0.001643  k1=2 k2=1 leaves=8608  best=0.001303@149  patience=41/150
+Step 191: val=0.001876 split=0.001178 total=0.002465  k1=1 k2=1 leaves=11104  best=0.001303@149  patience=42/150
+Step 192: val=0.000903 split=0.001074 total=0.001440  k1=4 k2=3 leaves=10240  best=0.001303@149  patience=43/150
+Step 193: val=0.001929 split=0.002287 total=0.003073  k1=4 k2=5 leaves=10432  best=0.001303@149  patience=44/150
+Step 194: val=0.001979 split=0.000852 total=0.002406  k1=2 k2=3 leaves=9856  best=0.001303@149  patience=45/150
+Step 195: val=0.001589 split=0.002136 total=0.002657  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=46/150
+Step 196: val=0.001419 split=0.000582 total=0.001710  k1=1 k2=1 leaves=11104  best=0.001303@149  patience=47/150
+Step 197: val=0.001399 split=0.000880 total=0.001839  k1=4 k2=2 leaves=8704  best=0.001303@149  patience=48/150
+Step 198: val=0.003124 split=0.013862 total=0.010054  k1=3 k2=5 leaves=9136  best=0.001303@149  patience=49/150
+Step 199: val=0.001257 split=0.000469 total=0.001492  k1=1 k2=1 leaves=11104  best=0.001303@149  patience=50/150
+Step 200: val=0.001358 split=0.001382 total=0.002049  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=51/150
+  -> Saved plots/20260226_190141/samples_step0200.png (3 samples)
+  -> Saved plots/20260226_190141/loss_curve_step0200.png
+Step 201: val=0.001606 split=0.000664 total=0.001938  k1=5 k2=2 leaves=8512  best=0.001303@149  patience=52/150
+Step 202: val=0.001289 split=0.000374 total=0.001476  k1=1 k2=4 leaves=9088  best=0.001303@149  patience=53/150
+Step 203: val=0.002169 split=0.000611 total=0.002474  k1=2 k2=3 leaves=9856  best=0.001303@149  patience=54/150
+Step 204: val=0.004263 split=0.013630 total=0.011078  k1=5 k2=5 leaves=11104  best=0.001303@149  patience=55/150
+Step 205: val=0.001716 split=0.000727 total=0.002079  k1=3 k2=2 leaves=9856  best=0.001303@149  patience=56/150
+Step 206: val=0.001842 split=0.001467 total=0.002576  k1=5 k2=4 leaves=10432  best=0.001303@149  patience=57/150
+Step 207: val=0.001470 split=0.000694 total=0.001817  k1=4 k2=1 leaves=9088  best=0.001303@149  patience=58/150
+Step 208: val=0.001187 split=0.000840 total=0.001608  k1=4 k2=1 leaves=9088  best=0.001303@149  patience=59/150
+Step 209: val=0.001540 split=0.000263 total=0.001671  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=60/150
+Step 210: val=0.001042 split=0.002257 total=0.002171  k1=1 k2=3 leaves=8704  best=0.001303@149  patience=61/150
+Step 211: val=0.001715 split=0.001995 total=0.002712  k1=3 k2=3 leaves=11104  best=0.001303@149  patience=62/150
+Step 212: val=0.002156 split=0.002242 total=0.003276  k1=4 k2=3 leaves=10240  best=0.001303@149  patience=63/150
+Step 213: val=0.001795 split=0.001622 total=0.002606  k1=3 k2=4 leaves=10240  best=0.001303@149  patience=64/150
+Step 214: val=0.001478 split=0.000984 total=0.001970  k1=3 k2=2 leaves=9856  best=0.001303@149  patience=65/150
+Step 215: val=0.001269 split=0.000439 total=0.001489  k1=5 k2=2 leaves=8512  best=0.001303@149  patience=66/150
+Step 216: val=0.002853 split=0.000198 total=0.002952  k1=2 k2=2 leaves=10624  best=0.001303@149  patience=67/150
+Step 217: val=0.001161 split=0.000254 total=0.001288  k1=4 k2=1 leaves=9088  best=0.001288@217  patience=0/150
+Step 218: val=0.001415 split=0.000482 total=0.001656  k1=4 k2=4 leaves=10240  best=0.001288@217  patience=1/150
+Step 219: val=0.001619 split=0.000180 total=0.001709  k1=1 k2=2 leaves=8608  best=0.001288@217  patience=2/150
+Step 220: val=0.000800 split=0.000400 total=0.001000  k1=1 k2=3 leaves=8704  best=0.001000@220  patience=0/150
+Step 221: val=0.007360 split=0.011780 total=0.013250  k1=5 k2=5 leaves=11104  best=0.001000@220  patience=1/150
+Step 222: val=0.003136 split=0.000241 total=0.003256  k1=2 k2=5 leaves=8512  best=0.001000@220  patience=2/150
+Step 223: val=0.001173 split=0.000225 total=0.001285  k1=2 k2=5 leaves=8512  best=0.001000@220  patience=3/150
+Step 224: val=0.003546 split=0.000527 total=0.003810  k1=3 k2=3 leaves=11104  best=0.001000@220  patience=4/150
+Step 225: val=0.003997 split=0.000126 total=0.004060  k1=1 k2=2 leaves=8608  best=0.001000@220  patience=5/150
+Step 226: val=0.001761 split=0.001028 total=0.002275  k1=5 k2=1 leaves=8800  best=0.001000@220  patience=6/150
+Step 227: val=0.003746 split=0.000857 total=0.004175  k1=5 k2=4 leaves=10432  best=0.001000@220  patience=7/150
+Step 228: val=0.002146 split=0.000273 total=0.002283  k1=4 k2=1 leaves=9088  best=0.001000@220  patience=8/150
+Step 229: val=0.002246 split=0.000333 total=0.002412  k1=3 k2=2 leaves=9856  best=0.001000@220  patience=9/150
+Step 230: val=0.003176 split=0.000963 total=0.003657  k1=4 k2=5 leaves=10432  best=0.001000@220  patience=10/150
+Step 231: val=0.001675 split=0.000134 total=0.001742  k1=2 k2=1 leaves=8608  best=0.001000@220  patience=11/150
+Step 232: val=0.001587 split=0.000303 total=0.001738  k1=1 k2=4 leaves=9088  best=0.001000@220  patience=12/150
+Step 233: val=0.001662 split=0.007205 total=0.005264  k1=5 k2=3 leaves=9136  best=0.001000@220  patience=13/150
+Step 234: val=0.001708 split=0.000587 total=0.002002  k1=1 k2=3 leaves=8704  best=0.001000@220  patience=14/150
+Step 235: val=0.001745 split=0.000223 total=0.001857  k1=4 k2=1 leaves=9088  best=0.001000@220  patience=15/150
+Step 236: val=0.001331 split=0.000451 total=0.001557  k1=5 k2=1 leaves=8800  best=0.001000@220  patience=16/150
+Step 237: val=0.001588 split=0.000291 total=0.001734  k1=3 k2=4 leaves=10240  best=0.001000@220  patience=17/150
+Step 238: val=0.001918 split=0.000426 total=0.002131  k1=3 k2=3 leaves=11104  best=0.001000@220  patience=18/150
+Step 239: val=0.000902 split=0.000158 total=0.000981  k1=2 k2=1 leaves=8608  best=0.000981@239  patience=0/150
+Step 240: val=0.003850 split=0.000539 total=0.004119  k1=5 k2=4 leaves=10432  best=0.000981@239  patience=1/150
+Step 241: val=0.002977 split=0.000537 total=0.003246  k1=5 k2=4 leaves=10432  best=0.000981@239  patience=2/150
+Step 242: val=0.001872 split=0.000183 total=0.001964  k1=2 k2=5 leaves=8512  best=0.000981@239  patience=3/150
+Step 243: val=0.003519 split=0.000257 total=0.003648  k1=4 k2=3 leaves=10240  best=0.000981@239  patience=4/150
+Step 244: val=0.004238 split=0.000152 total=0.004313  k1=1 k2=1 leaves=11104  best=0.000981@239  patience=5/150
+Step 245: val=0.002465 split=0.000238 total=0.002584  k1=1 k2=4 leaves=9088  best=0.000981@239  patience=6/150
+Step 246: val=0.001328 split=0.000253 total=0.001454  k1=1 k2=4 leaves=9088  best=0.000981@239  patience=7/150
+Step 247: val=0.005083 split=0.002457 total=0.006311  k1=3 k2=5 leaves=9136  best=0.000981@239  patience=8/150
+Step 248: val=0.002474 split=0.000201 total=0.002575  k1=2 k2=3 leaves=9856  best=0.000981@239  patience=9/150
+Step 249: val=0.003951 split=0.001851 total=0.004877  k1=5 k2=3 leaves=9136  best=0.000981@239  patience=10/150
+Step 250: val=0.001991 split=0.000195 total=0.002088  k1=2 k2=3 leaves=9856  best=0.000981@239  patience=11/150
+Step 251: val=0.001878 split=0.000668 total=0.002212  k1=5 k2=4 leaves=10432  best=0.000981@239  patience=12/150
+Step 252: val=0.002525 split=0.000176 total=0.002613  k1=2 k2=4 leaves=8704  best=0.000981@239  patience=13/150
+Step 253: val=0.002590 split=0.000313 total=0.002746  k1=3 k2=4 leaves=10240  best=0.000981@239  patience=14/150
+Step 254: val=0.001834 split=0.000298 total=0.001983  k1=4 k2=3 leaves=10240  best=0.000981@239  patience=15/150
+Step 255: val=0.002148 split=0.000213 total=0.002254  k1=1 k2=2 leaves=8608  best=0.000981@239  patience=16/150
+Step 256: val=0.001677 split=0.000715 total=0.002034  k1=3 k2=3 leaves=11104  best=0.000981@239  patience=17/150
+Step 257: val=0.002692 split=0.000240 total=0.002812  k1=2 k2=5 leaves=8512  best=0.000981@239  patience=18/150
+Step 258: val=0.002410 split=0.000571 total=0.002695  k1=5 k2=1 leaves=8800  best=0.000981@239  patience=19/150
+Step 259: val=0.002644 split=0.001120 total=0.003204  k1=5 k2=3 leaves=9136  best=0.000981@239  patience=20/150
+Step 260: val=0.003359 split=0.000632 total=0.003675  k1=5 k2=4 leaves=10432  best=0.000981@239  patience=21/150
+Step 261: val=0.003650 split=0.000277 total=0.003789  k1=1 k2=3 leaves=8704  best=0.000981@239  patience=22/150
+Step 262: val=0.003437 split=0.000132 total=0.003503  k1=2 k2=2 leaves=10624  best=0.000981@239  patience=23/150
+Step 263: val=0.001508 split=0.000232 total=0.001624  k1=3 k2=4 leaves=10240  best=0.000981@239  patience=24/150
+Step 264: val=0.004982 split=0.005810 total=0.007887  k1=5 k2=5 leaves=11104  best=0.000981@239  patience=25/150
+Step 265: val=0.004376 split=0.003497 total=0.006124  k1=5 k2=5 leaves=11104  best=0.000981@239  patience=26/150
+Step 266: val=0.001966 split=0.000267 total=0.002100  k1=3 k2=3 leaves=11104  best=0.000981@239  patience=27/150
+Step 267: val=0.001313 split=0.000255 total=0.001440  k1=5 k2=1 leaves=8800  best=0.000981@239  patience=28/150
+Step 268: val=0.001705 split=0.000597 total=0.002004  k1=4 k2=5 leaves=10432  best=0.000981@239  patience=29/150
+Step 269: val=0.002308 split=0.000377 total=0.002497  k1=4 k2=1 leaves=9088  best=0.000981@239  patience=30/150
+Step 270: val=0.001479 split=0.001472 total=0.002215  k1=5 k2=4 leaves=10432  best=0.000981@239  patience=31/150
+Step 271: val=0.001166 split=0.000255 total=0.001294  k1=2 k2=5 leaves=8512  best=0.000981@239  patience=32/150
+Step 272: val=0.002325 split=0.003201 total=0.003926  k1=5 k2=5 leaves=11104  best=0.000981@239  patience=33/150
+Step 273: val=0.001423 split=0.001152 total=0.001999  k1=5 k2=4 leaves=10432  best=0.000981@239  patience=34/150
+Step 274: val=0.001916 split=0.000096 total=0.001964  k1=2 k2=1 leaves=8608  best=0.000981@239  patience=35/150
+Step 275: val=0.001952 split=0.000523 total=0.002213  k1=3 k2=1 leaves=8704  best=0.000981@239  patience=36/150
+Step 276: val=0.002112 split=0.000130 total=0.002177  k1=3 k2=2 leaves=9856  best=0.000981@239  patience=37/150
+Step 277: val=0.001110 split=0.000252 total=0.001236  k1=2 k2=4 leaves=8704  best=0.000981@239  patience=38/150
+Step 278: val=0.001654 split=0.000258 total=0.001783  k1=3 k2=1 leaves=8704  best=0.000981@239  patience=39/150
+Step 279: val=0.001599 split=0.000185 total=0.001692  k1=4 k2=1 leaves=9088  best=0.000981@239  patience=40/150
+Step 280: val=0.002250 split=0.000057 total=0.002278  k1=2 k2=2 leaves=10624  best=0.000981@239  patience=41/150
+Step 281: val=0.000814 split=0.000246 total=0.000937  k1=1 k2=3 leaves=8704  best=0.000937@281  patience=0/150
+Step 282: val=0.000777 split=0.000197 total=0.000875  k1=1 k2=3 leaves=8704  best=0.000875@282  patience=0/150
+Step 283: val=0.001229 split=0.000114 total=0.001286  k1=3 k2=3 leaves=11104  best=0.000875@282  patience=1/150
+Step 284: val=0.001526 split=0.000067 total=0.001559  k1=3 k2=2 leaves=9856  best=0.000875@282  patience=2/150
+Step 285: val=0.001119 split=0.000068 total=0.001154  k1=3 k2=2 leaves=9856  best=0.000875@282  patience=3/150
+Step 286: val=0.001328 split=0.000079 total=0.001367  k1=5 k2=2 leaves=8512  best=0.000875@282  patience=4/150
+Step 287: val=0.000960 split=0.000065 total=0.000992  k1=4 k2=2 leaves=8704  best=0.000875@282  patience=5/150
+Step 288: val=0.000895 split=0.000112 total=0.000951  k1=3 k2=1 leaves=8704  best=0.000875@282  patience=6/150
+Step 289: val=0.001452 split=0.000093 total=0.001499  k1=4 k2=3 leaves=10240  best=0.000875@282  patience=7/150
+Step 290: val=0.000932 split=0.000053 total=0.000959  k1=2 k2=4 leaves=8704  best=0.000875@282  patience=8/150
+Step 291: val=0.001089 split=0.000071 total=0.001124  k1=2 k2=3 leaves=9856  best=0.000875@282  patience=9/150
+Step 292: val=0.001412 split=0.000535 total=0.001680  k1=5 k2=3 leaves=9136  best=0.000875@282  patience=10/150
+Step 293: val=0.001009 split=0.000163 total=0.001091  k1=1 k2=5 leaves=8800  best=0.000875@282  patience=11/150
+Step 294: val=0.003280 split=0.003765 total=0.005163  k1=5 k2=5 leaves=11104  best=0.000875@282  patience=12/150
+Step 295: val=0.003947 split=0.000055 total=0.003975  k1=3 k2=2 leaves=9856  best=0.000875@282  patience=13/150
+Step 296: val=0.001842 split=0.000081 total=0.001882  k1=1 k2=4 leaves=9088  best=0.000875@282  patience=14/150
+Step 297: val=0.000948 split=0.000566 total=0.001231  k1=5 k2=3 leaves=9136  best=0.000875@282  patience=15/150
+Step 298: val=0.001144 split=0.000037 total=0.001162  k1=2 k2=2 leaves=10624  best=0.000875@282  patience=16/150
+Step 299: val=0.002047 split=0.000061 total=0.002077  k1=5 k2=2 leaves=8512  best=0.000875@282  patience=17/150
+Step 300: val=0.003590 split=0.000108 total=0.003645  k1=4 k2=5 leaves=10432  best=0.000875@282  patience=18/150
+  -> Saved plots/20260226_190141/samples_step0300.png (3 samples)
+  -> Saved plots/20260226_190141/loss_curve_step0300.png
+Step 301: val=0.000917 split=0.000095 total=0.000965  k1=4 k2=2 leaves=8704  best=0.000875@282  patience=19/150
+Step 302: val=0.000741 split=0.000266 total=0.000874  k1=1 k2=5 leaves=8800  best=0.000874@302  patience=0/150
+Step 303: val=0.003300 split=0.000046 total=0.003323  k1=1 k2=1 leaves=11104  best=0.000874@302  patience=1/150
+Step 304: val=0.000858 split=0.001010 total=0.001363  k1=3 k2=5 leaves=9136  best=0.000874@302  patience=2/150
+Step 305: val=0.000754 split=0.000234 total=0.000871  k1=1 k2=5 leaves=8800  best=0.000871@305  patience=0/150
+Step 306: val=0.001363 split=0.000057 total=0.001391  k1=3 k2=2 leaves=9856  best=0.000871@305  patience=1/150
+Step 307: val=0.002423 split=0.000392 total=0.002619  k1=5 k2=5 leaves=11104  best=0.000871@305  patience=2/150
+Step 308: val=0.001026 split=0.000056 total=0.001054  k1=3 k2=2 leaves=9856  best=0.000871@305  patience=3/150
+Step 309: val=0.002279 split=0.000349 total=0.002453  k1=5 k2=5 leaves=11104  best=0.000871@305  patience=4/150
+Step 310: val=0.000845 split=0.000045 total=0.000868  k1=1 k2=2 leaves=8608  best=0.000868@310  patience=0/150
+Step 311: val=0.000760 split=0.000049 total=0.000784  k1=2 k2=5 leaves=8512  best=0.000784@311  patience=0/150
+Step 312: val=0.001292 split=0.000043 total=0.001313  k1=1 k2=2 leaves=8608  best=0.000784@311  patience=1/150
+Step 313: val=0.000980 split=0.000067 total=0.001013  k1=1 k2=4 leaves=9088  best=0.000784@311  patience=2/150
+Step 314: val=0.001345 split=0.000100 total=0.001395  k1=5 k2=4 leaves=10432  best=0.000784@311  patience=3/150
+Step 315: val=0.001315 split=0.000045 total=0.001338  k1=3 k2=2 leaves=9856  best=0.000784@311  patience=4/150
+Step 316: val=0.001601 split=0.000549 total=0.001875  k1=3 k2=5 leaves=9136  best=0.000784@311  patience=5/150
+Step 317: val=0.001096 split=0.000044 total=0.001118  k1=2 k2=1 leaves=8608  best=0.000784@311  patience=6/150
+Step 318: val=0.000767 split=0.000062 total=0.000798  k1=1 k2=4 leaves=9088  best=0.000784@311  patience=7/150
+Step 319: val=0.001444 split=0.000094 total=0.001491  k1=5 k2=4 leaves=10432  best=0.000784@311  patience=8/150
+Step 320: val=0.001922 split=0.000026 total=0.001935  k1=1 k2=1 leaves=11104  best=0.000784@311  patience=9/150
+Step 321: val=0.000879 split=0.000235 total=0.000997  k1=5 k2=3 leaves=9136  best=0.000784@311  patience=10/150
+Step 322: val=0.001221 split=0.000043 total=0.001242  k1=2 k2=4 leaves=8704  best=0.000784@311  patience=11/150
+Step 323: val=0.001143 split=0.000085 total=0.001186  k1=3 k2=1 leaves=8704  best=0.000784@311  patience=12/150
+Step 324: val=0.000834 split=0.000103 total=0.000885  k1=1 k2=3 leaves=8704  best=0.000784@311  patience=13/150
+Step 325: val=0.001104 split=0.000049 total=0.001128  k1=4 k2=3 leaves=10240  best=0.000784@311  patience=14/150
+Step 326: val=0.000763 split=0.000039 total=0.000782  k1=1 k2=2 leaves=8608  best=0.000782@326  patience=0/150
+Step 327: val=0.001005 split=0.000109 total=0.001060  k1=3 k2=3 leaves=11104  best=0.000782@326  patience=1/150
+Step 328: val=0.001339 split=0.000112 total=0.001395  k1=1 k2=5 leaves=8800  best=0.000782@326  patience=2/150
+Step 329: val=0.000529 split=0.000057 total=0.000557  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=0/150
+Step 330: val=0.001919 split=0.000021 total=0.001930  k1=1 k2=1 leaves=11104  best=0.000557@329  patience=1/150
+Step 331: val=0.001464 split=0.000021 total=0.001475  k1=1 k2=1 leaves=11104  best=0.000557@329  patience=2/150
+Step 332: val=0.001785 split=0.000050 total=0.001810  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=3/150
+Step 333: val=0.000685 split=0.000036 total=0.000703  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=4/150
+Step 334: val=0.001936 split=0.000051 total=0.001961  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=5/150
+Step 335: val=0.000867 split=0.000025 total=0.000880  k1=2 k2=2 leaves=10624  best=0.000557@329  patience=6/150
+Step 336: val=0.000758 split=0.000032 total=0.000774  k1=2 k2=4 leaves=8704  best=0.000557@329  patience=7/150
+Step 337: val=0.000764 split=0.000036 total=0.000782  k1=2 k2=5 leaves=8512  best=0.000557@329  patience=8/150
+Step 338: val=0.000728 split=0.000090 total=0.000773  k1=1 k2=5 leaves=8800  best=0.000557@329  patience=9/150
+Step 339: val=0.002149 split=0.000023 total=0.002161  k1=2 k2=2 leaves=10624  best=0.000557@329  patience=10/150
+Step 340: val=0.000693 split=0.000075 total=0.000731  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=11/150
+Step 341: val=0.001449 split=0.000163 total=0.001531  k1=5 k2=3 leaves=9136  best=0.000557@329  patience=12/150
+Step 342: val=0.000638 split=0.000066 total=0.000671  k1=3 k2=1 leaves=8704  best=0.000557@329  patience=13/150
+Step 343: val=0.000846 split=0.000045 total=0.000868  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=14/150
+Step 344: val=0.001855 split=0.000097 total=0.001904  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=15/150
+Step 345: val=0.000825 split=0.000035 total=0.000843  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=16/150
+Step 346: val=0.001400 split=0.000078 total=0.001439  k1=3 k2=3 leaves=11104  best=0.000557@329  patience=17/150
+Step 347: val=0.000655 split=0.000042 total=0.000676  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=18/150
+Step 348: val=0.000823 split=0.000034 total=0.000840  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=19/150
+Step 349: val=0.000568 split=0.000074 total=0.000605  k1=4 k2=1 leaves=9088  best=0.000557@329  patience=20/150
+Step 350: val=0.001027 split=0.000073 total=0.001063  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=21/150
+Step 351: val=0.001819 split=0.000263 total=0.001951  k1=3 k2=5 leaves=9136  best=0.000557@329  patience=22/150
+Step 352: val=0.000908 split=0.000041 total=0.000929  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=23/150
+Step 353: val=0.001004 split=0.000027 total=0.001017  k1=2 k2=4 leaves=8704  best=0.000557@329  patience=24/150
+Step 354: val=0.000996 split=0.000042 total=0.001018  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=25/150
+Step 355: val=0.000994 split=0.000026 total=0.001007  k1=2 k2=4 leaves=8704  best=0.000557@329  patience=26/150
+Step 356: val=0.000727 split=0.000070 total=0.000762  k1=3 k2=3 leaves=11104  best=0.000557@329  patience=27/150
+Step 357: val=0.001241 split=0.000032 total=0.001256  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=28/150
+Step 358: val=0.000585 split=0.000060 total=0.000615  k1=3 k2=1 leaves=8704  best=0.000557@329  patience=29/150
+Step 359: val=0.002321 split=0.000036 total=0.002339  k1=2 k2=5 leaves=8512  best=0.000557@329  patience=30/150
+Step 360: val=0.001342 split=0.000047 total=0.001366  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=31/150
+Step 361: val=0.000730 split=0.000058 total=0.000759  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=32/150
+Step 362: val=0.001094 split=0.000069 total=0.001129  k1=3 k2=3 leaves=11104  best=0.000557@329  patience=33/150
+Step 363: val=0.000940 split=0.000028 total=0.000954  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=34/150
+Step 364: val=0.001920 split=0.000018 total=0.001928  k1=1 k2=1 leaves=11104  best=0.000557@329  patience=35/150
+Step 365: val=0.001156 split=0.000085 total=0.001198  k1=4 k2=1 leaves=9088  best=0.000557@329  patience=36/150
+Step 366: val=0.001698 split=0.000049 total=0.001722  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=37/150
+Step 367: val=0.001007 split=0.000089 total=0.001052  k1=4 k2=1 leaves=9088  best=0.000557@329  patience=38/150
+Step 368: val=0.000883 split=0.000058 total=0.000912  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=39/150
+Step 369: val=0.001213 split=0.000019 total=0.001223  k1=1 k2=1 leaves=11104  best=0.000557@329  patience=40/150
+Step 370: val=0.002212 split=0.000090 total=0.002257  k1=4 k2=5 leaves=10432  best=0.000557@329  patience=41/150
+Step 371: val=0.000864 split=0.000043 total=0.000886  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=42/150
+Step 372: val=0.001379 split=0.000028 total=0.001393  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=43/150
+Step 373: val=0.000788 split=0.000170 total=0.000873  k1=3 k2=5 leaves=9136  best=0.000557@329  patience=44/150
+Step 374: val=0.002267 split=0.000019 total=0.002277  k1=2 k2=2 leaves=10624  best=0.000557@329  patience=45/150
+Step 375: val=0.001039 split=0.000052 total=0.001066  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=46/150
+Step 376: val=0.001257 split=0.000033 total=0.001274  k1=2 k2=5 leaves=8512  best=0.000557@329  patience=47/150
+Step 377: val=0.001318 split=0.000032 total=0.001334  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=48/150
+Step 378: val=0.001082 split=0.000057 total=0.001111  k1=3 k2=1 leaves=8704  best=0.000557@329  patience=49/150
+Step 379: val=0.000924 split=0.000055 total=0.000951  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=50/150
+Step 380: val=0.002710 split=0.000101 total=0.002761  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=51/150
+Step 381: val=0.001215 split=0.000084 total=0.001258  k1=4 k2=5 leaves=10432  best=0.000557@329  patience=52/150
+Step 382: val=0.003537 split=0.000050 total=0.003562  k1=3 k2=1 leaves=8704  best=0.000557@329  patience=53/150
+Step 383: val=0.003447 split=0.000032 total=0.003463  k1=2 k2=1 leaves=8608  best=0.000557@329  patience=54/150
+Step 384: val=0.001621 split=0.000025 total=0.001633  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=55/150
+Step 385: val=0.002597 split=0.000135 total=0.002664  k1=5 k2=3 leaves=9136  best=0.000557@329  patience=56/150
+Step 386: val=0.001648 split=0.000031 total=0.001663  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=57/150
+Step 387: val=0.002771 split=0.000039 total=0.002791  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=58/150
+Step 388: val=0.002237 split=0.000093 total=0.002284  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=59/150
+Step 389: val=0.001601 split=0.000027 total=0.001614  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=60/150
+Step 390: val=0.001590 split=0.000415 total=0.001797  k1=5 k2=5 leaves=11104  best=0.000557@329  patience=61/150
+Step 391: val=0.002552 split=0.000072 total=0.002589  k1=1 k2=5 leaves=8800  best=0.000557@329  patience=62/150
+Step 392: val=0.003440 split=0.000032 total=0.003456  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=63/150
+Step 393: val=0.001901 split=0.000026 total=0.001915  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=64/150
+Step 394: val=0.001675 split=0.000065 total=0.001707  k1=4 k2=1 leaves=9088  best=0.000557@329  patience=65/150
+Step 395: val=0.002654 split=0.000038 total=0.002673  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=66/150
+Step 396: val=0.003142 split=0.000068 total=0.003176  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=67/150
+Step 397: val=0.002191 split=0.000043 total=0.002212  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=68/150
+Step 398: val=0.001445 split=0.000041 total=0.001466  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=69/150
+Step 399: val=0.001486 split=0.000047 total=0.001510  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=70/150
+Step 400: val=0.001185 split=0.000069 total=0.001219  k1=1 k2=5 leaves=8800  best=0.000557@329  patience=71/150
+  -> Saved plots/20260226_190141/samples_step0400.png (3 samples)
+  -> Saved plots/20260226_190141/loss_curve_step0400.png
+Step 401: val=0.001049 split=0.000086 total=0.001093  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=72/150
+Step 402: val=0.004066 split=0.000032 total=0.004082  k1=2 k2=1 leaves=8608  best=0.000557@329  patience=73/150
+Step 403: val=0.003660 split=0.000363 total=0.003842  k1=5 k2=5 leaves=11104  best=0.000557@329  patience=74/150
+Step 404: val=0.001670 split=0.000067 total=0.001703  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=75/150
+Step 405: val=0.001320 split=0.000026 total=0.001333  k1=1 k2=2 leaves=8608  best=0.000557@329  patience=76/150
+Step 406: val=0.002535 split=0.000044 total=0.002557  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=77/150
+Step 407: val=0.001264 split=0.000028 total=0.001278  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=78/150
+Step 408: val=0.002538 split=0.000189 total=0.002632  k1=5 k2=3 leaves=9136  best=0.000557@329  patience=79/150
+Step 409: val=0.001655 split=0.000029 total=0.001670  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=80/150
+Step 410: val=0.000964 split=0.000057 total=0.000992  k1=3 k2=1 leaves=8704  best=0.000557@329  patience=81/150
+Step 411: val=0.002397 split=0.000234 total=0.002514  k1=3 k2=5 leaves=9136  best=0.000557@329  patience=82/150
+Step 412: val=0.000904 split=0.000029 total=0.000918  k1=2 k2=5 leaves=8512  best=0.000557@329  patience=83/150
+Step 413: val=0.001534 split=0.000065 total=0.001567  k1=4 k2=5 leaves=10432  best=0.000557@329  patience=84/150
+Step 414: val=0.002043 split=0.000029 total=0.002057  k1=5 k2=2 leaves=8512  best=0.000557@329  patience=85/150
+Step 415: val=0.001878 split=0.000029 total=0.001892  k1=5 k2=2 leaves=8512  best=0.000557@329  patience=86/150
+Step 416: val=0.001155 split=0.000208 total=0.001259  k1=3 k2=5 leaves=9136  best=0.000557@329  patience=87/150
+Step 417: val=0.001254 split=0.000062 total=0.001285  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=88/150
+Step 418: val=0.003566 split=0.000243 total=0.003688  k1=5 k2=5 leaves=11104  best=0.000557@329  patience=89/150
+Step 419: val=0.001210 split=0.000030 total=0.001225  k1=2 k2=5 leaves=8512  best=0.000557@329  patience=90/150
+Step 420: val=0.001577 split=0.000067 total=0.001611  k1=4 k2=5 leaves=10432  best=0.000557@329  patience=91/150
+Step 421: val=0.000993 split=0.000034 total=0.001010  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=92/150
+Step 422: val=0.002771 split=0.000057 total=0.002800  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=93/150
+Step 423: val=0.001693 split=0.000069 total=0.001728  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=94/150
+Step 424: val=0.001578 split=0.000033 total=0.001594  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=95/150
+Step 425: val=0.001011 split=0.000060 total=0.001041  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=96/150
+Step 426: val=0.001619 split=0.000030 total=0.001634  k1=2 k2=4 leaves=8704  best=0.000557@329  patience=97/150
+Step 427: val=0.000896 split=0.000024 total=0.000908  k1=1 k2=2 leaves=8608  best=0.000557@329  patience=98/150
+Step 428: val=0.001429 split=0.000031 total=0.001444  k1=2 k2=1 leaves=8608  best=0.000557@329  patience=99/150
+Step 429: val=0.001799 split=0.000015 total=0.001807  k1=1 k2=1 leaves=11104  best=0.000557@329  patience=100/150
+Step 430: val=0.005859 split=0.000208 total=0.005963  k1=5 k2=5 leaves=11104  best=0.000557@329  patience=101/150
+Step 431: val=0.001353 split=0.000027 total=0.001366  k1=2 k2=1 leaves=8608  best=0.000557@329  patience=102/150
+Step 432: val=0.003298 split=0.000059 total=0.003328  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=103/150
+Step 433: val=0.001702 split=0.000033 total=0.001719  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=104/150
+Step 434: val=0.005809 split=0.000041 total=0.005830  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=105/150
+Step 435: val=0.002050 split=0.000081 total=0.002091  k1=1 k2=5 leaves=8800  best=0.000557@329  patience=106/150
+Step 436: val=0.005358 split=0.000185 total=0.005451  k1=5 k2=3 leaves=9136  best=0.000557@329  patience=107/150
+Step 437: val=0.002248 split=0.000032 total=0.002264  k1=5 k2=2 leaves=8512  best=0.000557@329  patience=108/150
+Step 438: val=0.003206 split=0.000066 total=0.003239  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=109/150
+Step 439: val=0.003084 split=0.000031 total=0.003100  k1=5 k2=2 leaves=8512  best=0.000557@329  patience=110/150
+Step 440: val=0.001895 split=0.000033 total=0.001911  k1=5 k2=2 leaves=8512  best=0.000557@329  patience=111/150
+Step 441: val=0.004103 split=0.000027 total=0.004116  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=112/150
+Step 442: val=0.001901 split=0.000073 total=0.001938  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=113/150
+Step 443: val=0.002903 split=0.000068 total=0.002937  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=114/150
+Step 444: val=0.001446 split=0.000032 total=0.001462  k1=2 k2=1 leaves=8608  best=0.000557@329  patience=115/150
+Step 445: val=0.002413 split=0.000068 total=0.002447  k1=3 k2=1 leaves=8704  best=0.000557@329  patience=116/150
+Step 446: val=0.001746 split=0.000035 total=0.001763  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=117/150
+Step 447: val=0.003070 split=0.000043 total=0.003091  k1=2 k2=4 leaves=8704  best=0.000557@329  patience=118/150
+Step 448: val=0.001832 split=0.000078 total=0.001871  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=119/150
+Step 449: val=0.002608 split=0.000035 total=0.002625  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=120/150
+Step 450: val=0.001653 split=0.000040 total=0.001673  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=121/150
+Step 451: val=0.001756 split=0.000036 total=0.001774  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=122/150
+Step 452: val=0.002644 split=0.000032 total=0.002660  k1=2 k2=1 leaves=8608  best=0.000557@329  patience=123/150
+Step 453: val=0.001877 split=0.000021 total=0.001887  k1=1 k2=1 leaves=11104  best=0.000557@329  patience=124/150
+Step 454: val=0.001891 split=0.000038 total=0.001910  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=125/150
+Step 455: val=0.002535 split=0.000042 total=0.002556  k1=4 k2=4 leaves=10240  best=0.000557@329  patience=126/150
+Step 456: val=0.001648 split=0.000075 total=0.001685  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=127/150
+Step 457: val=0.001445 split=0.000029 total=0.001459  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=128/150
+Step 458: val=0.001333 split=0.000061 total=0.001364  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=129/150
+Step 459: val=0.002215 split=0.000076 total=0.002253  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=130/150
+Step 460: val=0.003129 split=0.000029 total=0.003144  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=131/150
+Step 461: val=0.001573 split=0.000068 total=0.001607  k1=5 k2=1 leaves=8800  best=0.000557@329  patience=132/150
+Step 462: val=0.001479 split=0.000034 total=0.001496  k1=4 k2=3 leaves=10240  best=0.000557@329  patience=133/150
+Step 463: val=0.002683 split=0.000074 total=0.002720  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=134/150
+Step 464: val=0.000837 split=0.000058 total=0.000866  k1=1 k2=3 leaves=8704  best=0.000557@329  patience=135/150
+Step 465: val=0.003667 split=0.000232 total=0.003783  k1=5 k2=5 leaves=11104  best=0.000557@329  patience=136/150
+Step 466: val=0.001825 split=0.000043 total=0.001847  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=137/150
+Step 467: val=0.002129 split=0.000049 total=0.002154  k1=4 k2=2 leaves=8704  best=0.000557@329  patience=138/150
+Step 468: val=0.001427 split=0.000046 total=0.001450  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=139/150
+Step 469: val=0.002526 split=0.000025 total=0.002539  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=140/150
+Step 470: val=0.001375 split=0.000025 total=0.001388  k1=3 k2=2 leaves=9856  best=0.000557@329  patience=141/150
+Step 471: val=0.003203 split=0.000028 total=0.003217  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=142/150
+Step 472: val=0.001634 split=0.000028 total=0.001648  k1=2 k2=3 leaves=9856  best=0.000557@329  patience=143/150
+Step 473: val=0.002164 split=0.000019 total=0.002173  k1=2 k2=2 leaves=10624  best=0.000557@329  patience=144/150
+Step 474: val=0.001576 split=0.000066 total=0.001609  k1=5 k2=4 leaves=10432  best=0.000557@329  patience=145/150
+Step 475: val=0.001756 split=0.000033 total=0.001772  k1=2 k2=4 leaves=8704  best=0.000557@329  patience=146/150
+Step 476: val=0.001959 split=0.000042 total=0.001980  k1=1 k2=4 leaves=9088  best=0.000557@329  patience=147/150
+Step 477: val=0.002785 split=0.000085 total=0.002828  k1=3 k2=3 leaves=11104  best=0.000557@329  patience=148/150
+Step 478: val=0.001659 split=0.000033 total=0.001676  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=149/150
+Step 479: val=0.001592 split=0.000035 total=0.001610  k1=3 k2=4 leaves=10240  best=0.000557@329  patience=150/150
+
+Early stopping triggered at step 479 (no improvement for 150 steps)
+Training complete. Best model saved at step 329 with total_loss=0.000557
+Best model path: plots/20260226_190141/best_model.pt
+
+Loading best model for final evaluation + embedding-only decode demo...
+Embedding-only decode demo ran successfully.
+/home/tahmid/venv/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  warnings.warn(
+Running on cuda
+Traceback (most recent call last):
+  File "/home/tahmid/Development/OctreeRefineNet/20260226-QuadVAE-Autoencoder.py", line 1046, in <module>
+    main()
+  File "/home/tahmid/Development/OctreeRefineNet/20260226-QuadVAE-Autoencoder.py", line 776, in main
+    model = TreeAE_DirectionB(in_c=1, hidden=128, emb_dim=128, max_depth=MAX_LEVEL, pos_freqs=6).to(device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahmid/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahmid/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/tahmid/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/tahmid/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/tahmid/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+KeyboardInterrupt
+/home/tahmid/venv/lib/python3.12/site-packages/torch/cuda/__init__.py:283: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  warnings.warn(
+Running on cuda
+Saving plots to: plots/20260226_205831
+Training Denoising AE across random trees for 3000 steps...
+  - Random K1,K2 in [1,5] each step
+  - Noise std: 0.05
+  - GRADIENT-BASED splitting
+  - Split loss: ENABLED (weight=0.5)
+  - Decoder starts from learned root token; uses ONLY stored embeddings + topology
+Step 0: val=0.252483 split=0.690717 total=0.597942  k1=1 k2=1 leaves=33568  best=0.597942@0  patience=0/150
+  -> Saved plots/20260226_205831/samples_step0000.png (1 samples)
+  -> Saved plots/20260226_205831/loss_curve_step0000.png
+Step 1: val=0.230587 split=0.641532 total=0.551453  k1=4 k2=4 leaves=33280  best=0.551453@1  patience=0/150
+Step 2: val=0.276863 split=0.571393 total=0.562659  k1=1 k2=3 leaves=25408  best=0.551453@1  patience=1/150
+Step 3: val=0.252345 split=0.485911 total=0.495399  k1=2 k2=4 leaves=24448  best=0.495399@3  patience=0/150
+Step 4: val=0.183211 split=0.398875 total=0.382748  k1=4 k2=3 leaves=28864  best=0.382748@4  patience=0/150
+Step 5: val=0.115887 split=0.318191 total=0.275082  k1=3 k2=4 leaves=28864  best=0.275082@5  patience=0/150
+Step 6: val=0.163339 split=0.252342 total=0.289609  k1=3 k2=3 leaves=32608  best=0.275082@5  patience=1/150
+Step 7: val=0.124347 split=0.203917 total=0.226404  k1=1 k2=5 leaves=25552  best=0.226404@7  patience=0/150
+Step 8: val=0.115443 split=0.174534 total=0.202808  k1=5 k2=1 leaves=25552  best=0.202808@8  patience=0/150
+Step 9: val=0.064211 split=0.176544 total=0.152581  k1=3 k2=4 leaves=28864  best=0.152581@9  patience=0/150
+Step 10: val=0.057757 split=0.149655 total=0.132682  k1=5 k2=1 leaves=25552  best=0.132682@10  patience=0/150
+Step 11: val=0.048036 split=0.139463 total=0.117865  k1=5 k2=2 leaves=24640  best=0.117865@11  patience=0/150
+Step 12: val=0.126745 split=0.167022 total=0.210354  k1=1 k2=1 leaves=33568  best=0.117865@11  patience=1/150
+Step 13: val=0.076524 split=0.158908 total=0.156075  k1=5 k2=5 leaves=32416  best=0.117865@11  patience=2/150
+Step 14: val=0.087132 split=0.155052 total=0.164755  k1=1 k2=1 leaves=33568  best=0.117865@11  patience=3/150
+Step 15: val=0.060343 split=0.134722 total=0.127801  k1=1 k2=3 leaves=25408  best=0.117865@11  patience=4/150
+Step 16: val=0.103728 split=0.129799 total=0.168724  k1=2 k2=5 leaves=24640  best=0.117865@11  patience=5/150
+Step 17: val=0.091797 split=0.129539 total=0.156663  k1=1 k2=5 leaves=25552  best=0.117865@11  patience=6/150
+Step 18: val=0.088044 split=0.141059 total=0.158669  k1=4 k2=2 leaves=24448  best=0.117865@11  patience=7/150
+Step 19: val=0.044682 split=0.148118 total=0.118837  k1=1 k2=1 leaves=33568  best=0.117865@11  patience=8/150
+Step 20: val=0.033055 split=0.151912 total=0.109107  k1=3 k2=4 leaves=28864  best=0.109107@20  patience=0/150
+Step 21: val=0.046426 split=0.156108 total=0.124575  k1=5 k2=4 leaves=29440  best=0.109107@20  patience=1/150
+Step 22: val=0.036793 split=0.128845 total=0.101312  k1=1 k2=2 leaves=25024  best=0.101312@22  patience=0/150
+Step 23: val=0.036391 split=0.156450 total=0.114712  k1=5 k2=4 leaves=29440  best=0.101312@22  patience=1/150
+Step 24: val=0.022126 split=0.149301 total=0.096872  k1=3 k2=4 leaves=28864  best=0.096872@24  patience=0/150
+Step 25: val=0.030200 split=0.122477 total=0.091533  k1=5 k2=2 leaves=24640  best=0.091533@25  patience=0/150
+Step 26: val=0.025259 split=0.122956 total=0.086832  k1=5 k2=1 leaves=25552  best=0.086832@26  patience=0/150
+Step 27: val=0.027260 split=0.148879 total=0.101794  k1=2 k2=3 leaves=27520  best=0.086832@26  patience=1/150
+Step 28: val=0.016708 split=0.126722 total=0.080164  k1=4 k2=2 leaves=24448  best=0.080164@28  patience=0/150
+Step 29: val=0.051839 split=0.146097 total=0.124981  k1=1 k2=1 leaves=33568  best=0.080164@28  patience=1/150
+Step 30: val=0.016831 split=0.151613 total=0.092732  k1=4 k2=5 leaves=29440  best=0.080164@28  patience=2/150
+Step 31: val=0.016313 split=0.149585 total=0.091199  k1=5 k2=4 leaves=29440  best=0.080164@28  patience=3/150
+Step 32: val=0.030678 split=0.118548 total=0.090045  k1=4 k2=2 leaves=24448  best=0.080164@28  patience=4/150
+Step 33: val=0.024506 split=0.108150 total=0.078674  k1=5 k2=2 leaves=24640  best=0.078674@33  patience=0/150
+Step 34: val=0.022069 split=0.110235 total=0.077280  k1=5 k2=1 leaves=25552  best=0.077280@34  patience=0/150
+Step 35: val=0.014690 split=0.124126 total=0.076846  k1=1 k2=1 leaves=33568  best=0.076846@35  patience=0/150
+Step 36: val=0.020849 split=0.103132 total=0.072509  k1=2 k2=5 leaves=24640  best=0.072509@36  patience=0/150
+Step 37: val=0.015836 split=0.111359 total=0.071608  k1=4 k2=1 leaves=25792  best=0.071608@37  patience=0/150
+Step 38: val=0.012188 split=0.132705 total=0.078633  k1=4 k2=5 leaves=29440  best=0.071608@37  patience=1/150
+Step 39: val=0.020611 split=0.133393 total=0.087400  k1=5 k2=5 leaves=32416  best=0.071608@37  patience=2/150
+Step 40: val=0.009515 split=0.092185 total=0.055700  k1=5 k2=1 leaves=25552  best=0.055700@40  patience=0/150
+Step 41: val=0.008686 split=0.087497 total=0.052526  k1=5 k2=2 leaves=24640  best=0.052526@41  patience=0/150
+Step 42: val=0.036834 split=0.084702 total=0.079276  k1=1 k2=1 leaves=33568  best=0.052526@41  patience=1/150
+Step 43: val=0.011279 split=0.074176 total=0.048458  k1=2 k2=5 leaves=24640  best=0.048458@43  patience=0/150
+Step 44: val=0.016096 split=0.073714 total=0.053045  k1=2 k2=4 leaves=24448  best=0.048458@43  patience=1/150
+Step 45: val=0.019081 split=0.098600 total=0.068472  k1=3 k2=3 leaves=32608  best=0.048458@43  patience=2/150
+Step 46: val=0.015908 split=0.047519 total=0.039759  k1=1 k2=2 leaves=25024  best=0.039759@46  patience=0/150
+Step 47: val=0.014770 split=0.052450 total=0.041086  k1=5 k2=1 leaves=25552  best=0.039759@46  patience=1/150
+Step 48: val=0.016079 split=0.101654 total=0.066997  k1=5 k2=5 leaves=32416  best=0.039759@46  patience=2/150
+Step 49: val=0.011154 split=0.036673 total=0.029581  k1=2 k2=1 leaves=25024  best=0.029581@49  patience=0/150
+Step 50: val=0.020050 split=0.043285 total=0.041783  k1=1 k2=5 leaves=25552  best=0.029581@49  patience=1/150
+Step 51: val=0.014557 split=0.086253 total=0.057773  k1=4 k2=5 leaves=29440  best=0.029581@49  patience=2/150
+Step 52: val=0.011301 split=0.091245 total=0.057014  k1=5 k2=5 leaves=32416  best=0.029581@49  patience=3/150
+Step 53: val=0.012425 split=0.081222 total=0.053125  k1=3 k2=5 leaves=24400  best=0.029581@49  patience=4/150
+Step 54: val=0.024540 split=0.052707 total=0.050983  k1=3 k2=3 leaves=32608  best=0.029581@49  patience=5/150
+Step 55: val=0.016932 split=0.038380 total=0.036211  k1=1 k2=5 leaves=25552  best=0.029581@49  patience=6/150
+Step 56: val=0.016265 split=0.030257 total=0.031482  k1=3 k2=1 leaves=25408  best=0.029581@49  patience=7/150
+Step 57: val=0.010621 split=0.057080 total=0.039250  k1=3 k2=2 leaves=27520  best=0.029581@49  patience=8/150
+Step 58: val=0.017662 split=0.034673 total=0.035087  k1=1 k2=4 leaves=25792  best=0.029581@49  patience=9/150
+Step 59: val=0.013186 split=0.023575 total=0.025063  k1=1 k2=3 leaves=25408  best=0.025063@59  patience=0/150
+Step 60: val=0.010279 split=0.034297 total=0.027517  k1=5 k2=1 leaves=25552  best=0.025063@59  patience=1/150
+Step 61: val=0.011755 split=0.032717 total=0.028202  k1=1 k2=4 leaves=25792  best=0.025063@59  patience=2/150
+Step 62: val=0.007421 split=0.029458 total=0.022238  k1=1 k2=4 leaves=25792  best=0.022238@62  patience=0/150
+Step 63: val=0.009143 split=0.068414 total=0.043438  k1=5 k2=3 leaves=24400  best=0.022238@62  patience=1/150
+Step 64: val=0.013008 split=0.051124 total=0.038658  k1=2 k2=3 leaves=27520  best=0.022238@62  patience=2/150
+Step 65: val=0.009013 split=0.063284 total=0.040742  k1=3 k2=5 leaves=24400  best=0.022238@62  patience=3/150
+Step 66: val=0.020418 split=0.022023 total=0.031517  k1=2 k2=2 leaves=34048  best=0.022238@62  patience=4/150
+Step 67: val=0.007958 split=0.022254 total=0.019172  k1=5 k2=1 leaves=25552  best=0.019172@67  patience=0/150
+Step 68: val=0.010325 split=0.017448 total=0.019136  k1=3 k2=1 leaves=25408  best=0.019136@68  patience=0/150
+Step 69: val=0.010402 split=0.055517 total=0.038247  k1=3 k2=5 leaves=24400  best=0.019136@68  patience=1/150
+Step 70: val=0.013868 split=0.022455 total=0.025182  k1=2 k2=4 leaves=24448  best=0.019136@68  patience=2/150
+Step 71: val=0.013378 split=0.016741 total=0.021835  k1=2 k2=5 leaves=24640  best=0.019136@68  patience=3/150
+Step 72: val=0.007085 split=0.015033 total=0.014687  k1=1 k2=3 leaves=25408  best=0.014687@72  patience=0/150
+Step 73: val=0.011427 split=0.104746 total=0.063887  k1=5 k2=5 leaves=32416  best=0.014687@72  patience=1/150
+Step 74: val=0.009485 split=0.020623 total=0.019882  k1=3 k2=1 leaves=25408  best=0.014687@72  patience=2/150
+Step 75: val=0.010021 split=0.075683 total=0.047948  k1=2 k2=3 leaves=27520  best=0.014687@72  patience=3/150
+Step 76: val=0.013673 split=0.051032 total=0.039274  k1=2 k2=2 leaves=34048  best=0.014687@72  patience=4/150
+Step 77: val=0.006091 split=0.026866 total=0.019610  k1=3 k2=1 leaves=25408  best=0.014687@72  patience=5/150
+Step 78: val=0.009178 split=0.024951 total=0.021739  k1=4 k2=2 leaves=24448  best=0.014687@72  patience=6/150
+Step 79: val=0.010092 split=0.039571 total=0.029962  k1=4 k2=5 leaves=29440  best=0.014687@72  patience=7/150
+Step 80: val=0.009154 split=0.018758 total=0.018617  k1=5 k2=2 leaves=24640  best=0.014687@72  patience=8/150
+Step 81: val=0.010301 split=0.042796 total=0.031783  k1=4 k2=4 leaves=33280  best=0.014687@72  patience=9/150
+Step 82: val=0.018611 split=0.045150 total=0.041271  k1=3 k2=2 leaves=27520  best=0.014687@72  patience=10/150
+Step 83: val=0.009878 split=0.045142 total=0.032534  k1=3 k2=5 leaves=24400  best=0.014687@72  patience=11/150
+Step 84: val=0.004775 split=0.027932 total=0.018825  k1=4 k2=4 leaves=33280  best=0.014687@72  patience=12/150
+Step 85: val=0.008759 split=0.019346 total=0.018516  k1=1 k2=3 leaves=25408  best=0.014687@72  patience=13/150
+Step 86: val=0.007828 split=0.019567 total=0.017695  k1=1 k2=2 leaves=25024  best=0.014687@72  patience=14/150
+Step 87: val=0.008793 split=0.019340 total=0.018546  k1=5 k2=2 leaves=24640  best=0.014687@72  patience=15/150
+Step 88: val=0.016133 split=0.025989 total=0.029212  k1=3 k2=3 leaves=32608  best=0.014687@72  patience=16/150
+Step 89: val=0.009303 split=0.011116 total=0.014945  k1=2 k2=2 leaves=34048  best=0.014687@72  patience=17/150
+Step 90: val=0.006362 split=0.012032 total=0.012462  k1=1 k2=2 leaves=25024  best=0.012462@90  patience=0/150
+Step 91: val=0.006557 split=0.015916 total=0.014598  k1=4 k2=1 leaves=25792  best=0.012462@90  patience=1/150
+Step 92: val=0.004954 split=0.011058 total=0.010565  k1=1 k2=3 leaves=25408  best=0.010565@92  patience=0/150
+Step 93: val=0.007761 split=0.045601 total=0.030644  k1=3 k2=5 leaves=24400  best=0.010565@92  patience=1/150
+Step 94: val=0.007519 split=0.014353 total=0.014778  k1=5 k2=1 leaves=25552  best=0.010565@92  patience=2/150
+Step 95: val=0.008087 split=0.013983 total=0.015161  k1=1 k2=1 leaves=33568  best=0.010565@92  patience=3/150
+Step 96: val=0.005977 split=0.008018 total=0.010068  k1=2 k2=2 leaves=34048  best=0.010068@96  patience=0/150
+Step 97: val=0.005498 split=0.020603 total=0.015881  k1=3 k2=4 leaves=28864  best=0.010068@96  patience=1/150
+Step 98: val=0.006654 split=0.024770 total=0.019120  k1=5 k2=4 leaves=29440  best=0.010068@96  patience=2/150
+Step 99: val=0.007467 split=0.019628 total=0.017362  k1=3 k2=3 leaves=32608  best=0.010068@96  patience=3/150
+Step 100: val=0.006223 split=0.008705 total=0.010657  k1=2 k2=1 leaves=25024  best=0.010068@96  patience=4/150
+  -> Saved plots/20260226_205831/samples_step0100.png (2 samples)
+  -> Saved plots/20260226_205831/loss_curve_step0100.png
+Step 101: val=0.006172 split=0.040751 total=0.026628  k1=5 k2=5 leaves=32416  best=0.010068@96  patience=5/150
+Step 102: val=0.003400 split=0.015403 total=0.011182  k1=3 k2=4 leaves=28864  best=0.010068@96  patience=6/150
+Step 103: val=0.005111 split=0.007257 total=0.008821  k1=3 k2=1 leaves=25408  best=0.008821@103  patience=0/150
+Step 104: val=0.006615 split=0.025775 total=0.019583  k1=5 k2=5 leaves=32416  best=0.008821@103  patience=1/150
+Step 105: val=0.006303 split=0.009315 total=0.011041  k1=2 k2=4 leaves=24448  best=0.008821@103  patience=2/150
+Step 106: val=0.002817 split=0.007108 total=0.006452  k1=4 k2=1 leaves=25792  best=0.006452@106  patience=0/150
+Step 107: val=0.004471 split=0.019343 total=0.014222  k1=4 k2=5 leaves=29440  best=0.006452@106  patience=1/150
+Step 108: val=0.004990 split=0.018335 total=0.014237  k1=4 k2=3 leaves=28864  best=0.006452@106  patience=2/150
+Step 109: val=0.007584 split=0.004505 total=0.009916  k1=1 k2=1 leaves=33568  best=0.006452@106  patience=3/150
+Step 110: val=0.004944 split=0.005407 total=0.007727  k1=5 k2=2 leaves=24640  best=0.006452@106  patience=4/150
+Step 111: val=0.010569 split=0.023593 total=0.022445  k1=5 k2=5 leaves=32416  best=0.006452@106  patience=5/150
+Step 112: val=0.004567 split=0.010407 total=0.009850  k1=3 k2=3 leaves=32608  best=0.006452@106  patience=6/150
+Step 113: val=0.006452 split=0.005081 total=0.009072  k1=1 k2=3 leaves=25408  best=0.006452@106  patience=7/150
+Step 114: val=0.006174 split=0.001277 total=0.006891  k1=2 k2=2 leaves=34048  best=0.006452@106  patience=8/150
+Step 115: val=0.004390 split=0.040243 total=0.024590  k1=5 k2=3 leaves=24400  best=0.006452@106  patience=9/150
+Step 116: val=0.005847 split=0.006404 total=0.009128  k1=1 k2=5 leaves=25552  best=0.006452@106  patience=10/150
+Step 117: val=0.010394 split=0.002093 total=0.011519  k1=1 k2=1 leaves=33568  best=0.006452@106  patience=11/150
+Step 118: val=0.003704 split=0.004369 total=0.005967  k1=1 k2=2 leaves=25024  best=0.005967@118  patience=0/150
+Step 119: val=0.019190 split=0.022626 total=0.030581  k1=5 k2=5 leaves=32416  best=0.005967@118  patience=1/150
+Step 120: val=0.005184 split=0.006489 total=0.008507  k1=2 k2=1 leaves=25024  best=0.005967@118  patience=2/150
+Step 121: val=0.003252 split=0.003305 total=0.004982  k1=4 k2=2 leaves=24448  best=0.004982@121  patience=0/150
+Step 122: val=0.013749 split=0.008134 total=0.017894  k1=4 k2=4 leaves=33280  best=0.004982@121  patience=1/150
+Step 123: val=0.005010 split=0.004522 total=0.007349  k1=1 k2=5 leaves=25552  best=0.004982@121  patience=2/150
+Step 124: val=0.004337 split=0.004897 total=0.006863  k1=4 k2=1 leaves=25792  best=0.004982@121  patience=3/150
+Step 125: val=0.003401 split=0.008710 total=0.007833  k1=4 k2=4 leaves=33280  best=0.004982@121  patience=4/150
+Step 126: val=0.006036 split=0.005512 total=0.008869  k1=3 k2=4 leaves=28864  best=0.004982@121  patience=5/150
+Step 127: val=0.009388 split=0.005679 total=0.012305  k1=4 k2=2 leaves=24448  best=0.004982@121  patience=6/150
+Step 128: val=0.004421 split=0.002287 total=0.005641  k1=2 k2=2 leaves=34048  best=0.004982@121  patience=7/150
+Step 129: val=0.005453 split=0.006503 total=0.008781  k1=3 k2=4 leaves=28864  best=0.004982@121  patience=8/150
+Step 130: val=0.012017 split=0.014357 total=0.019272  k1=5 k2=5 leaves=32416  best=0.004982@121  patience=9/150
+Step 131: val=0.005380 split=0.007187 total=0.009050  k1=2 k2=3 leaves=27520  best=0.004982@121  patience=10/150
+Step 132: val=0.006764 split=0.015179 total=0.014429  k1=4 k2=5 leaves=29440  best=0.004982@121  patience=11/150
+Step 133: val=0.003481 split=0.005215 total=0.006164  k1=1 k2=2 leaves=25024  best=0.004982@121  patience=12/150
+Step 134: val=0.004343 split=0.003622 total=0.006230  k1=1 k2=3 leaves=25408  best=0.004982@121  patience=13/150
+Step 135: val=0.005247 split=0.003890 total=0.007268  k1=4 k2=1 leaves=25792  best=0.004982@121  patience=14/150
+Step 136: val=0.004825 split=0.004164 total=0.006982  k1=1 k2=5 leaves=25552  best=0.004982@121  patience=15/150
+Step 137: val=0.002862 split=0.002611 total=0.004243  k1=3 k2=1 leaves=25408  best=0.004243@137  patience=0/150
+Step 138: val=0.006839 split=0.013716 total=0.013772  k1=5 k2=4 leaves=29440  best=0.004243@137  patience=1/150
+Step 139: val=0.006609 split=0.001292 total=0.007329  k1=1 k2=1 leaves=33568  best=0.004243@137  patience=2/150
+Step 140: val=0.005351 split=0.004615 total=0.007733  k1=4 k2=1 leaves=25792  best=0.004243@137  patience=3/150
+Step 141: val=0.004600 split=0.002807 total=0.006078  k1=1 k2=3 leaves=25408  best=0.004243@137  patience=4/150
+Step 142: val=0.004508 split=0.010633 total=0.009898  k1=3 k2=3 leaves=32608  best=0.004243@137  patience=5/150
+Step 143: val=0.004025 split=0.008670 total=0.008434  k1=4 k2=5 leaves=29440  best=0.004243@137  patience=6/150
+Step 144: val=0.003423 split=0.002741 total=0.004867  k1=1 k2=4 leaves=25792  best=0.004243@137  patience=7/150
+Step 145: val=0.004673 split=0.019416 total=0.014455  k1=5 k2=5 leaves=32416  best=0.004243@137  patience=8/150
+Step 146: val=0.002862 split=0.006485 total=0.006178  k1=4 k2=4 leaves=33280  best=0.004243@137  patience=9/150
+Step 147: val=0.006780 split=0.001979 total=0.007843  k1=1 k2=4 leaves=25792  best=0.004243@137  patience=10/150
+Step 148: val=0.002753 split=0.028104 total=0.016878  k1=3 k2=5 leaves=24400  best=0.004243@137  patience=11/150
+Step 149: val=0.004421 split=0.027710 total=0.018349  k1=3 k2=5 leaves=24400  best=0.004243@137  patience=12/150
+Step 150: val=0.005352 split=0.003689 total=0.007270  k1=4 k2=4 leaves=33280  best=0.004243@137  patience=13/150
+Step 151: val=0.002490 split=0.002250 total=0.003688  k1=2 k2=5 leaves=24640  best=0.003688@151  patience=0/150
+Step 152: val=0.005725 split=0.006221 total=0.008908  k1=2 k2=3 leaves=27520  best=0.003688@151  patience=1/150
+Step 153: val=0.004084 split=0.003591 total=0.005952  k1=4 k2=1 leaves=25792  best=0.003688@151  patience=2/150
+Step 154: val=0.002175 split=0.003774 total=0.004135  k1=4 k2=4 leaves=33280  best=0.003688@151  patience=3/150
+Step 155: val=0.008285 split=0.004351 total=0.010533  k1=5 k2=1 leaves=25552  best=0.003688@151  patience=4/150
+Step 156: val=0.007359 split=0.013892 total=0.014377  k1=5 k2=5 leaves=32416  best=0.003688@151  patience=5/150
+Step 157: val=0.003316 split=0.002225 total=0.004500  k1=4 k2=1 leaves=25792  best=0.003688@151  patience=6/150
+Step 158: val=0.005441 split=0.004177 total=0.007601  k1=4 k2=2 leaves=24448  best=0.003688@151  patience=7/150
+Step 159: val=0.003814 split=0.002653 total=0.005212  k1=1 k2=5 leaves=25552  best=0.003688@151  patience=8/150
+Step 160: val=0.005166 split=0.010940 total=0.010707  k1=5 k2=4 leaves=29440  best=0.003688@151  patience=9/150
+Step 161: val=0.006074 split=0.015891 total=0.014091  k1=5 k2=3 leaves=24400  best=0.003688@151  patience=10/150
+Step 162: val=0.006127 split=0.001843 total=0.007119  k1=2 k2=4 leaves=24448  best=0.003688@151  patience=11/150
+Step 163: val=0.003797 split=0.002582 total=0.005159  k1=4 k2=2 leaves=24448  best=0.003688@151  patience=12/150
+Step 164: val=0.012043 split=0.005642 total=0.014935  k1=4 k2=3 leaves=28864  best=0.003688@151  patience=13/150
+Step 165: val=0.003377 split=0.003035 total=0.004965  k1=1 k2=5 leaves=25552  best=0.003688@151  patience=14/150
+Step 166: val=0.003143 split=0.001524 total=0.003975  k1=1 k2=3 leaves=25408  best=0.003688@151  patience=15/150
+Step 167: val=0.004732 split=0.011024 total=0.010314  k1=5 k2=3 leaves=24400  best=0.003688@151  patience=16/150
+Step 168: val=0.003555 split=0.000935 total=0.004093  k1=1 k2=1 leaves=33568  best=0.003688@151  patience=17/150
+Step 169: val=0.002078 split=0.002938 total=0.003617  k1=1 k2=3 leaves=25408  best=0.003617@169  patience=0/150
+Step 170: val=0.003886 split=0.009945 total=0.008929  k1=4 k2=5 leaves=29440  best=0.003617@169  patience=1/150
+Step 171: val=0.004997 split=0.004431 total=0.007283  k1=2 k2=1 leaves=25024  best=0.003617@169  patience=2/150
+Step 172: val=0.003231 split=0.005743 total=0.006172  k1=2 k2=1 leaves=25024  best=0.003617@169  patience=3/150
+Step 173: val=0.002814 split=0.006030 total=0.005898  k1=3 k2=2 leaves=27520  best=0.003617@169  patience=4/150
+Step 174: val=0.003108 split=0.002638 total=0.004496  k1=5 k2=2 leaves=24640  best=0.003617@169  patience=5/150
+Step 175: val=0.003244 split=0.002545 total=0.004585  k1=2 k2=5 leaves=24640  best=0.003617@169  patience=6/150
+Step 176: val=0.002622 split=0.003932 total=0.004657  k1=4 k2=3 leaves=28864  best=0.003617@169  patience=7/150
+Step 177: val=0.002985 split=0.001498 total=0.003803  k1=4 k2=1 leaves=25792  best=0.003617@169  patience=8/150
+Step 178: val=0.002192 split=0.001712 total=0.003117  k1=1 k2=4 leaves=25792  best=0.003117@178  patience=0/150
+Step 179: val=0.004300 split=0.001913 total=0.005325  k1=4 k2=3 leaves=28864  best=0.003117@178  patience=1/150
+Step 180: val=0.002097 split=0.004333 total=0.004332  k1=1 k2=2 leaves=25024  best=0.003117@178  patience=2/150
+Step 181: val=0.004063 split=0.008275 total=0.008268  k1=3 k2=5 leaves=24400  best=0.003117@178  patience=3/150
+Step 182: val=0.001835 split=0.001250 total=0.002528  k1=1 k2=4 leaves=25792  best=0.002528@182  patience=0/150
+Step 183: val=0.002019 split=0.001187 total=0.002680  k1=2 k2=4 leaves=24448  best=0.002528@182  patience=1/150
+Step 184: val=0.002438 split=0.008006 total=0.006508  k1=3 k2=5 leaves=24400  best=0.002528@182  patience=2/150
+Step 185: val=0.002765 split=0.001538 total=0.003602  k1=4 k2=3 leaves=28864  best=0.002528@182  patience=3/150
+Step 186: val=0.001761 split=0.001413 total=0.002535  k1=5 k2=2 leaves=24640  best=0.002528@182  patience=4/150
+Step 187: val=0.002409 split=0.001474 total=0.003213  k1=4 k2=3 leaves=28864  best=0.002528@182  patience=5/150
+Step 188: val=0.002113 split=0.001916 total=0.003138  k1=3 k2=2 leaves=27520  best=0.002528@182  patience=6/150
+Step 189: val=0.001988 split=0.000596 total=0.002353  k1=3 k2=1 leaves=25408  best=0.002353@189  patience=0/150
+Step 190: val=0.002053 split=0.001994 total=0.003117  k1=2 k2=3 leaves=27520  best=0.002353@189  patience=1/150
+Step 191: val=0.004693 split=0.001612 total=0.005566  k1=4 k2=4 leaves=33280  best=0.002353@189  patience=2/150
+Step 192: val=0.002472 split=0.007210 total=0.006143  k1=3 k2=5 leaves=24400  best=0.002353@189  patience=3/150
+Step 193: val=0.002702 split=0.001749 total=0.003643  k1=2 k2=3 leaves=27520  best=0.002353@189  patience=4/150
+Step 194: val=0.003224 split=0.001272 total=0.003926  k1=1 k2=2 leaves=25024  best=0.002353@189  patience=5/150
+Step 195: val=0.002041 split=0.000892 total=0.002553  k1=2 k2=1 leaves=25024  best=0.002353@189  patience=6/150
+Step 196: val=0.001350 split=0.000953 total=0.001893  k1=1 k2=2 leaves=25024  best=0.001893@196  patience=0/150
+Step 197: val=0.001538 split=0.000964 total=0.002086  k1=1 k2=2 leaves=25024  best=0.001893@196  patience=1/150
+Step 198: val=0.003684 split=0.000912 total=0.004206  k1=4 k2=1 leaves=25792  best=0.001893@196  patience=2/150
+Step 199: val=0.002800 split=0.000902 total=0.003316  k1=4 k2=2 leaves=24448  best=0.001893@196  patience=3/150
+Step 200: val=0.002337 split=0.006676 total=0.005740  k1=5 k2=3 leaves=24400  best=0.001893@196  patience=4/150
+  -> Saved plots/20260226_205831/samples_step0200.png (3 samples)
+  -> Saved plots/20260226_205831/loss_curve_step0200.png
+Step 201: val=0.004358 split=0.000813 total=0.004830  k1=5 k2=1 leaves=25552  best=0.001893@196  patience=5/150
+Step 202: val=0.004915 split=0.001164 total=0.005562  k1=2 k2=3 leaves=27520  best=0.001893@196  patience=6/150
+Step 203: val=0.001680 split=0.000419 total=0.001955  k1=4 k2=2 leaves=24448  best=0.001893@196  patience=7/150
+Step 204: val=0.001751 split=0.001068 total=0.002350  k1=4 k2=5 leaves=29440  best=0.001893@196  patience=8/150
+Step 205: val=0.001970 split=0.001319 total=0.002694  k1=3 k2=2 leaves=27520  best=0.001893@196  patience=9/150
+Step 206: val=0.002511 split=0.000673 total=0.002912  k1=1 k2=4 leaves=25792  best=0.001893@196  patience=10/150
+Step 207: val=0.004874 split=0.004284 total=0.007080  k1=5 k2=5 leaves=32416  best=0.001893@196  patience=11/150
+Step 208: val=0.001291 split=0.001125 total=0.001918  k1=2 k2=5 leaves=24640  best=0.001893@196  patience=12/150
+Step 209: val=0.001691 split=0.000682 total=0.002097  k1=2 k2=3 leaves=27520  best=0.001893@196  patience=13/150
+Step 210: val=0.002471 split=0.000948 total=0.003009  k1=3 k2=2 leaves=27520  best=0.001893@196  patience=14/150
+Step 211: val=0.002206 split=0.000971 total=0.002755  k1=2 k2=3 leaves=27520  best=0.001893@196  patience=15/150
+Step 212: val=0.001275 split=0.000999 total=0.001838  k1=2 k2=1 leaves=25024  best=0.001838@212  patience=0/150
+Step 213: val=0.001253 split=0.000481 total=0.001557  k1=4 k2=1 leaves=25792  best=0.001557@213  patience=0/150
+Step 214: val=0.002149 split=0.002632 total=0.003528  k1=4 k2=5 leaves=29440  best=0.001557@213  patience=1/150
+Step 215: val=0.001434 split=0.000558 total=0.001776  k1=2 k2=3 leaves=27520  best=0.001557@213  patience=2/150
+Step 216: val=0.001496 split=0.000623 total=0.001870  k1=1 k2=1 leaves=33568  best=0.001557@213  patience=3/150
+Step 217: val=0.002807 split=0.001424 total=0.003582  k1=3 k2=3 leaves=32608  best=0.001557@213  patience=4/150
+Step 218: val=0.002198 split=0.002055 total=0.003288  k1=5 k2=1 leaves=25552  best=0.001557@213  patience=5/150
+Step 219: val=0.001619 split=0.000523 total=0.001943  k1=5 k2=4 leaves=29440  best=0.001557@213  patience=6/150
+Step 220: val=0.001402 split=0.001111 total=0.002020  k1=2 k2=5 leaves=24640  best=0.001557@213  patience=7/150
+Step 221: val=0.001736 split=0.006407 total=0.005002  k1=5 k2=3 leaves=24400  best=0.001557@213  patience=8/150
+Step 222: val=0.001018 split=0.000489 total=0.001325  k1=5 k2=2 leaves=24640  best=0.001325@222  patience=0/150
+Step 223: val=0.002864 split=0.002291 total=0.004072  k1=5 k2=5 leaves=32416  best=0.001325@222  patience=1/150
+Step 224: val=0.002028 split=0.000181 total=0.002181  k1=3 k2=1 leaves=25408  best=0.001325@222  patience=2/150
+Step 225: val=0.001284 split=0.000476 total=0.001584  k1=4 k2=3 leaves=28864  best=0.001325@222  patience=3/150
+Step 226: val=0.001179 split=0.000417 total=0.001449  k1=1 k2=5 leaves=25552  best=0.001325@222  patience=4/150
+Step 227: val=0.001287 split=0.000374 total=0.001536  k1=1 k2=5 leaves=25552  best=0.001325@222  patience=5/150
+Step 228: val=0.001295 split=0.000223 total=0.001468  k1=4 k2=2 leaves=24448  best=0.001325@222  patience=6/150
+Step 229: val=0.002088 split=0.005184 total=0.004741  k1=3 k2=5 leaves=24400  best=0.001325@222  patience=7/150
+Step 230: val=0.001536 split=0.000195 total=0.001694  k1=1 k2=5 leaves=25552  best=0.001325@222  patience=8/150
+Step 231: val=0.001150 split=0.000166 total=0.001294  k1=2 k2=4 leaves=24448  best=0.001294@231  patience=0/150
+Step 232: val=0.001215 split=0.000232 total=0.001392  k1=5 k2=1 leaves=25552  best=0.001294@231  patience=1/150
+Step 233: val=0.001311 split=0.000856 total=0.001800  k1=1 k2=2 leaves=25024  best=0.001294@231  patience=2/150
+Step 234: val=0.001011 split=0.001090 total=0.001616  k1=3 k2=2 leaves=27520  best=0.001294@231  patience=3/150
+Step 235: val=0.002124 split=0.000193 total=0.002281  k1=5 k2=1 leaves=25552  best=0.001294@231  patience=4/150
+Step 236: val=0.001469 split=0.000469 total=0.001764  k1=2 k2=3 leaves=27520  best=0.001294@231  patience=5/150
+Step 237: val=0.000856 split=0.000123 total=0.000978  k1=3 k2=1 leaves=25408  best=0.000978@237  patience=0/150
+Step 238: val=0.001739 split=0.000662 total=0.002130  k1=5 k2=4 leaves=29440  best=0.000978@237  patience=1/150
+Step 239: val=0.001313 split=0.000206 total=0.001476  k1=4 k2=2 leaves=24448  best=0.000978@237  patience=2/150
+Step 240: val=0.003990 split=0.000065 total=0.004082  k1=2 k2=2 leaves=34048  best=0.000978@237  patience=3/150
+Step 241: val=0.000687 split=0.000174 total=0.000833  k1=4 k2=1 leaves=25792  best=0.000833@241  patience=0/150
+Step 242: val=0.002000 split=0.000194 total=0.002156  k1=5 k2=1 leaves=25552  best=0.000833@241  patience=1/150
+Step 243: val=0.002634 split=0.000083 total=0.002734  k1=2 k2=2 leaves=34048  best=0.000833@241  patience=2/150
+Step 244: val=0.002147 split=0.000171 total=0.002292  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=3/150
+Step 245: val=0.001888 split=0.000558 total=0.002226  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=4/150
+Step 246: val=0.001493 split=0.000370 total=0.001736  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=5/150
+Step 247: val=0.001208 split=0.000193 total=0.001363  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=6/150
+Step 248: val=0.002406 split=0.000098 total=0.002513  k1=3 k2=1 leaves=25408  best=0.000833@241  patience=7/150
+Step 249: val=0.000896 split=0.000108 total=0.001008  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=8/150
+Step 250: val=0.003662 split=0.003345 total=0.005393  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=9/150
+Step 251: val=0.001339 split=0.000159 total=0.001477  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=10/150
+Step 252: val=0.001188 split=0.000310 total=0.001401  k1=4 k2=3 leaves=28864  best=0.000833@241  patience=11/150
+Step 253: val=0.001661 split=0.000147 total=0.001793  k1=5 k2=1 leaves=25552  best=0.000833@241  patience=12/150
+Step 254: val=0.001323 split=0.002572 total=0.002667  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=13/150
+Step 255: val=0.001368 split=0.000162 total=0.001506  k1=4 k2=5 leaves=29440  best=0.000833@241  patience=14/150
+Step 256: val=0.001278 split=0.000204 total=0.001438  k1=2 k2=4 leaves=24448  best=0.000833@241  patience=15/150
+Step 257: val=0.000802 split=0.000093 total=0.000905  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=16/150
+Step 258: val=0.001365 split=0.002171 total=0.002508  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=17/150
+Step 259: val=0.002298 split=0.000349 total=0.002530  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=18/150
+Step 260: val=0.001835 split=0.000341 total=0.002062  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=19/150
+Step 261: val=0.001277 split=0.000203 total=0.001435  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=20/150
+Step 262: val=0.001067 split=0.000352 total=0.001300  k1=2 k2=1 leaves=25024  best=0.000833@241  patience=21/150
+Step 263: val=0.002320 split=0.001839 total=0.003296  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=22/150
+Step 264: val=0.001809 split=0.002063 total=0.002897  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=23/150
+Step 265: val=0.002689 split=0.000170 total=0.002830  k1=1 k2=1 leaves=33568  best=0.000833@241  patience=24/150
+Step 266: val=0.001410 split=0.000104 total=0.001518  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=25/150
+Step 267: val=0.001868 split=0.000099 total=0.001974  k1=5 k2=1 leaves=25552  best=0.000833@241  patience=26/150
+Step 268: val=0.002110 split=0.000127 total=0.002229  k1=4 k2=5 leaves=29440  best=0.000833@241  patience=27/150
+Step 269: val=0.001396 split=0.000134 total=0.001519  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=28/150
+Step 270: val=0.001413 split=0.000290 total=0.001613  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=29/150
+Step 271: val=0.001567 split=0.000108 total=0.001677  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=30/150
+Step 272: val=0.001805 split=0.000091 total=0.001906  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=31/150
+Step 273: val=0.001327 split=0.000099 total=0.001432  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=32/150
+Step 274: val=0.001231 split=0.000098 total=0.001335  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=33/150
+Step 275: val=0.001730 split=0.000088 total=0.001829  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=34/150
+Step 276: val=0.001252 split=0.000216 total=0.001415  k1=4 k2=4 leaves=33280  best=0.000833@241  patience=35/150
+Step 277: val=0.001258 split=0.000084 total=0.001355  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=36/150
+Step 278: val=0.001157 split=0.000085 total=0.001254  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=37/150
+Step 279: val=0.002123 split=0.000119 total=0.002237  k1=2 k2=4 leaves=24448  best=0.000833@241  patience=38/150
+Step 280: val=0.001726 split=0.000267 total=0.001914  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=39/150
+Step 281: val=0.000990 split=0.000127 total=0.001108  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=40/150
+Step 282: val=0.001282 split=0.000161 total=0.001417  k1=2 k2=3 leaves=27520  best=0.000833@241  patience=41/150
+Step 283: val=0.001241 split=0.000120 total=0.001355  k1=4 k2=1 leaves=25792  best=0.000833@241  patience=42/150
+Step 284: val=0.001426 split=0.001360 total=0.002160  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=43/150
+Step 285: val=0.001788 split=0.000289 total=0.001986  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=44/150
+Step 286: val=0.001091 split=0.000122 total=0.001206  k1=4 k2=1 leaves=25792  best=0.000833@241  patience=45/150
+Step 287: val=0.001183 split=0.000163 total=0.001318  k1=1 k2=2 leaves=25024  best=0.000833@241  patience=46/150
+Step 288: val=0.001463 split=0.000098 total=0.001565  k1=1 k2=5 leaves=25552  best=0.000833@241  patience=47/150
+Step 289: val=0.001271 split=0.000114 total=0.001381  k1=4 k2=1 leaves=25792  best=0.000833@241  patience=48/150
+Step 290: val=0.001216 split=0.000118 total=0.001328  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=49/150
+Step 291: val=0.001025 split=0.000087 total=0.001122  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=50/150
+Step 292: val=0.002020 split=0.000063 total=0.002105  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=51/150
+Step 293: val=0.002076 split=0.000092 total=0.002174  k1=4 k2=5 leaves=29440  best=0.000833@241  patience=52/150
+Step 294: val=0.001415 split=0.000092 total=0.001513  k1=1 k2=1 leaves=33568  best=0.000833@241  patience=53/150
+Step 295: val=0.002208 split=0.000131 total=0.002325  k1=5 k2=4 leaves=29440  best=0.000833@241  patience=54/150
+Step 296: val=0.001793 split=0.001224 total=0.002458  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=55/150
+Step 297: val=0.001195 split=0.000087 total=0.001291  k1=1 k2=1 leaves=33568  best=0.000833@241  patience=56/150
+Step 298: val=0.001880 split=0.000093 total=0.001978  k1=4 k2=1 leaves=25792  best=0.000833@241  patience=57/150
+Step 299: val=0.001880 split=0.000208 total=0.002036  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=58/150
+Step 300: val=0.000944 split=0.000097 total=0.001044  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=59/150
+  -> Saved plots/20260226_205831/samples_step0300.png (3 samples)
+  -> Saved plots/20260226_205831/loss_curve_step0300.png
+Step 301: val=0.002442 split=0.000996 total=0.002992  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=60/150
+Step 302: val=0.001657 split=0.000972 total=0.002195  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=61/150
+Step 303: val=0.001313 split=0.000065 total=0.001397  k1=3 k2=1 leaves=25408  best=0.000833@241  patience=62/150
+Step 304: val=0.002503 split=0.000278 total=0.002693  k1=3 k2=4 leaves=28864  best=0.000833@241  patience=63/150
+Step 305: val=0.001385 split=0.000931 total=0.001902  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=64/150
+Step 306: val=0.001657 split=0.000294 total=0.001855  k1=3 k2=4 leaves=28864  best=0.000833@241  patience=65/150
+Step 307: val=0.001462 split=0.000256 total=0.001641  k1=4 k2=3 leaves=28864  best=0.000833@241  patience=66/150
+Step 308: val=0.002171 split=0.000092 total=0.002268  k1=5 k2=4 leaves=29440  best=0.000833@241  patience=67/150
+Step 309: val=0.003089 split=0.000404 total=0.003342  k1=5 k2=5 leaves=32416  best=0.000833@241  patience=68/150
+Step 310: val=0.001234 split=0.000078 total=0.001324  k1=1 k2=5 leaves=25552  best=0.000833@241  patience=69/150
+Step 311: val=0.001352 split=0.000068 total=0.001437  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=70/150
+Step 312: val=0.001473 split=0.000069 total=0.001558  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=71/150
+Step 313: val=0.001131 split=0.000075 total=0.001219  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=72/150
+Step 314: val=0.000846 split=0.000100 total=0.000946  k1=1 k2=2 leaves=25024  best=0.000833@241  patience=73/150
+Step 315: val=0.001308 split=0.000120 total=0.001418  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=74/150
+Step 316: val=0.001480 split=0.000104 total=0.001582  k1=1 k2=2 leaves=25024  best=0.000833@241  patience=75/150
+Step 317: val=0.001253 split=0.000122 total=0.001364  k1=4 k2=4 leaves=33280  best=0.000833@241  patience=76/150
+Step 318: val=0.000988 split=0.000069 total=0.001073  k1=1 k2=5 leaves=25552  best=0.000833@241  patience=77/150
+Step 319: val=0.001212 split=0.000796 total=0.001660  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=78/150
+Step 320: val=0.001784 split=0.000055 total=0.001861  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=79/150
+Step 321: val=0.001581 split=0.000062 total=0.001661  k1=1 k2=5 leaves=25552  best=0.000833@241  patience=80/150
+Step 322: val=0.001665 split=0.000182 total=0.001805  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=81/150
+Step 323: val=0.001760 split=0.000103 total=0.001861  k1=3 k2=4 leaves=28864  best=0.000833@241  patience=82/150
+Step 324: val=0.001985 split=0.000088 total=0.002078  k1=2 k2=3 leaves=27520  best=0.000833@241  patience=83/150
+Step 325: val=0.001548 split=0.000064 total=0.001629  k1=4 k2=1 leaves=25792  best=0.000833@241  patience=84/150
+Step 326: val=0.001354 split=0.000062 total=0.001434  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=85/150
+Step 327: val=0.002000 split=0.000067 total=0.002082  k1=5 k2=4 leaves=29440  best=0.000833@241  patience=86/150
+Step 328: val=0.003715 split=0.000072 total=0.003799  k1=2 k2=3 leaves=27520  best=0.000833@241  patience=87/150
+Step 329: val=0.002117 split=0.000108 total=0.002219  k1=4 k2=3 leaves=28864  best=0.000833@241  patience=88/150
+Step 330: val=0.001124 split=0.000056 total=0.001200  k1=1 k2=1 leaves=33568  best=0.000833@241  patience=89/150
+Step 331: val=0.001505 split=0.000037 total=0.001571  k1=2 k2=2 leaves=34048  best=0.000833@241  patience=90/150
+Step 332: val=0.003807 split=0.000063 total=0.003887  k1=5 k2=1 leaves=25552  best=0.000833@241  patience=91/150
+Step 333: val=0.001818 split=0.000045 total=0.001888  k1=3 k2=1 leaves=25408  best=0.000833@241  patience=92/150
+Step 334: val=0.001569 split=0.000095 total=0.001664  k1=3 k2=4 leaves=28864  best=0.000833@241  patience=93/150
+Step 335: val=0.002446 split=0.000275 total=0.002632  k1=5 k2=5 leaves=32416  best=0.000833@241  patience=94/150
+Step 336: val=0.005149 split=0.000066 total=0.005230  k1=1 k2=1 leaves=33568  best=0.000833@241  patience=95/150
+Step 337: val=0.005197 split=0.000099 total=0.005294  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=96/150
+Step 338: val=0.001475 split=0.000107 total=0.001576  k1=4 k2=4 leaves=33280  best=0.000833@241  patience=97/150
+Step 339: val=0.002951 split=0.000060 total=0.003028  k1=2 k2=4 leaves=24448  best=0.000833@241  patience=98/150
+Step 340: val=0.002743 split=0.000107 total=0.002843  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=99/150
+Step 341: val=0.002457 split=0.000056 total=0.002532  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=100/150
+Step 342: val=0.003255 split=0.000325 total=0.003464  k1=5 k2=5 leaves=32416  best=0.000833@241  patience=101/150
+Step 343: val=0.002780 split=0.000131 total=0.002892  k1=3 k2=4 leaves=28864  best=0.000833@241  patience=102/150
+Step 344: val=0.004082 split=0.000072 total=0.004165  k1=2 k2=4 leaves=24448  best=0.000833@241  patience=103/150
+Step 345: val=0.003551 split=0.000096 total=0.003645  k1=1 k2=2 leaves=25024  best=0.000833@241  patience=104/150
+Step 346: val=0.001155 split=0.000159 total=0.001281  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=105/150
+Step 347: val=0.003285 split=0.000079 total=0.003371  k1=2 k2=1 leaves=25024  best=0.000833@241  patience=106/150
+Step 348: val=0.006265 split=0.000063 total=0.006343  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=107/150
+Step 349: val=0.003205 split=0.000096 total=0.003299  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=108/150
+Step 350: val=0.003282 split=0.000190 total=0.003423  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=109/150
+Step 351: val=0.003200 split=0.000861 total=0.003676  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=110/150
+Step 352: val=0.006191 split=0.000052 total=0.006263  k1=2 k2=2 leaves=34048  best=0.000833@241  patience=111/150
+Step 353: val=0.001203 split=0.000155 total=0.001327  k1=4 k2=4 leaves=33280  best=0.000833@241  patience=112/150
+Step 354: val=0.002362 split=0.000078 total=0.002447  k1=2 k2=2 leaves=34048  best=0.000833@241  patience=113/150
+Step 355: val=0.002599 split=0.000086 total=0.002688  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=114/150
+Step 356: val=0.002957 split=0.000089 total=0.003047  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=115/150
+Step 357: val=0.002635 split=0.000252 total=0.002807  k1=2 k2=3 leaves=27520  best=0.000833@241  patience=116/150
+Step 358: val=0.003301 split=0.000064 total=0.003378  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=117/150
+Step 359: val=0.003369 split=0.000432 total=0.003629  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=118/150
+Step 360: val=0.001800 split=0.000232 total=0.001961  k1=2 k2=3 leaves=27520  best=0.000833@241  patience=119/150
+Step 361: val=0.002042 split=0.000076 total=0.002125  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=120/150
+Step 362: val=0.002082 split=0.000121 total=0.002187  k1=1 k2=5 leaves=25552  best=0.000833@241  patience=121/150
+Step 363: val=0.003368 split=0.000239 total=0.003532  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=122/150
+Step 364: val=0.002652 split=0.000160 total=0.002777  k1=5 k2=4 leaves=29440  best=0.000833@241  patience=123/150
+Step 365: val=0.001836 split=0.001081 total=0.002421  k1=3 k2=5 leaves=24400  best=0.000833@241  patience=124/150
+Step 366: val=0.003308 split=0.000137 total=0.003421  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=125/150
+Step 367: val=0.002288 split=0.000981 total=0.002822  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=126/150
+Step 368: val=0.003457 split=0.000323 total=0.003663  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=127/150
+Step 369: val=0.004626 split=0.000107 total=0.004724  k1=1 k2=1 leaves=33568  best=0.000833@241  patience=128/150
+Step 370: val=0.003670 split=0.000072 total=0.003750  k1=2 k2=2 leaves=34048  best=0.000833@241  patience=129/150
+Step 371: val=0.002756 split=0.000148 total=0.002873  k1=3 k2=2 leaves=27520  best=0.000833@241  patience=130/150
+Step 372: val=0.002373 split=0.000136 total=0.002485  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=131/150
+Step 373: val=0.002009 split=0.000152 total=0.002129  k1=1 k2=5 leaves=25552  best=0.000833@241  patience=132/150
+Step 374: val=0.002485 split=0.000111 total=0.002584  k1=4 k2=2 leaves=24448  best=0.000833@241  patience=133/150
+Step 375: val=0.003140 split=0.000141 total=0.003254  k1=3 k2=1 leaves=25408  best=0.000833@241  patience=134/150
+Step 376: val=0.001850 split=0.000404 total=0.002096  k1=3 k2=4 leaves=28864  best=0.000833@241  patience=135/150
+Step 377: val=0.004953 split=0.000404 total=0.005198  k1=2 k2=5 leaves=24640  best=0.000833@241  patience=136/150
+Step 378: val=0.003246 split=0.000288 total=0.003433  k1=5 k2=2 leaves=24640  best=0.000833@241  patience=137/150
+Step 379: val=0.002183 split=0.000188 total=0.002320  k1=1 k2=4 leaves=25792  best=0.000833@241  patience=138/150
+Step 380: val=0.001834 split=0.000166 total=0.001960  k1=1 k2=3 leaves=25408  best=0.000833@241  patience=139/150
+Step 381: val=0.003335 split=0.000253 total=0.003504  k1=3 k2=1 leaves=25408  best=0.000833@241  patience=140/150
+Step 382: val=0.005303 split=0.001206 total=0.005948  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=141/150
+Step 383: val=0.004492 split=0.000159 total=0.004614  k1=3 k2=1 leaves=25408  best=0.000833@241  patience=142/150
+Step 384: val=0.004989 split=0.000218 total=0.005140  k1=4 k2=4 leaves=33280  best=0.000833@241  patience=143/150
+Step 385: val=0.003650 split=0.000172 total=0.003778  k1=2 k2=4 leaves=24448  best=0.000833@241  patience=144/150
+Step 386: val=0.004385 split=0.000724 total=0.004790  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=145/150
+Step 387: val=0.004672 split=0.000244 total=0.004836  k1=3 k2=3 leaves=32608  best=0.000833@241  patience=146/150
+Step 388: val=0.005215 split=0.000644 total=0.005579  k1=5 k2=3 leaves=24400  best=0.000833@241  patience=147/150
+Step 389: val=0.003028 split=0.000149 total=0.003144  k1=4 k2=4 leaves=33280  best=0.000833@241  patience=148/150
+Step 390: val=0.004958 split=0.000074 total=0.005037  k1=2 k2=2 leaves=34048  best=0.000833@241  patience=149/150
+Step 391: val=0.002209 split=0.000183 total=0.002342  k1=2 k2=1 leaves=25024  best=0.000833@241  patience=150/150
+
+Early stopping triggered at step 391 (no improvement for 150 steps)
+Training complete. Best model saved at step 241 with total_loss=0.000833
+Best model path: plots/20260226_205831/best_model.pt
+
+Loading best model for final evaluation + embedding-only decode demo...
+Embedding-only decode demo ran successfully.

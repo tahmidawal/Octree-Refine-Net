@@ -1,0 +1,32 @@
+I am seeking expert professional help on my research. 
+
+The research focus. To be able to solve PDEs on Quadtrees using adaptive autoencoders. As in we will solve -laplacian u = f where u and f are functions defined on quadtrees.
+
+The problem I am solved so far is that I'm trying to created Quadtree based addaptive autoencoder in a way such that it takes in a quadtree with any levels and any splittinhg and then it encodes and then decodes and does a complete good reconstruction of the function. So far we have two such autoencoders for both f and u 
+
+I have been able to create an autoencoder like that with relative accuracy for the function f = sin(2pik1X)sin(2pik2Y) where the octree has the gradient as the indicator function. Similarly for its solution u in the poisson problem as well. The code is attached below
+
+
+------
+
+Main focus:
+But my main focus is, to build a PDE solver in the embedding space. 
+
+My plan - 
+
+1. Imagine the poisson problem laplacian u = -f. I want to generate u and f data for this problem in pairs. 
+2. I want to train autoencoders for u and f separately. I think the same autoencoder should work for both right? 
+3. Using the trained autoencoders for u and f, I want to extract their value in the embedding space from the autoencoders
+4. Then I want to train a specialized neural network which will learn to predict from f(embedding representation) -> u (embedding representation)
+5. The final goal, given we have an f quadtree, we get its embeddings, predict embeddings of u from the embeddings of f and then finally reconstruct u quadtree from its embeddings. The aim is to be able to solve the operator as accurately as possible and isolating the mesh complications from the operator complications
+
+So far, I have done the above steps. 
+
+
+Notes
+1. The way we have the embeddings now (I have attached a snaphgsot of the embedding dump for you ), would we be able to perform the neural operator solve part? As in predict the embeddings of u from f. 
+2. When u is reconstucted, I would like u to be reconstructed by itself using the predictive splitting without parent enforcing
+3. I want to find out a proper reliable, smart, and efficient way to train a neural network that can predict the embeddings of u from the embeddings of f without a bloated system
+
+My first question to you. Based on this, do you think we will be able to work with these embedding pairs 
+for predicting and then reconstructing u. As in are we or will we be able to truly learn the pde in the embedding space
