@@ -809,7 +809,8 @@ def generate_paired_dataset(n_train, n_val, k_lo=1, k_hi=5, seed=0,
 # AE TRAINING
 # ═══════════════════════════════════════════════════════════════════════════
 def train_shared_ae(train_set, val_set, n_steps=8000, lr=1e-3, seed=42,
-                    out_dir=None, save_path=None, eval_every=500):
+                    out_dir=None, save_path=None, eval_every=500,
+                    hidden=HIDDEN, emb_dim=EMB_DIM):
     """Train one shared AE on the union of F-views and u-views of the data.
     At each step, sample (i, view) where view ∈ {f, u} and view becomes the
     AE input/target."""
@@ -819,7 +820,7 @@ def train_shared_ae(train_set, val_set, n_steps=8000, lr=1e-3, seed=42,
     sample0 = train_set[0]
     pd0     = topology_to_padded(sample0['qt'], which='u')
 
-    model = CompressedBottleneckAE(hidden=HIDDEN, emb_dim=EMB_DIM)
+    model = CompressedBottleneckAE(hidden=hidden, emb_dim=emb_dim)
     key, sk = jax.random.split(key)
     params  = model.init(sk, pd0)['params']
     n_p     = sum(x.size for x in jax.tree_util.tree_leaves(params))
@@ -1182,6 +1183,10 @@ def main():
     p.add_argument('--seed',          type=int,   default=0)
     p.add_argument('--ae-steps',      type=int,   default=8000)
     p.add_argument('--ae-lr',         type=float, default=1e-3)
+    p.add_argument('--hidden',        type=int,   default=HIDDEN,
+                   help='AE hidden width (encoder/decoder feature dim)')
+    p.add_argument('--emb-dim',       type=int,   default=EMB_DIM,
+                   help='per-node bottleneck embedding dim')
     p.add_argument('--mlp-steps',     type=int,   default=5000)
     p.add_argument('--mlp-hidden',    type=int,   default=512)
     p.add_argument('--mlp-layers',    type=int,   default=3)
@@ -1216,7 +1221,8 @@ def main():
             d = pickle.load(f)
         train_set, val_set = d['train'], d['val']
         train_shared_ae(train_set, val_set, n_steps=args.ae_steps, lr=args.ae_lr,
-                        seed=args.seed, out_dir=out_dir, save_path=ae_path)
+                        seed=args.seed, out_dir=out_dir, save_path=ae_path,
+                        hidden=args.hidden, emb_dim=args.emb_dim)
 
     if args.command in ('train_mlp', 'all'):
         with open(data_path, 'rb') as f:
