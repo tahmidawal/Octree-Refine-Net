@@ -718,22 +718,64 @@ class LatentMLP(nn.Module):
 # DATA GENERATION  — paired (F_pd, u_pd) samples, cached to disk
 # ═══════════════════════════════════════════════════════════════════════════
 def generate_paired_dataset(n_train, n_val, k_lo=1, k_hi=5, seed=0,
-                            grad_thresh=0.5, save_path=None):
+                            grad_thresh=0.5, save_path=None,
+                            target='analytical'):
     """k_lo, k_hi are INTEGER bounds. We sample integer (k1, k2) pairs.
     Why integer: poisson_u(x,y; k1,k2) = sin(k1·π·x)sin(k2·π·y)/((k1²+k2²)π²)
-    only satisfies u=0 on [0,1]² boundary when k1, k2 are integers
-    (so sin(k·π·1)=sin(k·π)=0). For non-integer k, the formula violates
-    the BC and the FOM solution differs by ~40% — masking everything
-    downstream as a pipeline bug."""
+    only satisfies u=0 on [0,1]² boundary when k1, k2 are integers.
+
+    target='analytical': store u = closed-form analytical solution at cell centers.
+    target='fom':        store u = FVM-discrete solution (one CG solve per sample).
+                          This makes the AE's manifold align with what NM-ROM solves for.
+    """
     rng = np.random.RandomState(seed)
     train_freqs = rng.randint(k_lo, k_hi + 1, size=(n_train, 2)).astype(np.float32)
     val_freqs   = rng.randint(k_lo, k_hi + 1, size=(n_val,   2)).astype(np.float32)
+
+    def _replace_u_with_fom(qt):
+        """Solve K·u = rhs for the FVM-discrete u and overwrite qt['values_u']
+        with the FOM solution interpolated to all node centers."""
+        K_op, f_vec, _u_ref, N, global_idx, leaf_list = build_fvm_operator(qt)
+        sol, _ = jspla.cg(K_op, f_vec, x0=jnp.zeros(N), tol=1e-10, maxiter=20000)
+        sol = np.array(sol.block_until_ready())   # (N,) leaf values in global order
+
+        # Build a (depth, morton_key) -> global_index mapping back into per-depth
+        # node arrays so we can plug FOM values into qt['values_u'][d][i, 0].
+        leaf_at_depth = [{} for _ in range(MAX_LEVEL + 1)]
+        for (d, mk), gi in global_idx.items():
+            leaf_at_depth[d][int(mk)] = gi
+
+        new_values_u = [np.zeros((len(qt['keys'][d]), 1), np.float32) for d in range(MAX_LEVEL+1)]
+        for d in range(MAX_LEVEL + 1):
+            kd = qt['keys'][d]; lm = qt['leaf_mask'][d]
+            for i, is_leaf in enumerate(lm):
+                if is_leaf:
+                    gi = leaf_at_depth[d].get(int(kd[i]))
+                    if gi is not None:
+                        new_values_u[d][i, 0] = sol[gi]
+        # Internal-node values: pool from children (mean) so encoder can use them.
+        for d in range(MAX_LEVEL - 1, -1, -1):
+            ch = qt['children'][d]; kd = qt['keys'][d]
+            S_next = DEPTH_SIZES[d + 1]
+            for i in range(len(kd)):
+                if not qt['leaf_mask'][d][i]:
+                    sm = 0.0; cnt = 0
+                    for c in range(4):
+                        ci = int(ch[i, c])
+                        if ci < S_next and ci < len(qt['keys'][d + 1]):
+                            sm += float(new_values_u[d + 1][ci, 0]); cnt += 1
+                    if cnt > 0:
+                        new_values_u[d][i, 0] = sm / cnt
+        qt['values_u'] = new_values_u
+        return qt
 
     def build(k_pairs, label):
         out = []
         t0 = time.perf_counter()
         for i, (k1, k2) in enumerate(k_pairs):
             qt = build_quadtree(float(k1), float(k2), grad_thresh)
+            if target == 'fom':
+                qt = _replace_u_with_fom(qt)
             n_leaves = sum(int(qt['leaf_mask'][d].sum()) for d in range(MAX_LEVEL+1))
             out.append({
                 'k1': float(k1), 'k2': float(k2),
@@ -745,7 +787,7 @@ def generate_paired_dataset(n_train, n_val, k_lo=1, k_hi=5, seed=0,
                       flush=True)
         return out
 
-    print(f"Building {n_train} train + {n_val} val paired (F,u) trees...")
+    print(f"Building {n_train} train + {n_val} val paired (F,u) trees... target={target}")
     train_set = build(train_freqs, 'train')
     val_set   = build(val_freqs,   'val')
 
@@ -1132,6 +1174,10 @@ def main():
     p.add_argument('--n-val',         type=int,   default=40)
     p.add_argument('--k-lo',          type=int,   default=1)
     p.add_argument('--k-hi',          type=int,   default=5)
+    p.add_argument('--target',        type=str,   default='analytical',
+                   choices=['analytical', 'fom'],
+                   help='What to use as the u-side training target: closed-form '
+                        'analytical solution, or one-time FVM CG solve per sample.')
     p.add_argument('--grad-thresh',   type=float, default=0.5)
     p.add_argument('--seed',          type=int,   default=0)
     p.add_argument('--ae-steps',      type=int,   default=8000)
@@ -1162,7 +1208,8 @@ def main():
         else:
             generate_paired_dataset(args.n_train, args.n_val,
                                     args.k_lo, args.k_hi, args.seed,
-                                    args.grad_thresh, save_path=data_path)
+                                    args.grad_thresh, save_path=data_path,
+                                    target=args.target)
 
     if args.command in ('train_ae', 'all'):
         with open(data_path, 'rb') as f:
