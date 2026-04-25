@@ -9,3 +9,18 @@ plots/
 *.png
 *.jpg
 *.jpeg
+# SLURM logs
+slurm_*.out
+slurm_*.err
+*.out
+*.err
+# Claude internal
+.claude/
+# Checkpoints / embeddings
+*.pkl
+embeddings/
+training_logs/
+inference_results/
+# Smoke/temp
+_smoke*
+smoke_plots/

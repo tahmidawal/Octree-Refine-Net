@@ -695,7 +695,7 @@ def main():
     mse = nn.MSELoss()
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = f"plots/{timestamp}"
+    output_dir = f"plots/feb16_DirectionB_{timestamp}"
     os.makedirs(output_dir, exist_ok=True)
     print(f"Saving plots to: {output_dir}")
 

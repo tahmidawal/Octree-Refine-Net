@@ -729,7 +729,7 @@ def main():
     split_weight = 0.5
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = f"plots/feb18_dual_poisson_{timestamp}"
+    output_dir = f"plots/poisson_{timestamp}"
     os.makedirs(output_dir, exist_ok=True)
     print(f"Saving outputs to: {output_dir}")
 
