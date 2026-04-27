@@ -64,7 +64,8 @@ def main():
     if not rows or avg is None:
         raise SystemExit(f"{tsv} has no rows or no AVG line.")
 
-    out = Path(args.out) if args.out else exp_dir / 'finecell_summary.png'
+    out = Path(args.out) if args.out else exp_dir / 'plots' / 'finecell_summary.png'
+    out.parent.mkdir(parents=True, exist_ok=True)
     case_labels = [f"k=({int(r['k1'])},{int(r['k2'])})" for r in rows]
     x = np.arange(len(rows))
 

@@ -47,7 +47,7 @@ def main():
     args = p.parse_args()
 
     exp = Path(args.exp_dir)
-    out_dir = Path(args.out_dir) if args.out_dir else exp / 'plots_solutions'
+    out_dir = Path(args.out_dir) if args.out_dir else exp / 'plots'
     out_dir.mkdir(parents=True, exist_ok=True)
 
     ds     = pickle.load(open(exp / 'paired_dataset.pkl', 'rb'))
@@ -127,7 +127,7 @@ def main():
 
     plt.suptitle(f'F → u via NM-ROM: 4-method comparison ({n} cases)', fontsize=13, y=1.0)
     plt.tight_layout()
-    out_grid = out_dir / 'all_cases_grid.png'
+    out_grid = out_dir / 'solutions_grid.png'
     plt.savefig(out_grid, dpi=130, bbox_inches='tight'); plt.close()
     print(f"\nSaved {out_grid}")
 

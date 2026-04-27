@@ -932,7 +932,9 @@ def train_shared_ae(train_set, val_set, n_steps=8000, lr=1e-3, seed=42,
         print(f"  Saved AE to {save_path}")
 
     if out_dir is not None:
-        _plot_ae_history(history, out_dir / 'ae_loss.png')
+        plots_dir = Path(out_dir) / 'plots'
+        plots_dir.mkdir(parents=True, exist_ok=True)
+        _plot_ae_history(history, plots_dir / 'ae_loss.png')
 
     return model, best_params, history
 
@@ -1346,7 +1348,8 @@ def main():
     args = p.parse_args()
 
     out_dir = Path(args.out)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / 'plots').mkdir(parents=True, exist_ok=True)
+    (out_dir / 'logs' ).mkdir(parents=True, exist_ok=True)
     print(f"=== f_to_u_nmrom: {args.command} | out={out_dir} ===")
     print(f"JAX devices: {jax.devices()}")
 
@@ -1404,7 +1407,7 @@ def main():
         mlp_model = LatentMLP(hidden=mlp_ck.get('hidden', 512),
                               n_layers=mlp_ck.get('n_layers', 3))
         mlp_params = mlp_ck['params']
-        bench_dir = out_dir / 'plots_bench'; bench_dir.mkdir(exist_ok=True)
+        bench_dir = out_dir / 'plots' / 'bench'; bench_dir.mkdir(parents=True, exist_ok=True)
         if not bench_log.exists():
             with open(bench_log, 'w') as f:
                 f.write('i\tk1\tk2\tN\tn_fine\tn_coarse\t'

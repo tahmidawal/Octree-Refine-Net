@@ -174,7 +174,24 @@ final/
 ├── f_to_u_nmrom.py              ← main pipeline (data, train_ae, train_mlp, bench, all)
 ├── plot_finecell_summary.py     ← bar chart from benchmark_results.tsv
 ├── plot_per_case_detailed.py    ← per-case 8-panel: input/gt/predictions/error/histogram
-└── plot_solutions.py            ← per-case 4-panel grid (analytical / WARM-full / WARM-fine / MLP)
+├── plot_solutions.py            ← per-case 4-panel grid (analytical / WARM-full / WARM-fine / MLP)
+└── runs/
+    └── <run_name>/              ← one directory per experiment
+        ├── paired_dataset.pkl       — (n_train + n_val) (F, u) pairs
+        ├── shared_ae.pkl            — AE checkpoint
+        ├── mlp_z_f_to_z_u.pkl       — MLP checkpoint
+        ├── benchmark_results.tsv    — per-case + AVG metrics
+        ├── logs/
+        │   ├── data.log
+        │   ├── ae_train.log
+        │   ├── mlp_train.log
+        │   └── bench.log
+        └── plots/
+            ├── ae_loss.png
+            ├── finecell_summary.png
+            ├── solutions_grid.png
+            ├── bench/case_NN.png
+            └── detailed/detailed_kK1_K2.png
 ```
 
 ## How to reproduce the result

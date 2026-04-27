@@ -48,19 +48,34 @@ python plot_solutions.py --exp-dir runs/exp --n-cases 6
 
 ## Output layout per experiment
 
+Every run directory has the same structure — artifacts at root, logs in `logs/`,
+all images under `plots/`:
+
 ```
-runs/exp/
+runs/<name>/
 ├── paired_dataset.pkl              # (n_train + n_val) (F, u) pairs on adaptive quadtrees
 ├── shared_ae.pkl                   # AE checkpoint (params + training history)
 ├── mlp_z_f_to_z_u.pkl              # MLP checkpoint
 ├── benchmark_results.tsv           # per-case + AVG rel-L2 / time / iters
-├── ae_loss.png                     # AE training curves
-├── plots_bench/case_NN.png         # per-case 6-panel from `bench` command
-├── plots_detailed/                 # from plot_per_case_detailed.py
-│   └── detailed_kK1_K2.png
-├── plots_solutions/                # from plot_solutions.py
-│   └── all_cases_grid.png
-└── finecell_summary.png            # from plot_finecell_summary.py
+├── logs/
+│   ├── data.log                    # output of `data` subcommand
+│   ├── ae_train.log                # output of `train_ae`
+│   ├── mlp_train.log               # output of `train_mlp`
+│   └── bench.log                   # output of `bench`
+└── plots/
+    ├── ae_loss.png                 # AE training curves
+    ├── finecell_summary.png        # from plot_finecell_summary.py
+    ├── solutions_grid.png          # from plot_solutions.py
+    ├── bench/case_NN.png           # per-case 6-panel from `bench` command
+    └── detailed/
+        └── detailed_kK1_K2.png     # from plot_per_case_detailed.py
+```
+
+To capture command stdout into `logs/`:
+
+```bash
+python f_to_u_nmrom.py train_ae --out runs/exp --ae-steps 8000 \
+       2>&1 | tee runs/exp/logs/ae_train.log
 ```
 
 ## Knobs

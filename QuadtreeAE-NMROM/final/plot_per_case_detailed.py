@@ -175,7 +175,7 @@ def main():
     args = p.parse_args()
 
     exp = Path(args.exp_dir)
-    out_dir = Path(args.out_dir) if args.out_dir else exp / 'plots_detailed'
+    out_dir = Path(args.out_dir) if args.out_dir else exp / 'plots' / 'detailed'
     out_dir.mkdir(parents=True, exist_ok=True)
 
     ds     = pickle.load(open(exp / 'paired_dataset.pkl', 'rb'))
