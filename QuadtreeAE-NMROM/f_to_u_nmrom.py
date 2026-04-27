@@ -647,9 +647,29 @@ def extract_leaf_values(val_pred, leaf_gather):
 # NM-ROM SOLVER  (GN, Petrov-Galerkin form, depth-scaled preconditioner)
 # ═══════════════════════════════════════════════════════════════════════════
 def make_nmrom_solver(model, params, pd, qt, K_op, f_vec, global_idx,
-                      max_outer=8, max_inner=6, tol=1e-5):
+                      max_outer=8, max_inner=6, tol=1e-5,
+                      residual_weights=None, lam_reg=0.0, z_anchor=None):
+    """
+    residual_weights: optional (N,) array of per-leaf weights for the residual.
+        If None, uniform 1.0 (standard NM-ROM). Setting weights to 0 on coarse
+        cells and 1 on fine cells restricts the PDE constraint to fine cells.
+        With a non-zero mask but a strong residual gradient at fine cells
+        only, the latent z becomes under-determined and GN can drift wildly
+        — pair with `lam_reg > 0` to keep z anchored.
+    lam_reg: Tikhonov penalty weight on ‖z − z_anchor‖². Adds λ·I to the GN
+        Hessian and λ(z − z_anchor) to the gradient. Critical when residual
+        is masked.
+    z_anchor: the latent to regularize toward (e.g. the MLP-warm-start).
+        If None and lam_reg > 0, anchors at z_init in the solve() call.
+    """
     P_inv       = 1.0 / DEPTH_SCALE_VEC
     leaf_gather = build_leaf_gather(qt, global_idx)
+
+    if residual_weights is None:
+        w = jnp.ones(f_vec.shape[0], jnp.float32)
+    else:
+        w = jnp.asarray(residual_weights, jnp.float32)
+    lam = float(lam_reg)
 
     def constrained_decode(z):
         # Decoder produces u in U_SCALE-rescaled space; divide to get physical u.
@@ -660,17 +680,18 @@ def make_nmrom_solver(model, params, pd, qt, K_op, f_vec, global_idx,
     constrained_decode_jit = jit(constrained_decode)
 
     @jit
-    def gn_step(z):
+    def gn_step(z, z_a):
         u_pred, vjp_fn = jax.vjp(constrained_decode, z)
-        r              = K_op(u_pred) - f_vec
-        g_red          = vjp_fn(r)[0]
+        r              = (K_op(u_pred) - f_vec) * w
+        g_red          = vjp_fn(r)[0] + lam * (z - z_a)   # Tikhonov gradient
 
         def GN_op_tilde(dz_tilde):
             dz       = P_inv * dz_tilde
             _, Jdz   = jax.jvp(constrained_decode, (z,), (dz,))
-            KJdz     = K_op(Jdz)
+            KJdz     = K_op(Jdz) * w
             JtKJdz   = vjp_fn(KJdz)[0]
-            return P_inv * JtKJdz
+            # Add Tikhonov damping. P_inv·λ·I·P_inv·dz_tilde = λ·P_inv²·dz_tilde
+            return P_inv * JtKJdz + lam * P_inv * P_inv * dz_tilde
 
         rhs         = -(P_inv * g_red)
         dz_tilde, _ = jspla.cg(GN_op_tilde, rhs, tol=1e-4, maxiter=100)
@@ -679,10 +700,11 @@ def make_nmrom_solver(model, params, pd, qt, K_op, f_vec, global_idx,
 
     def solve(z_init=None, verbose=False):
         z = jnp.zeros(LATENT_DIM) if z_init is None else z_init
+        z_a = z if z_anchor is None else z_anchor
         history = []
         total_iters = max_outer * max_inner
         for it in range(total_iters):
-            z, rn, gn = gn_step(z)
+            z, rn, gn = gn_step(z, z_a)
             rn_f = float(rn); gn_f = float(gn)
             history.append(rn_f)
             if verbose:
@@ -1042,13 +1064,22 @@ def benchmark(ae_model, ae_params, mlp_model, mlp_params, val_set,
         pd_f = topology_to_padded(qt, which='f')
         pd_u = topology_to_padded(qt, which='u')
         K_op, f_vec, u_ref, N, global_idx, leaf_list = build_fvm_operator(qt)
-        print(f"\nCase {i+1}: k=({k1:.3f}, {k2:.3f})  N_leaves={N}", flush=True)
 
-        # Cold-start solver
+        # Per-leaf depth + fine-cell mask. Fine cells = leaves at the deepest
+        # level present in this tree (depth = max_depth_present, here MAX_LEVEL
+        # for adaptive trees with any depth-MAX_LEVEL refinement).
+        leaf_depths = np.array([lf[3] for lf in leaf_list], np.int32)
+        max_d_present = int(leaf_depths.max())
+        fine_mask  = (leaf_depths == max_d_present).astype(np.float32)
+        coarse_mask = 1.0 - fine_mask
+        n_fine   = int(fine_mask.sum()); n_coarse = N - n_fine
+        print(f"\nCase {i+1}: k=({k1:.3f}, {k2:.3f})  N_leaves={N}  "
+              f"fine={n_fine}  coarse={n_coarse}", flush=True)
+
+        # Cold-start solver (full residual)
         solve_cold, _ = make_nmrom_solver(ae_model, ae_params, pd_f, qt, K_op, f_vec,
                                           global_idx, max_outer=max_outer,
                                           max_inner=max_inner, tol=tol)
-        # First call warms JIT
         _ = solve_cold(z_init=jnp.zeros(LATENT_DIM))
         t0 = time.perf_counter()
         z_cold, u_cold, hist_cold = solve_cold(z_init=jnp.zeros(LATENT_DIM), verbose=False)
@@ -1058,7 +1089,6 @@ def benchmark(ae_model, ae_params, mlp_model, mlp_params, val_set,
         # MLP warm-start
         z_F0  = encode_F(pd_f)
         z_u0  = mlp_predict(z_F0)
-        # Decode the MLP guess directly (no GN)
         leaf_gather = build_leaf_gather(qt, global_idx)
         @jax.jit
         def decode_z(z):
@@ -1067,14 +1097,29 @@ def benchmark(ae_model, ae_params, mlp_model, mlp_params, val_set,
             return extract_leaf_values(vpred, leaf_gather) / U_SCALE
         u_mlp_only = decode_z(z_u0)
 
+        # WARM (full residual) and FINE (residual restricted to fine leaves)
         solve_warm, _ = make_nmrom_solver(ae_model, ae_params, pd_f, qt, K_op, f_vec,
                                           global_idx, max_outer=max_outer,
                                           max_inner=max_inner, tol=tol)
-        _ = solve_warm(z_init=z_u0)  # JIT warmup
+        _ = solve_warm(z_init=z_u0)
         t0 = time.perf_counter()
         z_warm, u_warm, hist_warm = solve_warm(z_init=z_u0, verbose=False)
         u_warm.block_until_ready()
         t_warm = time.perf_counter() - t0
+
+        # Fine-cell solver: residual masked to fine leaves, with Tikhonov
+        # regularization toward the MLP-warm-start latent so the under-determined
+        # masked problem can't drift z far from the MLP guess.
+        solve_fine, _ = make_nmrom_solver(ae_model, ae_params, pd_f, qt, K_op, f_vec,
+                                          global_idx, max_outer=max_outer,
+                                          max_inner=max_inner, tol=tol,
+                                          residual_weights=fine_mask,
+                                          lam_reg=1e-3, z_anchor=z_u0)
+        _ = solve_fine(z_init=z_u0)
+        t0 = time.perf_counter()
+        z_fine, u_fine, hist_fine = solve_fine(z_init=z_u0, verbose=False)
+        u_fine.block_until_ready()
+        t_fine = time.perf_counter() - t0
 
         # FOM (CG on the FVM operator)
         @jit
@@ -1087,59 +1132,118 @@ def benchmark(ae_model, ae_params, mlp_model, mlp_params, val_set,
         u_fom.block_until_ready()
         t_fom = time.perf_counter() - t0
 
-        # Metrics: rel-L2 against analytical reference and against FOM-discrete.
+        # Metrics: rel-L2 against analytical, against FOM-discrete, plus fine-only
+        # rel-L2 (the metric this iteration is targeting).
         u_ref_np  = np.array(u_ref)
         u_fom_np  = np.array(u_fom)
-        rel_a = lambda u: float(np.linalg.norm(np.array(u) - u_ref_np) /
-                                max(np.linalg.norm(u_ref_np), 1e-30))
-        rel_f = lambda u: float(np.linalg.norm(np.array(u) - u_fom_np) /
-                                max(np.linalg.norm(u_fom_np), 1e-30))
-        rel_cold     = rel_a(u_cold);     rel_cold_fom = rel_f(u_cold)
-        rel_warm     = rel_a(u_warm);     rel_warm_fom = rel_f(u_warm)
-        rel_mlp_only = rel_a(u_mlp_only); rel_mlp_fom  = rel_f(u_mlp_only)
-        rel_fom      = rel_a(u_fom)       # vs analytical (truncation error)
+        fmask_np  = fine_mask
+        cmask_np  = coarse_mask
+
+        def rel(u_arr, ref, mask=None):
+            ua = np.array(u_arr)
+            if mask is None:
+                num = np.linalg.norm(ua - ref); den = np.linalg.norm(ref)
+            else:
+                w_ = mask
+                num = np.sqrt(np.sum(w_ * (ua - ref)**2))
+                den = np.sqrt(np.sum(w_ * ref**2))
+            return float(num / max(den, 1e-30))
+
+        # vs analytical (full / fine / coarse)
+        rel_cold     = rel(u_cold,     u_ref_np)
+        rel_warm     = rel(u_warm,     u_ref_np)
+        rel_fine     = rel(u_fine,     u_ref_np)
+        rel_mlp_only = rel(u_mlp_only, u_ref_np)
+        rel_fom      = rel(u_fom,      u_ref_np)
+
+        rel_warm_fineonly = rel(u_warm,     u_ref_np, fmask_np)
+        rel_fine_fineonly = rel(u_fine,     u_ref_np, fmask_np)
+        rel_mlp_fineonly  = rel(u_mlp_only, u_ref_np, fmask_np)
+        rel_fom_fineonly  = rel(u_fom,      u_ref_np, fmask_np)
+
+        rel_warm_coarse = rel(u_warm,     u_ref_np, cmask_np) if n_coarse else 0.0
+        rel_fine_coarse = rel(u_fine,     u_ref_np, cmask_np) if n_coarse else 0.0
+        rel_mlp_coarse  = rel(u_mlp_only, u_ref_np, cmask_np) if n_coarse else 0.0
+
+        # vs FOM-discrete
+        rel_cold_fom = rel(u_cold,     u_fom_np)
+        rel_warm_fom = rel(u_warm,     u_fom_np)
+        rel_fine_fom = rel(u_fine,     u_fom_np)
+        rel_mlp_fom  = rel(u_mlp_only, u_fom_np)
+
         row = dict(
-            i=i+1, k1=k1, k2=k2, N=N,
-            rel_cold=rel_cold, rel_warm=rel_warm, rel_mlp=rel_mlp_only, rel_fom=rel_fom,
-            rel_cold_fom=rel_cold_fom, rel_warm_fom=rel_warm_fom, rel_mlp_fom=rel_mlp_fom,
-            t_cold=t_cold, t_warm=t_warm, t_fom=t_fom,
+            i=i+1, k1=k1, k2=k2, N=N, n_fine=n_fine, n_coarse=n_coarse,
+            rel_cold=rel_cold, rel_warm=rel_warm, rel_fine=rel_fine,
+            rel_mlp=rel_mlp_only, rel_fom=rel_fom,
+            rel_warm_fineonly=rel_warm_fineonly, rel_fine_fineonly=rel_fine_fineonly,
+            rel_mlp_fineonly=rel_mlp_fineonly,   rel_fom_fineonly=rel_fom_fineonly,
+            rel_warm_coarse=rel_warm_coarse, rel_fine_coarse=rel_fine_coarse,
+            rel_mlp_coarse=rel_mlp_coarse,
+            rel_cold_fom=rel_cold_fom, rel_warm_fom=rel_warm_fom,
+            rel_fine_fom=rel_fine_fom, rel_mlp_fom=rel_mlp_fom,
+            t_cold=t_cold, t_warm=t_warm, t_fine=t_fine, t_fom=t_fom,
             iters_cold=len(hist_cold), iters_warm=len(hist_warm),
+            iters_fine=len(hist_fine),
         )
         rows.append(row)
-        print(f"  COLD : rel-L2 vs ana={rel_cold:.4e}  vs FOM={rel_cold_fom:.4e}  iters={len(hist_cold):2d}  time={t_cold:.3f}s")
-        print(f"  WARM : rel-L2 vs ana={rel_warm:.4e}  vs FOM={rel_warm_fom:.4e}  iters={len(hist_warm):2d}  time={t_warm:.3f}s")
-        print(f"  MLP  : rel-L2 vs ana={rel_mlp_only:.4e}  vs FOM={rel_mlp_fom:.4e}  (no GN)")
-        print(f"  FOM  : rel-L2 vs ana={rel_fom:.4e}  (truncation error)  time={t_fom:.3f}s")
+        print(f"  COLD       : rel-L2 vs ana={rel_cold:.4e}  vs FOM={rel_cold_fom:.4e}  iters={len(hist_cold):2d}  time={t_cold:.2f}s")
+        print(f"  WARM full  : rel-L2 vs ana={rel_warm:.4e}  vs FOM={rel_warm_fom:.4e}  iters={len(hist_warm):2d}  time={t_warm:.2f}s")
+        print(f"  WARM fine  : rel-L2 vs ana={rel_fine:.4e}  vs FOM={rel_fine_fom:.4e}  iters={len(hist_fine):2d}  time={t_fine:.2f}s")
+        print(f"  MLP only   : rel-L2 vs ana={rel_mlp_only:.4e}  vs FOM={rel_mlp_fom:.4e}")
+        print(f"  FOM        : rel-L2 vs ana={rel_fom:.4e}  time={t_fom:.3f}s")
+        print(f"  fine cells (where the FINE solver puts effort):")
+        print(f"    rel-L2 (fine-only)  WARM={rel_warm_fineonly:.4e}  FINE={rel_fine_fineonly:.4e}  "
+              f"MLP={rel_mlp_fineonly:.4e}  FOM={rel_fom_fineonly:.4e}")
+        print(f"  coarse cells (left to MLP):")
+        print(f"    rel-L2 (coarse-only) WARM={rel_warm_coarse:.4e}  FINE={rel_fine_coarse:.4e}  "
+              f"MLP={rel_mlp_coarse:.4e}")
 
         if out_dir is not None:
-            _plot_case(qt, leaf_list, np.array(u_ref), np.array(u_warm),
-                       np.array(u_cold), np.array(u_mlp_only),
-                       title=f"k=({k1:.2f},{k2:.2f})  rel-L2: warm={rel_warm:.2e} cold={rel_cold:.2e} mlp={rel_mlp_only:.2e}",
-                       save_path=out_dir / f'case_{i+1:02d}.png')
+            _plot_case_v2(leaf_list, np.array(u_ref), np.array(u_warm),
+                          np.array(u_fine), np.array(u_mlp_only), fmask_np,
+                          title=(f"k=({k1:.0f},{k2:.0f})  N={N}  fine={n_fine}  "
+                                 f"rel-L2: warm={rel_warm:.2e} fine={rel_fine:.2e} "
+                                 f"mlp={rel_mlp_only:.2e}\n"
+                                 f"fine-only rel-L2: warm={rel_warm_fineonly:.2e} "
+                                 f"fine={rel_fine_fineonly:.2e} mlp={rel_mlp_fineonly:.2e}"),
+                          save_path=out_dir / f'case_{i+1:02d}.png')
 
-    avg = {f'avg_{k}': float(np.mean([r[k] for r in rows]))
-           for k in ('rel_cold','rel_warm','rel_mlp','rel_fom',
-                     'rel_cold_fom','rel_warm_fom','rel_mlp_fom',
-                     't_cold','t_warm','t_fom','iters_cold','iters_warm')}
+    keys_avg = ('rel_cold','rel_warm','rel_fine','rel_mlp','rel_fom',
+                'rel_warm_fineonly','rel_fine_fineonly','rel_mlp_fineonly','rel_fom_fineonly',
+                'rel_warm_coarse','rel_fine_coarse','rel_mlp_coarse',
+                'rel_cold_fom','rel_warm_fom','rel_fine_fom','rel_mlp_fom',
+                't_cold','t_warm','t_fine','t_fom',
+                'iters_cold','iters_warm','iters_fine')
+    avg = {f'avg_{k}': float(np.mean([r[k] for r in rows])) for k in keys_avg}
     print(f"\n=== SUMMARY ({n_test} cases) ===")
-    print(f"  rel-L2 vs analytical:  cold {avg['avg_rel_cold']:.4e}  warm {avg['avg_rel_warm']:.4e}  "
-          f"mlp {avg['avg_rel_mlp']:.4e}  fom {avg['avg_rel_fom']:.4e}")
-    print(f"  rel-L2 vs FOM-discrete:cold {avg['avg_rel_cold_fom']:.4e}  warm {avg['avg_rel_warm_fom']:.4e}  "
-          f"mlp {avg['avg_rel_mlp_fom']:.4e}")
-    print(f"  time    cold {avg['avg_t_cold']:.3f}s   warm {avg['avg_t_warm']:.3f}s   "
-          f"fom {avg['avg_t_fom']:.3f}s")
-    print(f"  iters   cold {avg['avg_iters_cold']:.1f}   warm {avg['avg_iters_warm']:.1f}")
+    print(f"  Full-mesh rel-L2 vs analytical:")
+    print(f"    COLD={avg['avg_rel_cold']:.4e}  WARM={avg['avg_rel_warm']:.4e}  "
+          f"FINE={avg['avg_rel_fine']:.4e}  MLP={avg['avg_rel_mlp']:.4e}  "
+          f"FOM={avg['avg_rel_fom']:.4e}")
+    print(f"  Fine-cells-only rel-L2 vs analytical (the metric that matters):")
+    print(f"    WARM={avg['avg_rel_warm_fineonly']:.4e}  FINE={avg['avg_rel_fine_fineonly']:.4e}  "
+          f"MLP={avg['avg_rel_mlp_fineonly']:.4e}  FOM={avg['avg_rel_fom_fineonly']:.4e}")
+    print(f"  Coarse-cells-only rel-L2 vs analytical:")
+    print(f"    WARM={avg['avg_rel_warm_coarse']:.4e}  FINE={avg['avg_rel_fine_coarse']:.4e}  "
+          f"MLP={avg['avg_rel_mlp_coarse']:.4e}")
+    print(f"  Time:  COLD={avg['avg_t_cold']:.2f}s  WARM={avg['avg_t_warm']:.2f}s  "
+          f"FINE={avg['avg_t_fine']:.2f}s  FOM={avg['avg_t_fom']:.3f}s")
+    print(f"  Iters: COLD={avg['avg_iters_cold']:.1f}  WARM={avg['avg_iters_warm']:.1f}  "
+          f"FINE={avg['avg_iters_fine']:.1f}")
 
     if log_path is not None:
-        cols = ('i','k1','k2','N',
-                'rel_cold','rel_warm','rel_mlp','rel_fom',
-                'rel_cold_fom','rel_warm_fom','rel_mlp_fom',
-                't_cold','t_warm','t_fom','iters_cold','iters_warm')
+        cols = ('i','k1','k2','N','n_fine','n_coarse',
+                'rel_cold','rel_warm','rel_fine','rel_mlp','rel_fom',
+                'rel_warm_fineonly','rel_fine_fineonly','rel_mlp_fineonly','rel_fom_fineonly',
+                'rel_warm_coarse','rel_fine_coarse','rel_mlp_coarse',
+                'rel_cold_fom','rel_warm_fom','rel_fine_fom','rel_mlp_fom',
+                't_cold','t_warm','t_fine','t_fom',
+                'iters_cold','iters_warm','iters_fine')
         with open(log_path, 'a') as f:
             for r in rows:
                 f.write('\t'.join(str(r[k]) for k in cols) + '\n')
-            f.write('AVG\t-\t-\t-\t' +
-                    '\t'.join(f"{avg[f'avg_{k}']:.4e}" for k in cols[4:]) + '\n\n')
+            f.write('AVG\t-\t-\t-\t-\t-\t' +
+                    '\t'.join(f"{avg[f'avg_{k}']:.4e}" for k in cols[6:]) + '\n\n')
 
     return rows, avg
 
@@ -1162,6 +1266,50 @@ def _plot_case(qt, leaf_list, u_ref, u_warm, u_cold, u_mlp, title, save_path):
     plt.suptitle(title)
     plt.tight_layout()
     plt.savefig(save_path, dpi=120, bbox_inches='tight'); plt.close()
+
+
+def _plot_case_v2(leaf_list, u_ref, u_warm, u_fine, u_mlp, fine_mask,
+                  title, save_path):
+    """6-panel: u_ref, MLP, NM-ROM warm (full residual), NM-ROM fine (fine-only),
+    error of fine vs analytical, and the mesh visualisation (fine in white,
+    coarse darker) so the structure is visible at a glance."""
+    fig, axes = plt.subplots(2, 3, figsize=(18, 10))
+    vmin = float(u_ref.min()); vmax = float(u_ref.max())
+    err  = np.abs(u_fine - u_ref); e_max = float(err.max())
+
+    def draw(ax, vals, name, lo, hi, cmap='RdBu_r'):
+        cmap_obj = plt.get_cmap(cmap)
+        for li, (xc, yc, h, *_) in enumerate(leaf_list):
+            t = (vals[li] - lo) / max(hi - lo, 1e-30)
+            ax.add_patch(patches.Rectangle((xc - h/2, yc - h/2), h, h,
+                                            facecolor=cmap_obj(t), edgecolor='none'))
+        ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_aspect('equal')
+        ax.set_title(name, fontsize=10)
+        ax.set_xticks([]); ax.set_yticks([])
+
+    draw(axes[0,0], u_ref, 'analytical u', vmin, vmax)
+    draw(axes[0,1], u_mlp, 'MLP only', vmin, vmax)
+    draw(axes[0,2], u_warm, 'NM-ROM (full residual)', vmin, vmax)
+
+    draw(axes[1,0], u_fine, 'NM-ROM (fine-cells-only)', vmin, vmax)
+    draw(axes[1,1], err,    f'|fine-NMROM - analytical|  max={e_max:.2e}',
+         0, e_max, cmap='hot')
+
+    # Mesh structure: fine = light, coarse = dark. Just to remind which
+    # cells are getting the extra refinement.
+    ax = axes[1,2]
+    for li, (xc, yc, h, *_) in enumerate(leaf_list):
+        c = '#fdfd9b' if fine_mask[li] > 0.5 else '#444466'
+        ax.add_patch(patches.Rectangle((xc - h/2, yc - h/2), h, h,
+                                        facecolor=c, edgecolor='black',
+                                        linewidth=0.15))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_aspect('equal')
+    ax.set_title('mesh: yellow = fine cells (NM-ROM target)\nblue = coarse cells (MLP)', fontsize=9)
+    ax.set_xticks([]); ax.set_yticks([])
+
+    plt.suptitle(title, fontsize=11)
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=130, bbox_inches='tight'); plt.close()
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -1259,10 +1407,13 @@ def main():
         bench_dir = out_dir / 'plots_bench'; bench_dir.mkdir(exist_ok=True)
         if not bench_log.exists():
             with open(bench_log, 'w') as f:
-                f.write('i\tk1\tk2\tN\t'
-                        'rel_cold\trel_warm\trel_mlp\trel_fom\t'
-                        'rel_cold_fom\trel_warm_fom\trel_mlp_fom\t'
-                        't_cold\tt_warm\tt_fom\titers_cold\titers_warm\n')
+                f.write('i\tk1\tk2\tN\tn_fine\tn_coarse\t'
+                        'rel_cold\trel_warm\trel_fine\trel_mlp\trel_fom\t'
+                        'rel_warm_fineonly\trel_fine_fineonly\trel_mlp_fineonly\trel_fom_fineonly\t'
+                        'rel_warm_coarse\trel_fine_coarse\trel_mlp_coarse\t'
+                        'rel_cold_fom\trel_warm_fom\trel_fine_fom\trel_mlp_fom\t'
+                        't_cold\tt_warm\tt_fine\tt_fom\t'
+                        'iters_cold\titers_warm\titers_fine\n')
         benchmark(ae_model, ae_params, mlp_model, mlp_params, d['val'],
                   n_test=args.n_test, max_outer=args.max_outer,
                   max_inner=args.max_inner, tol=args.gn_tol,
