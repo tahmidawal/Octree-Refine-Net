@@ -1,0 +1,3 @@
+# Cached experiment artifacts (per-run datasets and checkpoints — large).
+# results.tsv and research_findings.md ARE committed (they're the lab record).
+runs/

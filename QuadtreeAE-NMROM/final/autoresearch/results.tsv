@@ -1,0 +1,1 @@
+tag	hash	n_train	ae_steps	hidden	emb_dim	u_scale	target	lam_reg	residual_strategy	rel_full	rel_fine	rel_coarse	ratio_fine_coarse	rel_mlp	rel_fom	avg_iters	avg_t_solve	goal_met	why	notes

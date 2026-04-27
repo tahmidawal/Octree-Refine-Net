@@ -928,7 +928,8 @@ def train_shared_ae(train_set, val_set, n_steps=8000, lr=1e-3, seed=42,
 
     if save_path is not None:
         with open(save_path, 'wb') as f:
-            pickle.dump({'params': best_params, 'history': history}, f)
+            pickle.dump({'params': best_params, 'history': history,
+                         'hidden': hidden, 'emb_dim': emb_dim}, f)
         print(f"  Saved AE to {save_path}")
 
     if out_dir is not None:
@@ -1402,7 +1403,9 @@ def main():
             ae_ck = pickle.load(f)
         with open(mlp_path, 'rb') as f:
             mlp_ck = pickle.load(f)
-        ae_model  = CompressedBottleneckAE(hidden=HIDDEN, emb_dim=EMB_DIM)
+        ae_hidden  = ae_ck.get('hidden',  HIDDEN)
+        ae_emb_dim = ae_ck.get('emb_dim', EMB_DIM)
+        ae_model  = CompressedBottleneckAE(hidden=ae_hidden, emb_dim=ae_emb_dim)
         ae_params = ae_ck['params']
         mlp_model = LatentMLP(hidden=mlp_ck.get('hidden', 512),
                               n_layers=mlp_ck.get('n_layers', 3))
